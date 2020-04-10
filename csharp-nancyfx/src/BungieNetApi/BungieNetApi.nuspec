@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>BungieNetApi</id>
+        <title>BungieNetApi</title>
+        <version>2.8.0</version>
+        <authors>openapi-generator</authors>
+        <owners>openapi-generator</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>NancyFx BungieNetApi API</description>
+        <copyright>https://www.bungie.net/en/View/Bungie/terms</copyright>
+        <licenseUrl>https://github.com/Bungie-net/api/blob/master/LICENSE</licenseUrl>
+    </metadata>
+</package>
