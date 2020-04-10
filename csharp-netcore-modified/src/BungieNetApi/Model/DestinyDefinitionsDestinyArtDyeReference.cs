@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyArtDyeReference" /> class.
         /// </summary>
         /// <param name="artDyeChannelHash">artDyeChannelHash.</param>
-        public DestinyDefinitionsDestinyArtDyeReference(int artDyeChannelHash = default(int))
+        public DestinyDefinitionsDestinyArtDyeReference(long artDyeChannelHash = default(long))
         {
             this.ArtDyeChannelHash = artDyeChannelHash;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ArtDyeChannelHash
         /// </summary>
         [DataMember(Name="artDyeChannelHash", EmitDefaultValue=false)]
-        public int ArtDyeChannelHash { get; set; }
+        public long ArtDyeChannelHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="quantity">How much of the item you&#39;ll be getting..</param>
         /// <param name="costs">A summary of the current costs of the item..</param>
         /// <param name="overrideNextRefreshDate">If this item has its own custom date where it may be removed from the Vendor&#39;s rotation, this is that date.  Note that there&#39;s not actually any guarantee that it will go away: it could be chosen again and end up still being in the Vendor&#39;s sale items! But this is the next date where that test will occur, and is also the date that the game shows for availability on things like Bounties being sold. So it&#39;s the best we can give..</param>
-        public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent(int vendorItemIndex = default(int), int itemHash = default(int), int overrideStyleItemHash = default(int), int quantity = default(int), List<DestinyDestinyItemQuantity> costs = default(List<DestinyDestinyItemQuantity>), DateTime overrideNextRefreshDate = default(DateTime))
+        public DestinyComponentsVendorsDestinyPublicVendorSaleItemComponent(int vendorItemIndex = default(int), long itemHash = default(long), long overrideStyleItemHash = default(long), int quantity = default(int), List<DestinyDestinyItemQuantity> costs = default(List<DestinyDestinyItemQuantity>), DateTime overrideNextRefreshDate = default(DateTime))
         {
             this.VendorItemIndex = vendorItemIndex;
             this.ItemHash = itemHash;
@@ -62,14 +62,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of the item being sold, as a quick shortcut for looking up the DestinyInventoryItemDefinition of the sale item.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don&#39;t do this, certain items whose styles are being overridden by socketed items - such as the \&quot;Recycle Shader\&quot; item - would show whatever their default icon/style is, and it wouldn&#39;t be pretty or look accurate.
         /// </summary>
         /// <value>If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don&#39;t do this, certain items whose styles are being overridden by socketed items - such as the \&quot;Recycle Shader\&quot; item - would show whatever their default icon/style is, and it wouldn&#39;t be pretty or look accurate.</value>
         [DataMember(Name="overrideStyleItemHash", EmitDefaultValue=false)]
-        public int OverrideStyleItemHash { get; set; }
+        public long OverrideStyleItemHash { get; set; }
 
         /// <summary>
         /// How much of the item you&#39;ll be getting.

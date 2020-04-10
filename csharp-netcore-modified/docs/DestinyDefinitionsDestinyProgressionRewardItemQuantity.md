@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **AcquisitionBehavior** | **int** |  | [optional] 
 **UiDisplayStyle** | **string** |  | [optional] 
 **ClaimUnlockDisplayStrings** | **List&lt;string&gt;** |  | [optional] 
-**ItemHash** | **int** | The hash identifier for the item in question. Use it to look up the item&#39;s DestinyInventoryItemDefinition. | [optional] 
+**ItemHash** | **long** | The hash identifier for the item in question. Use it to look up the item&#39;s DestinyInventoryItemDefinition. | [optional] 
 **ItemInstanceId** | **long** | If this quantity is referring to a specific instance of an item, this will have the item&#39;s instance ID. Normally, this will be null. | [optional] 
 **Quantity** | **int** | The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used. | [optional] 
 

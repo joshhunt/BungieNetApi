@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ItemReferenceHash** | **int** |  | [optional] 
+**ItemReferenceHash** | **long** |  | [optional] 
 **StackSize** | **int** |  | [optional] 
 **ItemId** | **long** |  | [optional] 
 **CharacterId** | **long** |  | [optional] 

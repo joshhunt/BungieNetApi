@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="challengeObjectiveHashes">Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions..</param>
         /// <param name="modifierHashes">The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions..</param>
         /// <param name="rewardTooltipItems">If the activity itself provides any specific \&quot;mock\&quot; rewards, this will be the items and their quantity.  Why \&quot;mock\&quot;, you ask? Because these are the rewards as they are represented in the tooltip of the Activity.  These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain..</param>
-        public DestinyActivitiesDestinyPublicActivityStatus(List<int> challengeObjectiveHashes = default(List<int>), List<int> modifierHashes = default(List<int>), List<DestinyDestinyItemQuantity> rewardTooltipItems = default(List<DestinyDestinyItemQuantity>))
+        public DestinyActivitiesDestinyPublicActivityStatus(List<long> challengeObjectiveHashes = default(List<long>), List<long> modifierHashes = default(List<long>), List<DestinyDestinyItemQuantity> rewardTooltipItems = default(List<DestinyDestinyItemQuantity>))
         {
             this.ChallengeObjectiveHashes = challengeObjectiveHashes;
             this.ModifierHashes = modifierHashes;
@@ -49,14 +49,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Active Challenges for the activity, if any - represented as hashes for DestinyObjectiveDefinitions.</value>
         [DataMember(Name="challengeObjectiveHashes", EmitDefaultValue=false)]
-        public List<int> ChallengeObjectiveHashes { get; set; }
+        public List<long> ChallengeObjectiveHashes { get; set; }
 
         /// <summary>
         /// The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.
         /// </summary>
         /// <value>The active modifiers on this activity, if any - represented as hashes for DestinyActivityModifierDefinitions.</value>
         [DataMember(Name="modifierHashes", EmitDefaultValue=false)]
-        public List<int> ModifierHashes { get; set; }
+        public List<long> ModifierHashes { get; set; }
 
         /// <summary>
         /// If the activity itself provides any specific \&quot;mock\&quot; rewards, this will be the items and their quantity.  Why \&quot;mock\&quot;, you ask? Because these are the rewards as they are represented in the tooltip of the Activity.  These are often pointers to fake items that look good in a tooltip, but represent an abstract concept of what you will get for a reward rather than the specific items you may obtain.

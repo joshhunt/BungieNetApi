@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="TrendingTrendingEntryDestinyItem" /> class.
         /// </summary>
         /// <param name="itemHash">itemHash.</param>
-        public TrendingTrendingEntryDestinyItem(int itemHash = default(int))
+        public TrendingTrendingEntryDestinyItem(long itemHash = default(long))
         {
             this.ItemHash = itemHash;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ItemHash
         /// </summary>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

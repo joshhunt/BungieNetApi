@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// <param name="loreHash">Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip. This is the hash identifier of the lore element to show, if there is one to be show..</param>
         /// <param name="nodeStyleIdentifier">Comes from the talent grid node style: this identifier should be used to determine how to render the node in the UI..</param>
         /// <param name="ignoreForCompletion">Comes from the talent grid node style: if true, then this node should be ignored for determining whether the grid is complete..</param>
-        public DestinyDefinitionsDestinyTalentNodeDefinition(int nodeIndex = default(int), int nodeHash = default(int), int row = default(int), int column = default(int), List<int> prerequisiteNodeIndexes = default(List<int>), int binaryPairNodeIndex = default(int), bool autoUnlocks = default(bool), bool lastStepRepeats = default(bool), bool isRandom = default(bool), DestinyDefinitionsDestinyNodeActivationRequirement randomActivationRequirement = default(DestinyDefinitionsDestinyNodeActivationRequirement), bool isRandomRepurchasable = default(bool), List<DestinyDefinitionsDestinyNodeStepDefinition> steps = default(List<DestinyDefinitionsDestinyNodeStepDefinition>), List<int> exclusiveWithNodeHashes = default(List<int>), int randomStartProgressionBarAtProgression = default(int), string layoutIdentifier = default(string), int groupHash = default(int), int loreHash = default(int), string nodeStyleIdentifier = default(string), bool ignoreForCompletion = default(bool))
+        public DestinyDefinitionsDestinyTalentNodeDefinition(int nodeIndex = default(int), long nodeHash = default(long), int row = default(int), int column = default(int), List<int> prerequisiteNodeIndexes = default(List<int>), int binaryPairNodeIndex = default(int), bool autoUnlocks = default(bool), bool lastStepRepeats = default(bool), bool isRandom = default(bool), DestinyDefinitionsDestinyNodeActivationRequirement randomActivationRequirement = default(DestinyDefinitionsDestinyNodeActivationRequirement), bool isRandomRepurchasable = default(bool), List<DestinyDefinitionsDestinyNodeStepDefinition> steps = default(List<DestinyDefinitionsDestinyNodeStepDefinition>), List<long> exclusiveWithNodeHashes = default(List<long>), int randomStartProgressionBarAtProgression = default(int), string layoutIdentifier = default(string), long groupHash = default(long), long loreHash = default(long), string nodeStyleIdentifier = default(string), bool ignoreForCompletion = default(bool))
         {
             this.NodeIndex = nodeIndex;
             this.NodeHash = nodeHash;
@@ -88,7 +88,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the node, which unfortunately is also content version dependent but can be (and ideally, should be) used instead of the nodeIndex to uniquely identify the node.  The two exist side-by-side for backcompat reasons due to the Great Talent Node Restructuring of Destiny 1, and I ran out of time to remove one of them and standardize on the other. Sorry!</value>
         [DataMember(Name="nodeHash", EmitDefaultValue=false)]
-        public int NodeHash { get; set; }
+        public long NodeHash { get; set; }
 
         /// <summary>
         /// The visual \&quot;row\&quot; where the node should be shown in the UI. If negative, then the node is hidden.
@@ -165,7 +165,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The nodeHash values for nodes that are in an Exclusive Set with this node.  See DestinyTalentGridDefinition.exclusiveSets for more info about exclusive sets.  Again, note that these are nodeHashes and *not* nodeIndexes.</value>
         [DataMember(Name="exclusiveWithNodeHashes", EmitDefaultValue=false)]
-        public List<int> ExclusiveWithNodeHashes { get; set; }
+        public List<long> ExclusiveWithNodeHashes { get; set; }
 
         /// <summary>
         /// If the node&#39;s step is randomly selected, this is the amount of the Talent Grid&#39;s progression experience at which the progression bar for the node should be shown.
@@ -186,14 +186,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>As of Destiny 2, nodes can exist as part of \&quot;Exclusive Groups\&quot;. These differ from exclusive sets in that, within the group, many nodes can be activated. But the act of activating any node in the group will cause \&quot;opposing\&quot; nodes (nodes in groups that are not allowed to be activated at the same time as this group) to deactivate.  See DestinyTalentExclusiveGroup for more information on the details. This is an identifier for this node&#39;s group, if it is part of one.</value>
         [DataMember(Name="groupHash", EmitDefaultValue=false)]
-        public int GroupHash { get; set; }
+        public long GroupHash { get; set; }
 
         /// <summary>
         /// Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip. This is the hash identifier of the lore element to show, if there is one to be show.
         /// </summary>
         /// <value>Talent nodes can be associated with a piece of Lore, generally rendered in a tooltip. This is the hash identifier of the lore element to show, if there is one to be show.</value>
         [DataMember(Name="loreHash", EmitDefaultValue=false)]
-        public int LoreHash { get; set; }
+        public long LoreHash { get; set; }
 
         /// <summary>
         /// Comes from the talent grid node style: this identifier should be used to determine how to render the node in the UI.

@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **MergeMethod** | **int** | Optional icon for the statistic | [optional] 
 **UnitLabel** | **string** | Localized Unit Name for the stat. | [optional] 
 **Weight** | **int** | Weight assigned to this stat indicating its relative impressiveness. | [optional] 
-**MedalTierHash** | **int** | The tier associated with this medal - be it implicitly or explicitly. | [optional] 
+**MedalTierHash** | **long** | The tier associated with this medal - be it implicitly or explicitly. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

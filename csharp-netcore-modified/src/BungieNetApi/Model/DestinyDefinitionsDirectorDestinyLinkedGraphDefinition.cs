@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="linkedGraphId">linkedGraphId.</param>
         /// <param name="linkedGraphs">linkedGraphs.</param>
         /// <param name="overview">overview.</param>
-        public DestinyDefinitionsDirectorDestinyLinkedGraphDefinition(string description = default(string), string name = default(string), DestinyDefinitionsDestinyUnlockExpressionDefinition unlockExpression = default(DestinyDefinitionsDestinyUnlockExpressionDefinition), int linkedGraphId = default(int), List<DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition> linkedGraphs = default(List<DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition>), string overview = default(string))
+        public DestinyDefinitionsDirectorDestinyLinkedGraphDefinition(string description = default(string), string name = default(string), DestinyDefinitionsDestinyUnlockExpressionDefinition unlockExpression = default(DestinyDefinitionsDestinyUnlockExpressionDefinition), long linkedGraphId = default(long), List<DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition> linkedGraphs = default(List<DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition>), string overview = default(string))
         {
             this.Description = description;
             this.Name = name;
@@ -72,7 +72,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets LinkedGraphId
         /// </summary>
         [DataMember(Name="linkedGraphId", EmitDefaultValue=false)]
-        public int LinkedGraphId { get; set; }
+        public long LinkedGraphId { get; set; }
 
         /// <summary>
         /// Gets or Sets LinkedGraphs

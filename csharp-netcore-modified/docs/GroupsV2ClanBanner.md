@@ -3,13 +3,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DecalId** | **int** |  | [optional] 
-**DecalColorId** | **int** |  | [optional] 
-**DecalBackgroundColorId** | **int** |  | [optional] 
-**GonfalonId** | **int** |  | [optional] 
-**GonfalonColorId** | **int** |  | [optional] 
-**GonfalonDetailId** | **int** |  | [optional] 
-**GonfalonDetailColorId** | **int** |  | [optional] 
+**DecalId** | **long** |  | [optional] 
+**DecalColorId** | **long** |  | [optional] 
+**DecalBackgroundColorId** | **long** |  | [optional] 
+**GonfalonId** | **long** |  | [optional] 
+**GonfalonColorId** | **long** |  | [optional] 
+**GonfalonDetailId** | **long** |  | [optional] 
+**GonfalonDetailColorId** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

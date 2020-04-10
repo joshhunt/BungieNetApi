@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyActivityInsertionPointDefinition" /> class.
         /// </summary>
         /// <param name="phaseHash">A unique hash value representing the phase. This can be useful for, for example, comparing how different instances of Raids have phases in different orders!.</param>
-        public DestinyDefinitionsDestinyActivityInsertionPointDefinition(int phaseHash = default(int))
+        public DestinyDefinitionsDestinyActivityInsertionPointDefinition(long phaseHash = default(long))
         {
             this.PhaseHash = phaseHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A unique hash value representing the phase. This can be useful for, for example, comparing how different instances of Raids have phases in different orders!</value>
         [DataMember(Name="phaseHash", EmitDefaultValue=false)]
-        public int PhaseHash { get; set; }
+        public long PhaseHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="categoryHash">The hash identifier of the Plug Category to compare against the plug item&#39;s plug.plugCategoryHash.  Note that this does NOT relate to any Definition in itself, it is only used for comparison purposes..</param>
         /// <param name="categoryIdentifier">The string identifier for the category, which is here mostly for debug purposes..</param>
         /// <param name="reinitializationPossiblePlugHashes">The list of all plug items (DestinyInventoryItemDefinition) that the socket may randomly be populated with when reinitialized.  Which ones you should actually show are determined by the plug being inserted into the socket, and the socket’s type.  When you inspect the plug that could go into a Masterwork Socket, look up the socket type of the socket being inspected and find the DestinySocketTypeDefinition.  Then, look at the Plugs that can fit in that socket. Find the Whitelist in the DestinySocketTypeDefinition that matches the plug item’s categoryhash.  That whitelist entry will potentially have a new “reinitializationPossiblePlugHashes” property.If it does, that means we know what it will roll if you try to insert this plug into this socket..</param>
-        public DestinyDefinitionsSocketsDestinyPlugWhitelistEntryDefinition(int categoryHash = default(int), string categoryIdentifier = default(string), List<int> reinitializationPossiblePlugHashes = default(List<int>))
+        public DestinyDefinitionsSocketsDestinyPlugWhitelistEntryDefinition(long categoryHash = default(long), string categoryIdentifier = default(string), List<long> reinitializationPossiblePlugHashes = default(List<long>))
         {
             this.CategoryHash = categoryHash;
             this.CategoryIdentifier = categoryIdentifier;
@@ -49,7 +49,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the Plug Category to compare against the plug item&#39;s plug.plugCategoryHash.  Note that this does NOT relate to any Definition in itself, it is only used for comparison purposes.</value>
         [DataMember(Name="categoryHash", EmitDefaultValue=false)]
-        public int CategoryHash { get; set; }
+        public long CategoryHash { get; set; }
 
         /// <summary>
         /// The string identifier for the category, which is here mostly for debug purposes.
@@ -63,7 +63,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The list of all plug items (DestinyInventoryItemDefinition) that the socket may randomly be populated with when reinitialized.  Which ones you should actually show are determined by the plug being inserted into the socket, and the socket’s type.  When you inspect the plug that could go into a Masterwork Socket, look up the socket type of the socket being inspected and find the DestinySocketTypeDefinition.  Then, look at the Plugs that can fit in that socket. Find the Whitelist in the DestinySocketTypeDefinition that matches the plug item’s categoryhash.  That whitelist entry will potentially have a new “reinitializationPossiblePlugHashes” property.If it does, that means we know what it will roll if you try to insert this plug into this socket.</value>
         [DataMember(Name="reinitializationPossiblePlugHashes", EmitDefaultValue=false)]
-        public List<int> ReinitializationPossiblePlugHashes { get; set; }
+        public List<long> ReinitializationPossiblePlugHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

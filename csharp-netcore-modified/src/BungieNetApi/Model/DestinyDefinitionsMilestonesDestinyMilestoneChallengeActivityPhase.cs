@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase" /> class.
         /// </summary>
         /// <param name="phaseHash">The hash identifier of the activity&#39;s phase..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase(int phaseHash = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase(long phaseHash = default(long))
         {
             this.PhaseHash = phaseHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the activity&#39;s phase.</value>
         [DataMember(Name="phaseHash", EmitDefaultValue=false)]
-        public int PhaseHash { get; set; }
+        public long PhaseHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

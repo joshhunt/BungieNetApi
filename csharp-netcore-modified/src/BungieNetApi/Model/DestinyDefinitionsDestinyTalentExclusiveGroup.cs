@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="nodeHashes">A quick reference of the talent nodes that are part of this group, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash).</param>
         /// <param name="opposingGroupHashes">A quick reference of Groups whose nodes will be deactivated if any node in this group is activated..</param>
         /// <param name="opposingNodeHashes">A quick reference of Nodes that will be deactivated if any node in this group is activated, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash).</param>
-        public DestinyDefinitionsDestinyTalentExclusiveGroup(int groupHash = default(int), int loreHash = default(int), List<int> nodeHashes = default(List<int>), List<int> opposingGroupHashes = default(List<int>), List<int> opposingNodeHashes = default(List<int>))
+        public DestinyDefinitionsDestinyTalentExclusiveGroup(long groupHash = default(long), long loreHash = default(long), List<long> nodeHashes = default(List<long>), List<long> opposingGroupHashes = default(List<long>), List<long> opposingNodeHashes = default(List<long>))
         {
             this.GroupHash = groupHash;
             this.LoreHash = loreHash;
@@ -53,35 +53,35 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for this exclusive group. Only guaranteed unique within the talent grid, not globally.</value>
         [DataMember(Name="groupHash", EmitDefaultValue=false)]
-        public int GroupHash { get; set; }
+        public long GroupHash { get; set; }
 
         /// <summary>
         /// If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.
         /// </summary>
         /// <value>If this group has an associated piece of lore to show next to it, this will be the identifier for that DestinyLoreDefinition.</value>
         [DataMember(Name="loreHash", EmitDefaultValue=false)]
-        public int LoreHash { get; set; }
+        public long LoreHash { get; set; }
 
         /// <summary>
         /// A quick reference of the talent nodes that are part of this group, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
         /// </summary>
         /// <value>A quick reference of the talent nodes that are part of this group, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)</value>
         [DataMember(Name="nodeHashes", EmitDefaultValue=false)]
-        public List<int> NodeHashes { get; set; }
+        public List<long> NodeHashes { get; set; }
 
         /// <summary>
         /// A quick reference of Groups whose nodes will be deactivated if any node in this group is activated.
         /// </summary>
         /// <value>A quick reference of Groups whose nodes will be deactivated if any node in this group is activated.</value>
         [DataMember(Name="opposingGroupHashes", EmitDefaultValue=false)]
-        public List<int> OpposingGroupHashes { get; set; }
+        public List<long> OpposingGroupHashes { get; set; }
 
         /// <summary>
         /// A quick reference of Nodes that will be deactivated if any node in this group is activated, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)
         /// </summary>
         /// <value>A quick reference of Nodes that will be deactivated if any node in this group is activated, by their Talent Node hashes. (See DestinyTalentNodeDefinition.nodeHash)</value>
         [DataMember(Name="opposingNodeHashes", EmitDefaultValue=false)]
-        public List<int> OpposingNodeHashes { get; set; }
+        public List<long> OpposingNodeHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

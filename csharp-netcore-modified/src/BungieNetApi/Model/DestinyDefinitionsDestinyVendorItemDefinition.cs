@@ -59,7 +59,7 @@ namespace BungieNetApi.Model
         /// <param name="expirationTooltip">If this item can expire, this is the tooltip message to show with its expiration info..</param>
         /// <param name="redirectToSaleIndexes">If this is populated, the purchase of this item should redirect to purchasing these other items instead..</param>
         /// <param name="socketOverrides">socketOverrides.</param>
-        public DestinyDefinitionsDestinyVendorItemDefinition(int vendorItemIndex = default(int), int itemHash = default(int), int quantity = default(int), List<int> failureIndexes = default(List<int>), List<DestinyDefinitionsDestinyVendorItemQuantity> currencies = default(List<DestinyDefinitionsDestinyVendorItemQuantity>), int refundPolicy = default(int), int refundTimeLimit = default(int), List<DestinyDefinitionsDestinyItemCreationEntryLevelDefinition> creationLevels = default(List<DestinyDefinitionsDestinyItemCreationEntryLevelDefinition>), int displayCategoryIndex = default(int), int categoryIndex = default(int), int originalCategoryIndex = default(int), int minimumLevel = default(int), int maximumLevel = default(int), DestinyDefinitionsDestinyVendorSaleItemActionBlockDefinition action = default(DestinyDefinitionsDestinyVendorSaleItemActionBlockDefinition), string displayCategory = default(string), int inventoryBucketHash = default(int), int visibilityScope = default(int), int purchasableScope = default(int), int exclusivity = default(int), bool isOffer = default(bool), bool isCrm = default(bool), int sortValue = default(int), string expirationTooltip = default(string), List<int> redirectToSaleIndexes = default(List<int>), List<DestinyDefinitionsDestinyVendorItemSocketOverride> socketOverrides = default(List<DestinyDefinitionsDestinyVendorItemSocketOverride>))
+        public DestinyDefinitionsDestinyVendorItemDefinition(int vendorItemIndex = default(int), long itemHash = default(long), int quantity = default(int), List<int> failureIndexes = default(List<int>), List<DestinyDefinitionsDestinyVendorItemQuantity> currencies = default(List<DestinyDefinitionsDestinyVendorItemQuantity>), int refundPolicy = default(int), int refundTimeLimit = default(int), List<DestinyDefinitionsDestinyItemCreationEntryLevelDefinition> creationLevels = default(List<DestinyDefinitionsDestinyItemCreationEntryLevelDefinition>), int displayCategoryIndex = default(int), int categoryIndex = default(int), int originalCategoryIndex = default(int), int minimumLevel = default(int), int maximumLevel = default(int), DestinyDefinitionsDestinyVendorSaleItemActionBlockDefinition action = default(DestinyDefinitionsDestinyVendorSaleItemActionBlockDefinition), string displayCategory = default(string), long inventoryBucketHash = default(long), int visibilityScope = default(int), int purchasableScope = default(int), int exclusivity = default(int), bool isOffer = default(bool), bool isCrm = default(bool), int sortValue = default(int), string expirationTooltip = default(string), List<int> redirectToSaleIndexes = default(List<int>), List<DestinyDefinitionsDestinyVendorItemSocketOverride> socketOverrides = default(List<DestinyDefinitionsDestinyVendorItemSocketOverride>))
         {
             this.VendorItemIndex = vendorItemIndex;
             this.ItemHash = itemHash;
@@ -100,7 +100,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the item being sold (DestinyInventoryItemDefinition).  Note that a vendor can sell the same item in multiple ways, so don&#39;t assume that itemHash is a unique identifier for this entity.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// The amount you will recieve of the item described in itemHash if you make the purchase.
@@ -198,7 +198,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The inventory bucket into which this item will be placed upon purchase.</value>
         [DataMember(Name="inventoryBucketHash", EmitDefaultValue=false)]
-        public int InventoryBucketHash { get; set; }
+        public long InventoryBucketHash { get; set; }
 
         /// <summary>
         /// The most restrictive scope that determines whether the item is available in the Vendor&#39;s inventory. See DestinyGatingScope&#39;s documentation for more information.  This can be determined by Unlock gating, or by whether or not the item has purchase level requirements (minimumLevel and maximumLevel properties).

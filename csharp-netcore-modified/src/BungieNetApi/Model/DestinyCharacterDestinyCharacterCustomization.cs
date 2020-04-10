@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// <param name="hairIndex">hairIndex.</param>
         /// <param name="featureIndex">featureIndex.</param>
         /// <param name="decalIndex">decalIndex.</param>
-        public DestinyCharacterDestinyCharacterCustomization(int personality = default(int), int face = default(int), int skinColor = default(int), int lipColor = default(int), int eyeColor = default(int), List<int> hairColors = default(List<int>), List<int> featureColors = default(List<int>), int decalColor = default(int), bool wearHelmet = default(bool), int hairIndex = default(int), int featureIndex = default(int), int decalIndex = default(int))
+        public DestinyCharacterDestinyCharacterCustomization(long personality = default(long), long face = default(long), long skinColor = default(long), long lipColor = default(long), long eyeColor = default(long), List<long> hairColors = default(List<long>), List<long> featureColors = default(List<long>), long decalColor = default(long), bool wearHelmet = default(bool), int hairIndex = default(int), int featureIndex = default(int), int decalIndex = default(int))
         {
             this.Personality = personality;
             this.Face = face;
@@ -66,49 +66,49 @@ namespace BungieNetApi.Model
         /// Gets or Sets Personality
         /// </summary>
         [DataMember(Name="personality", EmitDefaultValue=false)]
-        public int Personality { get; set; }
+        public long Personality { get; set; }
 
         /// <summary>
         /// Gets or Sets Face
         /// </summary>
         [DataMember(Name="face", EmitDefaultValue=false)]
-        public int Face { get; set; }
+        public long Face { get; set; }
 
         /// <summary>
         /// Gets or Sets SkinColor
         /// </summary>
         [DataMember(Name="skinColor", EmitDefaultValue=false)]
-        public int SkinColor { get; set; }
+        public long SkinColor { get; set; }
 
         /// <summary>
         /// Gets or Sets LipColor
         /// </summary>
         [DataMember(Name="lipColor", EmitDefaultValue=false)]
-        public int LipColor { get; set; }
+        public long LipColor { get; set; }
 
         /// <summary>
         /// Gets or Sets EyeColor
         /// </summary>
         [DataMember(Name="eyeColor", EmitDefaultValue=false)]
-        public int EyeColor { get; set; }
+        public long EyeColor { get; set; }
 
         /// <summary>
         /// Gets or Sets HairColors
         /// </summary>
         [DataMember(Name="hairColors", EmitDefaultValue=false)]
-        public List<int> HairColors { get; set; }
+        public List<long> HairColors { get; set; }
 
         /// <summary>
         /// Gets or Sets FeatureColors
         /// </summary>
         [DataMember(Name="featureColors", EmitDefaultValue=false)]
-        public List<int> FeatureColors { get; set; }
+        public List<long> FeatureColors { get; set; }
 
         /// <summary>
         /// Gets or Sets DecalColor
         /// </summary>
         [DataMember(Name="decalColor", EmitDefaultValue=false)]
-        public int DecalColor { get; set; }
+        public long DecalColor { get; set; }
 
         /// <summary>
         /// Gets or Sets WearHelmet

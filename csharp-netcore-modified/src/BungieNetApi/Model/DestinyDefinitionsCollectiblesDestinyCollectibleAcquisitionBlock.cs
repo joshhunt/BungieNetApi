@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="acquireMaterialRequirementHash">acquireMaterialRequirementHash.</param>
         /// <param name="acquireTimestampUnlockValueHash">acquireTimestampUnlockValueHash.</param>
-        public DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock(int acquireMaterialRequirementHash = default(int), int acquireTimestampUnlockValueHash = default(int))
+        public DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock(long acquireMaterialRequirementHash = default(long), long acquireTimestampUnlockValueHash = default(long))
         {
             this.AcquireMaterialRequirementHash = acquireMaterialRequirementHash;
             this.AcquireTimestampUnlockValueHash = acquireTimestampUnlockValueHash;
@@ -46,13 +46,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets AcquireMaterialRequirementHash
         /// </summary>
         [DataMember(Name="acquireMaterialRequirementHash", EmitDefaultValue=false)]
-        public int AcquireMaterialRequirementHash { get; set; }
+        public long AcquireMaterialRequirementHash { get; set; }
 
         /// <summary>
         /// Gets or Sets AcquireTimestampUnlockValueHash
         /// </summary>
         [DataMember(Name="acquireTimestampUnlockValueHash", EmitDefaultValue=false)]
-        public int AcquireTimestampUnlockValueHash { get; set; }
+        public long AcquireTimestampUnlockValueHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

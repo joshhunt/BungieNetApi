@@ -43,7 +43,7 @@ namespace BungieNetApi.Model
         /// <param name="sortOrder">If this category sorts items in a nonstandard way, this will be the way we sort..</param>
         /// <param name="displayStyleHash">An indicator of how the category will be displayed in the UI. It&#39;s up to you to do something cool or interesting in response to this, or just to treat it as a normal category..</param>
         /// <param name="displayStyleIdentifier">An indicator of how the category will be displayed in the UI. It&#39;s up to you to do something cool or interesting in response to this, or just to treat it as a normal category..</param>
-        public DestinyDefinitionsDestinyDisplayCategoryDefinition(int index = default(int), string identifier = default(string), int displayCategoryHash = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), bool displayInBanner = default(bool), int progressionHash = default(int), int sortOrder = default(int), int displayStyleHash = default(int), string displayStyleIdentifier = default(string))
+        public DestinyDefinitionsDestinyDisplayCategoryDefinition(int index = default(int), string identifier = default(string), long displayCategoryHash = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), bool displayInBanner = default(bool), long progressionHash = default(long), int sortOrder = default(int), long displayStyleHash = default(long), string displayStyleIdentifier = default(string))
         {
             this.Index = index;
             this.Identifier = identifier;
@@ -73,7 +73,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets DisplayCategoryHash
         /// </summary>
         [DataMember(Name="displayCategoryHash", EmitDefaultValue=false)]
-        public int DisplayCategoryHash { get; set; }
+        public long DisplayCategoryHash { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayProperties
@@ -93,7 +93,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If it exists, this is the hash identifier of a DestinyProgressionDefinition that represents the progression to show on this display category.  Specific categories can now have thier own distinct progression, apparently. So that&#39;s cool.</value>
         [DataMember(Name="progressionHash", EmitDefaultValue=false)]
-        public int ProgressionHash { get; set; }
+        public long ProgressionHash { get; set; }
 
         /// <summary>
         /// If this category sorts items in a nonstandard way, this will be the way we sort.
@@ -107,7 +107,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>An indicator of how the category will be displayed in the UI. It&#39;s up to you to do something cool or interesting in response to this, or just to treat it as a normal category.</value>
         [DataMember(Name="displayStyleHash", EmitDefaultValue=false)]
-        public int DisplayStyleHash { get; set; }
+        public long DisplayStyleHash { get; set; }
 
         /// <summary>
         /// An indicator of how the category will be displayed in the UI. It&#39;s up to you to do something cool or interesting in response to this, or just to treat it as a normal category.

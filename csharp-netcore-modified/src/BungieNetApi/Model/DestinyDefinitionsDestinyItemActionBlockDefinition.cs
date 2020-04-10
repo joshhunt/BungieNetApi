@@ -48,7 +48,7 @@ namespace BungieNetApi.Model
         /// <param name="deleteOnAction">If true, the item is deleted when the action completes..</param>
         /// <param name="consumeEntireStack">If true, the entire stack is deleted when the action completes..</param>
         /// <param name="useOnAcquire">If true, this action will be performed as soon as you earn this item. Some rewards work this way, providing you a single item to pick up from a reward-granting vendor in-game and then immediately consuming itself to provide you multiple items..</param>
-        public DestinyDefinitionsDestinyItemActionBlockDefinition(string verbName = default(string), string verbDescription = default(string), bool isPositive = default(bool), string overlayScreenName = default(string), string overlayIcon = default(string), int requiredCooldownSeconds = default(int), List<DestinyDefinitionsDestinyItemActionRequiredItemDefinition> requiredItems = default(List<DestinyDefinitionsDestinyItemActionRequiredItemDefinition>), List<DestinyDefinitionsDestinyProgressionRewardDefinition> progressionRewards = default(List<DestinyDefinitionsDestinyProgressionRewardDefinition>), string actionTypeLabel = default(string), string requiredLocation = default(string), int requiredCooldownHash = default(int), bool deleteOnAction = default(bool), bool consumeEntireStack = default(bool), bool useOnAcquire = default(bool))
+        public DestinyDefinitionsDestinyItemActionBlockDefinition(string verbName = default(string), string verbDescription = default(string), bool isPositive = default(bool), string overlayScreenName = default(string), string overlayIcon = default(string), int requiredCooldownSeconds = default(int), List<DestinyDefinitionsDestinyItemActionRequiredItemDefinition> requiredItems = default(List<DestinyDefinitionsDestinyItemActionRequiredItemDefinition>), List<DestinyDefinitionsDestinyProgressionRewardDefinition> progressionRewards = default(List<DestinyDefinitionsDestinyProgressionRewardDefinition>), string actionTypeLabel = default(string), string requiredLocation = default(string), long requiredCooldownHash = default(long), bool deleteOnAction = default(bool), bool consumeEntireStack = default(bool), bool useOnAcquire = default(bool))
         {
             this.VerbName = verbName;
             this.VerbDescription = verbDescription;
@@ -141,7 +141,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier hash for the Cooldown associated with this action. We have not pulled this data yet for you to have more data to use for cooldowns.</value>
         [DataMember(Name="requiredCooldownHash", EmitDefaultValue=false)]
-        public int RequiredCooldownHash { get; set; }
+        public long RequiredCooldownHash { get; set; }
 
         /// <summary>
         /// If true, the item is deleted when the action completes.

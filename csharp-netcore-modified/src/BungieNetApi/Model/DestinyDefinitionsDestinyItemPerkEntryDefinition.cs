@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="requirementDisplayString">If this perk is not active, this is the string to show for why it&#39;s not providing its benefits..</param>
         /// <param name="perkHash">A hash identifier for the DestinySandboxPerkDefinition being provided on the item..</param>
         /// <param name="perkVisibility">Indicates whether this perk should be shown, or if it should be shown disabled..</param>
-        public DestinyDefinitionsDestinyItemPerkEntryDefinition(string requirementDisplayString = default(string), int perkHash = default(int), int perkVisibility = default(int))
+        public DestinyDefinitionsDestinyItemPerkEntryDefinition(string requirementDisplayString = default(string), long perkHash = default(long), int perkVisibility = default(int))
         {
             this.RequirementDisplayString = requirementDisplayString;
             this.PerkHash = perkHash;
@@ -56,7 +56,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A hash identifier for the DestinySandboxPerkDefinition being provided on the item.</value>
         [DataMember(Name="perkHash", EmitDefaultValue=false)]
-        public int PerkHash { get; set; }
+        public long PerkHash { get; set; }
 
         /// <summary>
         /// Indicates whether this perk should be shown, or if it should be shown disabled.

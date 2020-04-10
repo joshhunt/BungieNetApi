@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="obscuredOverrideItemHash">obscuredOverrideItemHash.</param>
         /// <param name="requirements">requirements.</param>
-        public DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock(int obscuredOverrideItemHash = default(int), DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements = default(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock))
+        public DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock(long obscuredOverrideItemHash = default(long), DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements = default(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock))
         {
             this.ObscuredOverrideItemHash = obscuredOverrideItemHash;
             this.Requirements = requirements;
@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ObscuredOverrideItemHash
         /// </summary>
         [DataMember(Name="obscuredOverrideItemHash", EmitDefaultValue=false)]
-        public int ObscuredOverrideItemHash { get; set; }
+        public long ObscuredOverrideItemHash { get; set; }
 
         /// <summary>
         /// Gets or Sets Requirements

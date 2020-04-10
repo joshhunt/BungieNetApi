@@ -4,8 +4,8 @@ Nodes on a graph can be visually connected: this appears to be the information a
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceNodeHash** | **int** |  | [optional] 
-**DestNodeHash** | **int** |  | [optional] 
+**SourceNodeHash** | **long** |  | [optional] 
+**DestNodeHash** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

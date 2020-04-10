@@ -43,7 +43,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsEnergyTypesDestinyEnergyTypeDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string transparentIconPath = default(string), bool showIcon = default(bool), int enumValue = default(int), int capacityStatHash = default(int), int costStatHash = default(int), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsEnergyTypesDestinyEnergyTypeDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string transparentIconPath = default(string), bool showIcon = default(bool), int enumValue = default(int), long capacityStatHash = default(long), long costStatHash = default(long), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.TransparentIconPath = transparentIconPath;
@@ -89,21 +89,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this Energy Type can be used for determining the Type of Energy that an item can consume, this is the hash for the DestinyInvestmentStatDefinition that represents the stat which holds the Capacity for that energy type. (Note that this is optional because \&quot;Any\&quot; is a valid cost, but not valid for Capacity - an Armor must have a specific Energy Type for determining the energy type that the Armor is restricted to use)</value>
         [DataMember(Name="capacityStatHash", EmitDefaultValue=false)]
-        public int CapacityStatHash { get; set; }
+        public long CapacityStatHash { get; set; }
 
         /// <summary>
         /// If this Energy Type can be used as a cost to pay for socketing Armor 2.0 items, this is the hash for the DestinyInvestmentStatDefinition that stores the plug&#39;s raw cost.
         /// </summary>
         /// <value>If this Energy Type can be used as a cost to pay for socketing Armor 2.0 items, this is the hash for the DestinyInvestmentStatDefinition that stores the plug&#39;s raw cost.</value>
         [DataMember(Name="costStatHash", EmitDefaultValue=false)]
-        public int CostStatHash { get; set; }
+        public long CostStatHash { get; set; }
 
         /// <summary>
         /// The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

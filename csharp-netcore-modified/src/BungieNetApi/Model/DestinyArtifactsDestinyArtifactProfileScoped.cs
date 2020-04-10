@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="pointsAcquired">pointsAcquired.</param>
         /// <param name="powerBonusProgression">powerBonusProgression.</param>
         /// <param name="powerBonus">powerBonus.</param>
-        public DestinyArtifactsDestinyArtifactProfileScoped(int artifactHash = default(int), DestinyDestinyProgression pointProgression = default(DestinyDestinyProgression), int pointsAcquired = default(int), DestinyDestinyProgression powerBonusProgression = default(DestinyDestinyProgression), int powerBonus = default(int))
+        public DestinyArtifactsDestinyArtifactProfileScoped(long artifactHash = default(long), DestinyDestinyProgression pointProgression = default(DestinyDestinyProgression), int pointsAcquired = default(int), DestinyDestinyProgression powerBonusProgression = default(DestinyDestinyProgression), int powerBonus = default(int))
         {
             this.ArtifactHash = artifactHash;
             this.PointProgression = pointProgression;
@@ -52,7 +52,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ArtifactHash
         /// </summary>
         [DataMember(Name="artifactHash", EmitDefaultValue=false)]
-        public int ArtifactHash { get; set; }
+        public long ArtifactHash { get; set; }
 
         /// <summary>
         /// Gets or Sets PointProgression

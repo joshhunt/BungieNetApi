@@ -42,7 +42,7 @@ namespace BungieNetApi.Model
         /// <param name="sequenceNumber">The identifier of this receipt..</param>
         /// <param name="timeToExpiration">The seconds since epoch at which this receipt is rendered invalid..</param>
         /// <param name="expiresOn">The date at which this receipt is rendered invalid..</param>
-        public DestinyVendorsDestinyVendorReceipt(List<DestinyDestinyItemQuantity> currencyPaid = default(List<DestinyDestinyItemQuantity>), DestinyDestinyItemQuantity itemReceived = default(DestinyDestinyItemQuantity), int licenseUnlockHash = default(int), long purchasedByCharacterId = default(long), int refundPolicy = default(int), int sequenceNumber = default(int), long timeToExpiration = default(long), DateTime expiresOn = default(DateTime))
+        public DestinyVendorsDestinyVendorReceipt(List<DestinyDestinyItemQuantity> currencyPaid = default(List<DestinyDestinyItemQuantity>), DestinyDestinyItemQuantity itemReceived = default(DestinyDestinyItemQuantity), long licenseUnlockHash = default(long), long purchasedByCharacterId = default(long), int refundPolicy = default(int), int sequenceNumber = default(int), long timeToExpiration = default(long), DateTime expiresOn = default(DateTime))
         {
             this.CurrencyPaid = currencyPaid;
             this.ItemReceived = itemReceived;
@@ -73,7 +73,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unlock flag used to determine whether you still have the purchased item.</value>
         [DataMember(Name="licenseUnlockHash", EmitDefaultValue=false)]
-        public int LicenseUnlockHash { get; set; }
+        public long LicenseUnlockHash { get; set; }
 
         /// <summary>
         /// The ID of the character who made the purchase.

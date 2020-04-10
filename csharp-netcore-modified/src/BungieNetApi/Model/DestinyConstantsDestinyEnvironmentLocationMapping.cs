@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="itemHash">If this is populated, it is the item that you must possess for this location to be active because of this mapping. (theoretically, a location can have multiple mappings, and some might require an item while others don&#39;t).</param>
         /// <param name="objectiveHash">If this is populated, this is an objective related to the location..</param>
         /// <param name="activityHash">If this is populated, this is the activity you have to be playing in order to see this location appear because of this mapping. (theoretically, a location can have multiple mappings, and some might require you to be in a specific activity when others don&#39;t).</param>
-        public DestinyConstantsDestinyEnvironmentLocationMapping(int locationHash = default(int), string activationSource = default(string), int itemHash = default(int), int objectiveHash = default(int), int activityHash = default(int))
+        public DestinyConstantsDestinyEnvironmentLocationMapping(long locationHash = default(long), string activationSource = default(string), long itemHash = default(long), long objectiveHash = default(long), long activityHash = default(long))
         {
             this.LocationHash = locationHash;
             this.ActivationSource = activationSource;
@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The location that is revealed on the director by this mapping.</value>
         [DataMember(Name="locationHash", EmitDefaultValue=false)]
-        public int LocationHash { get; set; }
+        public long LocationHash { get; set; }
 
         /// <summary>
         /// A hint that the UI uses to figure out how this location is activated by the player.
@@ -67,21 +67,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this is populated, it is the item that you must possess for this location to be active because of this mapping. (theoretically, a location can have multiple mappings, and some might require an item while others don&#39;t)</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If this is populated, this is an objective related to the location.
         /// </summary>
         /// <value>If this is populated, this is an objective related to the location.</value>
         [DataMember(Name="objectiveHash", EmitDefaultValue=false)]
-        public int ObjectiveHash { get; set; }
+        public long ObjectiveHash { get; set; }
 
         /// <summary>
         /// If this is populated, this is the activity you have to be playing in order to see this location appear because of this mapping. (theoretically, a location can have multiple mappings, and some might require you to be in a specific activity when others don&#39;t)
         /// </summary>
         /// <value>If this is populated, this is the activity you have to be playing in order to see this location appear because of this mapping. (theoretically, a location can have multiple mappings, and some might require you to be in a specific activity when others don&#39;t)</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

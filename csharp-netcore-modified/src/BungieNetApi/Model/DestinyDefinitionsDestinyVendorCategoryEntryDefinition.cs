@@ -50,7 +50,7 @@ namespace BungieNetApi.Model
         /// <param name="isDisplayOnly">If true, this category only displays items: you can&#39;t purchase anything in them..</param>
         /// <param name="resetIntervalMinutesOverride">resetIntervalMinutesOverride.</param>
         /// <param name="resetOffsetMinutesOverride">resetOffsetMinutesOverride.</param>
-        public DestinyDefinitionsDestinyVendorCategoryEntryDefinition(int categoryIndex = default(int), int sortValue = default(int), int categoryHash = default(int), int quantityAvailable = default(int), bool showUnavailableItems = default(bool), bool hideIfNoCurrency = default(bool), bool hideFromRegularPurchase = default(bool), string buyStringOverride = default(string), string disabledDescription = default(string), string displayTitle = default(string), DestinyDefinitionsDestinyVendorCategoryOverlayDefinition overlay = default(DestinyDefinitionsDestinyVendorCategoryOverlayDefinition), List<int> vendorItemIndexes = default(List<int>), bool isPreview = default(bool), bool isDisplayOnly = default(bool), int resetIntervalMinutesOverride = default(int), int resetOffsetMinutesOverride = default(int))
+        public DestinyDefinitionsDestinyVendorCategoryEntryDefinition(int categoryIndex = default(int), int sortValue = default(int), long categoryHash = default(long), int quantityAvailable = default(int), bool showUnavailableItems = default(bool), bool hideIfNoCurrency = default(bool), bool hideFromRegularPurchase = default(bool), string buyStringOverride = default(string), string disabledDescription = default(string), string displayTitle = default(string), DestinyDefinitionsDestinyVendorCategoryOverlayDefinition overlay = default(DestinyDefinitionsDestinyVendorCategoryOverlayDefinition), List<int> vendorItemIndexes = default(List<int>), bool isPreview = default(bool), bool isDisplayOnly = default(bool), int resetIntervalMinutesOverride = default(int), int resetOffsetMinutesOverride = default(int))
         {
             this.CategoryIndex = categoryIndex;
             this.SortValue = sortValue;
@@ -89,7 +89,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hashed identifier for the category.</value>
         [DataMember(Name="categoryHash", EmitDefaultValue=false)]
-        public int CategoryHash { get; set; }
+        public long CategoryHash { get; set; }
 
         /// <summary>
         /// The amount of items that will be available when this category is shown.

@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="activityHash">activityHash.</param>
         /// <param name="status">status.</param>
-        public TrendingTrendingEntryDestinyActivity(int activityHash = default(int), DestinyActivitiesDestinyPublicActivityStatus status = default(DestinyActivitiesDestinyPublicActivityStatus))
+        public TrendingTrendingEntryDestinyActivity(long activityHash = default(long), DestinyActivitiesDestinyPublicActivityStatus status = default(DestinyActivitiesDestinyPublicActivityStatus))
         {
             this.ActivityHash = activityHash;
             this.Status = status;
@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ActivityHash
         /// </summary>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Gets or Sets Status

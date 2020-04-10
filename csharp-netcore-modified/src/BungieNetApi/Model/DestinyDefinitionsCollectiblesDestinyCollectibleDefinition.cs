@@ -49,7 +49,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int scope = default(int), string sourceString = default(string), int sourceHash = default(int), int itemHash = default(int), DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock acquisitionInfo = default(DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock), DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock stateInfo = default(DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock), DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo = default(DestinyDefinitionsPresentationDestinyPresentationChildBlock), int presentationNodeType = default(int), List<string> traitIds = default(List<string>), List<int> traitHashes = default(List<int>), List<int> parentNodeHashes = default(List<int>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int scope = default(int), string sourceString = default(string), long sourceHash = default(long), long itemHash = default(long), DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock acquisitionInfo = default(DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock), DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock stateInfo = default(DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock), DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo = default(DestinyDefinitionsPresentationDestinyPresentationChildBlock), int presentationNodeType = default(int), List<string> traitIds = default(List<string>), List<long> traitHashes = default(List<long>), List<long> parentNodeHashes = default(List<long>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.Scope = scope;
@@ -93,13 +93,13 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>This is a hash identifier we are building on the BNet side in an attempt to let people group collectibles by similar sources.  I can&#39;t promise that it&#39;s going to be 100% accurate, but if the designers were consistent in assigning the same source strings to items with the same sources, it *ought to* be. No promises though.  This hash also doesn&#39;t relate to an actual definition, just to note: we&#39;ve got nothing useful other than the source string for this data.</value>
         [DataMember(Name="sourceHash", EmitDefaultValue=false)]
-        public int SourceHash { get; set; }
+        public long SourceHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ItemHash
         /// </summary>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// Gets or Sets AcquisitionInfo
@@ -135,21 +135,21 @@ namespace BungieNetApi.Model
         /// Gets or Sets TraitHashes
         /// </summary>
         [DataMember(Name="traitHashes", EmitDefaultValue=false)]
-        public List<int> TraitHashes { get; set; }
+        public List<long> TraitHashes { get; set; }
 
         /// <summary>
         /// A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
         /// </summary>
         /// <value>A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.</value>
         [DataMember(Name="parentNodeHashes", EmitDefaultValue=false)]
-        public List<int> ParentNodeHashes { get; set; }
+        public List<long> ParentNodeHashes { get; set; }
 
         /// <summary>
         /// The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

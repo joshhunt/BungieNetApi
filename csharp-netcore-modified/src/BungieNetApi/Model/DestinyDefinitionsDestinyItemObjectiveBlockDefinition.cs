@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// <param name="questTypeHash">A hashed value for the questTypeIdentifier, because apparently I like to be redundant..</param>
         /// <param name="perObjectiveDisplayProperties">One entry per Objective on the item, it will have related display information..</param>
         /// <param name="displayAsStatTracker">displayAsStatTracker.</param>
-        public DestinyDefinitionsDestinyItemObjectiveBlockDefinition(List<int> objectiveHashes = default(List<int>), List<int> displayActivityHashes = default(List<int>), bool requireFullObjectiveCompletion = default(bool), int questlineItemHash = default(int), string narrative = default(string), string objectiveVerbName = default(string), string questTypeIdentifier = default(string), int questTypeHash = default(int), List<DestinyDefinitionsDestinyObjectiveDisplayProperties> perObjectiveDisplayProperties = default(List<DestinyDefinitionsDestinyObjectiveDisplayProperties>), bool displayAsStatTracker = default(bool))
+        public DestinyDefinitionsDestinyItemObjectiveBlockDefinition(List<long> objectiveHashes = default(List<long>), List<long> displayActivityHashes = default(List<long>), bool requireFullObjectiveCompletion = default(bool), long questlineItemHash = default(long), string narrative = default(string), string objectiveVerbName = default(string), string questTypeIdentifier = default(string), long questTypeHash = default(long), List<DestinyDefinitionsDestinyObjectiveDisplayProperties> perObjectiveDisplayProperties = default(List<DestinyDefinitionsDestinyObjectiveDisplayProperties>), bool displayAsStatTracker = default(bool))
         {
             this.ObjectiveHashes = objectiveHashes;
             this.DisplayActivityHashes = displayActivityHashes;
@@ -63,14 +63,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hashes to Objectives (DestinyObjectiveDefinition) that are part of this Quest Step, in the order that they should be rendered.</value>
         [DataMember(Name="objectiveHashes", EmitDefaultValue=false)]
-        public List<int> ObjectiveHashes { get; set; }
+        public List<long> ObjectiveHashes { get; set; }
 
         /// <summary>
         /// For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).  Rendered somewhat obsolete by perObjectiveDisplayProperties, which currently has much the same information but may end up with more info in the future.
         /// </summary>
         /// <value>For every entry in objectiveHashes, there is a corresponding entry in this array at the same index. If the objective is meant to be associated with a specific DestinyActivityDefinition, there will be a valid hash at that index. Otherwise, it will be invalid (0).  Rendered somewhat obsolete by perObjectiveDisplayProperties, which currently has much the same information but may end up with more info in the future.</value>
         [DataMember(Name="displayActivityHashes", EmitDefaultValue=false)]
-        public List<int> DisplayActivityHashes { get; set; }
+        public List<long> DisplayActivityHashes { get; set; }
 
         /// <summary>
         /// If True, all objectives must be completed for the step to be completed. If False, any one objective can be completed for the step to be completed.
@@ -84,7 +84,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the DestinyInventoryItemDefinition representing the Quest to which this Quest Step belongs.</value>
         [DataMember(Name="questlineItemHash", EmitDefaultValue=false)]
-        public int QuestlineItemHash { get; set; }
+        public long QuestlineItemHash { get; set; }
 
         /// <summary>
         /// The localized string for narrative text related to this quest step, if any.
@@ -112,7 +112,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A hashed value for the questTypeIdentifier, because apparently I like to be redundant.</value>
         [DataMember(Name="questTypeHash", EmitDefaultValue=false)]
-        public int QuestTypeHash { get; set; }
+        public long QuestTypeHash { get; set; }
 
         /// <summary>
         /// One entry per Objective on the item, it will have related display information.

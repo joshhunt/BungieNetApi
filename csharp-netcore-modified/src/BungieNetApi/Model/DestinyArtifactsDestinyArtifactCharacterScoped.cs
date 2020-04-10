@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="pointsUsed">pointsUsed.</param>
         /// <param name="resetCount">resetCount.</param>
         /// <param name="tiers">tiers.</param>
-        public DestinyArtifactsDestinyArtifactCharacterScoped(int artifactHash = default(int), int pointsUsed = default(int), int resetCount = default(int), List<DestinyArtifactsDestinyArtifactTier> tiers = default(List<DestinyArtifactsDestinyArtifactTier>))
+        public DestinyArtifactsDestinyArtifactCharacterScoped(long artifactHash = default(long), int pointsUsed = default(int), int resetCount = default(int), List<DestinyArtifactsDestinyArtifactTier> tiers = default(List<DestinyArtifactsDestinyArtifactTier>))
         {
             this.ArtifactHash = artifactHash;
             this.PointsUsed = pointsUsed;
@@ -50,7 +50,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ArtifactHash
         /// </summary>
         [DataMember(Name="artifactHash", EmitDefaultValue=false)]
-        public int ArtifactHash { get; set; }
+        public long ArtifactHash { get; set; }
 
         /// <summary>
         /// Gets or Sets PointsUsed

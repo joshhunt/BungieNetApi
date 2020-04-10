@@ -48,7 +48,7 @@ namespace BungieNetApi.Model
         /// <param name="currentResetCount">The number of resets of this progression you&#39;ve executed this season, if applicable to this progression..</param>
         /// <param name="seasonResets">Information about historical resets of this progression, if there is any data for it..</param>
         /// <param name="rewardItemStates">Information about historical rewards for this progression, if there is any data for it..</param>
-        public DestinyDestinyProgression(int progressionHash = default(int), int dailyProgress = default(int), int dailyLimit = default(int), int weeklyProgress = default(int), int weeklyLimit = default(int), int currentProgress = default(int), int level = default(int), int levelCap = default(int), int stepIndex = default(int), int progressToNextLevel = default(int), int nextLevelAt = default(int), int currentResetCount = default(int), List<DestinyDestinyProgressionResetEntry> seasonResets = default(List<DestinyDestinyProgressionResetEntry>), List<int> rewardItemStates = default(List<int>))
+        public DestinyDestinyProgression(long progressionHash = default(long), int dailyProgress = default(int), int dailyLimit = default(int), int weeklyProgress = default(int), int weeklyLimit = default(int), int currentProgress = default(int), int level = default(int), int levelCap = default(int), int stepIndex = default(int), int progressToNextLevel = default(int), int nextLevelAt = default(int), int currentResetCount = default(int), List<DestinyDestinyProgressionResetEntry> seasonResets = default(List<DestinyDestinyProgressionResetEntry>), List<int> rewardItemStates = default(List<int>))
         {
             this.ProgressionHash = progressionHash;
             this.DailyProgress = dailyProgress;
@@ -71,7 +71,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data.</value>
         [DataMember(Name="progressionHash", EmitDefaultValue=false)]
-        public int ProgressionHash { get; set; }
+        public long ProgressionHash { get; set; }
 
         /// <summary>
         /// The amount of progress earned today for this progression.

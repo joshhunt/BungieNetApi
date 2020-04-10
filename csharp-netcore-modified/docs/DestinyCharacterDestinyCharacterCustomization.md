@@ -4,14 +4,14 @@ Raw data about the customization options chosen for a character's face and appea
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Personality** | **int** |  | [optional] 
-**Face** | **int** |  | [optional] 
-**SkinColor** | **int** |  | [optional] 
-**LipColor** | **int** |  | [optional] 
-**EyeColor** | **int** |  | [optional] 
-**HairColors** | **List&lt;int&gt;** |  | [optional] 
-**FeatureColors** | **List&lt;int&gt;** |  | [optional] 
-**DecalColor** | **int** |  | [optional] 
+**Personality** | **long** |  | [optional] 
+**Face** | **long** |  | [optional] 
+**SkinColor** | **long** |  | [optional] 
+**LipColor** | **long** |  | [optional] 
+**EyeColor** | **long** |  | [optional] 
+**HairColors** | **List&lt;long&gt;** |  | [optional] 
+**FeatureColors** | **List&lt;long&gt;** |  | [optional] 
+**DecalColor** | **long** |  | [optional] 
 **WearHelmet** | **bool** |  | [optional] 
 **HairIndex** | **int** |  | [optional] 
 **FeatureIndex** | **int** |  | [optional] 

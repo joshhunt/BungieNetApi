@@ -754,7 +754,7 @@ No authorization required
 
 <a name="destiny2getcollectiblenodedetails"></a>
 # **Destiny2GetCollectibleNodeDetails**
-> InlineResponse20044 Destiny2GetCollectibleNodeDetails (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = null)
+> InlineResponse20044 Destiny2GetCollectibleNodeDetails (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = null)
 
 
 
@@ -778,7 +778,7 @@ namespace Example
             config.BasePath = "https://www.bungie.net/Platform";
             var apiInstance = new Destiny2Api(config);
             var characterId = 789;  // long | The Destiny Character ID of the character for whom we're getting collectible detail info.
-            var collectiblePresentationNodeHash = 56;  // int | The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
+            var collectiblePresentationNodeHash = 789;  // long | The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node.
             var destinyMembershipId = 789;  // long | Destiny membership ID of another user. You may be denied.
             var membershipType = 56;  // int | A valid non-BungieNet membership type.
             var components = new List<int>(); // List<int> | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional) 
@@ -804,7 +804,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **long**| The Destiny Character ID of the character for whom we&#39;re getting collectible detail info. | 
- **collectiblePresentationNodeHash** | **int**| The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. | 
+ **collectiblePresentationNodeHash** | **long**| The hash identifier of the Presentation Node for whom we should return collectible details. Details will only be returned for collectibles that are direct descendants of this node. | 
  **destinyMembershipId** | **long**| Destiny membership ID of another user. You may be denied. | 
  **membershipType** | **int**| A valid non-BungieNet membership type. | 
  **components** | [**List&lt;int&gt;**](int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional] 
@@ -904,7 +904,7 @@ No authorization required
 
 <a name="destiny2getdestinyentitydefinition"></a>
 # **Destiny2GetDestinyEntityDefinition**
-> InlineResponse20034 Destiny2GetDestinyEntityDefinition (string entityType, int hashIdentifier)
+> InlineResponse20034 Destiny2GetDestinyEntityDefinition (string entityType, long hashIdentifier)
 
 
 
@@ -928,7 +928,7 @@ namespace Example
             config.BasePath = "https://www.bungie.net/Platform";
             var apiInstance = new Destiny2Api(config);
             var entityType = entityType_example;  // string | The type of entity for whom you would like results. These correspond to the entity's definition contract name. For instance, if you are looking for items, this property should be 'DestinyInventoryItemDefinition'. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.
-            var hashIdentifier = 56;  // int | The hash identifier for the specific Entity you want returned.
+            var hashIdentifier = 789;  // long | The hash identifier for the specific Entity you want returned.
 
             try
             {
@@ -951,7 +951,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **entityType** | **string**| The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation. | 
- **hashIdentifier** | **int**| The hash identifier for the specific Entity you want returned. | 
+ **hashIdentifier** | **long**| The hash identifier for the specific Entity you want returned. | 
 
 ### Return type
 
@@ -1707,7 +1707,7 @@ No authorization required
 
 <a name="destiny2getpublicmilestonecontent"></a>
 # **Destiny2GetPublicMilestoneContent**
-> InlineResponse20057 Destiny2GetPublicMilestoneContent (int milestoneHash)
+> InlineResponse20057 Destiny2GetPublicMilestoneContent (long milestoneHash)
 
 
 
@@ -1730,7 +1730,7 @@ namespace Example
             Configuration config = new Configuration();
             config.BasePath = "https://www.bungie.net/Platform";
             var apiInstance = new Destiny2Api(config);
-            var milestoneHash = 56;  // int | The identifier for the milestone to be returned.
+            var milestoneHash = 789;  // long | The identifier for the milestone to be returned.
 
             try
             {
@@ -1752,7 +1752,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **milestoneHash** | **int**| The identifier for the milestone to be returned. | 
+ **milestoneHash** | **long**| The identifier for the milestone to be returned. | 
 
 ### Return type
 
@@ -1983,7 +1983,7 @@ No authorization required
 
 <a name="destiny2getvendor"></a>
 # **Destiny2GetVendor**
-> InlineResponse20042 Destiny2GetVendor (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = null)
+> InlineResponse20042 Destiny2GetVendor (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = null)
 
 
 
@@ -2009,7 +2009,7 @@ namespace Example
             var characterId = 789;  // long | The Destiny Character ID of the character for whom we're getting vendor info.
             var destinyMembershipId = 789;  // long | Destiny membership ID of another user. You may be denied.
             var membershipType = 56;  // int | A valid non-BungieNet membership type.
-            var vendorHash = 56;  // int | The Hash identifier of the Vendor to be returned.
+            var vendorHash = 789;  // long | The Hash identifier of the Vendor to be returned.
             var components = new List<int>(); // List<int> | A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional) 
 
             try
@@ -2035,7 +2035,7 @@ Name | Type | Description  | Notes
  **characterId** | **long**| The Destiny Character ID of the character for whom we&#39;re getting vendor info. | 
  **destinyMembershipId** | **long**| Destiny membership ID of another user. You may be denied. | 
  **membershipType** | **int**| A valid non-BungieNet membership type. | 
- **vendorHash** | **int**| The Hash identifier of the Vendor to be returned. | 
+ **vendorHash** | **long**| The Hash identifier of the Vendor to be returned. | 
  **components** | [**List&lt;int&gt;**](int.md)| A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. | [optional] 
 
 ### Return type

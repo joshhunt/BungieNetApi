@@ -41,7 +41,7 @@ namespace BungieNetApi.Model
         /// <param name="attributes">These are custom attributes on the equippability of the item.  For now, this can only be \&quot;equip on acquire\&quot;, which would mean that the item will be automatically equipped as soon as you pick it up..</param>
         /// <param name="ammoType">Ammo type used by a weapon is no longer determined by the bucket in which it is contained. If the item has an ammo type - i.e. if it is a weapon - this will be the type of ammunition expected..</param>
         /// <param name="displayStrings">These are strings that represent the possible Game/Account/Character state failure conditions that can occur when trying to equip the item. They match up one-to-one with requiredUnlockExpressions..</param>
-        public DestinyDefinitionsDestinyEquippingBlockDefinition(int gearsetItemHash = default(int), string uniqueLabel = default(string), int uniqueLabelHash = default(int), int equipmentSlotTypeHash = default(int), int attributes = default(int), int ammoType = default(int), List<string> displayStrings = default(List<string>))
+        public DestinyDefinitionsDestinyEquippingBlockDefinition(long gearsetItemHash = default(long), string uniqueLabel = default(string), long uniqueLabelHash = default(long), long equipmentSlotTypeHash = default(long), int attributes = default(int), int ammoType = default(int), List<string> displayStrings = default(List<string>))
         {
             this.GearsetItemHash = gearsetItemHash;
             this.UniqueLabel = uniqueLabel;
@@ -57,7 +57,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the item is part of a gearset, this is a reference to that gearset item.</value>
         [DataMember(Name="gearsetItemHash", EmitDefaultValue=false)]
-        public int GearsetItemHash { get; set; }
+        public long GearsetItemHash { get; set; }
 
         /// <summary>
         /// If defined, this is the label used to check if the item has other items of matching types already equipped.   For instance, when you aren&#39;t allowed to equip more than one Exotic Weapon, that&#39;s because all exotic weapons have identical uniqueLabels and the game checks the to-be-equipped item&#39;s uniqueLabel vs. all other already equipped items (other than the item in the slot that&#39;s about to be occupied).
@@ -71,14 +71,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of that unique label. Does not point to a specific definition.</value>
         [DataMember(Name="uniqueLabelHash", EmitDefaultValue=false)]
-        public int UniqueLabelHash { get; set; }
+        public long UniqueLabelHash { get; set; }
 
         /// <summary>
         /// An equipped item *must* be equipped in an Equipment Slot. This is the hash identifier of the DestinyEquipmentSlotDefinition into which it must be equipped.
         /// </summary>
         /// <value>An equipped item *must* be equipped in an Equipment Slot. This is the hash identifier of the DestinyEquipmentSlotDefinition into which it must be equipped.</value>
         [DataMember(Name="equipmentSlotTypeHash", EmitDefaultValue=false)]
-        public int EquipmentSlotTypeHash { get; set; }
+        public long EquipmentSlotTypeHash { get; set; }
 
         /// <summary>
         /// These are custom attributes on the equippability of the item.  For now, this can only be \&quot;equip on acquire\&quot;, which would mean that the item will be automatically equipped as soon as you pick it up.

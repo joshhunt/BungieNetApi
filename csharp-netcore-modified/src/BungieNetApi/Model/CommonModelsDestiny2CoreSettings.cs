@@ -48,7 +48,7 @@ namespace BungieNetApi.Model
         /// <param name="currentSeasonHash">currentSeasonHash.</param>
         /// <param name="futureSeasonHashes">futureSeasonHashes.</param>
         /// <param name="pastSeasonHashes">pastSeasonHashes.</param>
-        public CommonModelsDestiny2CoreSettings(int collectionRootNode = default(int), int badgesRootNode = default(int), int recordsRootNode = default(int), int medalsRootNode = default(int), int metricsRootNode = default(int), List<int> currentRankProgressionHashes = default(List<int>), string undiscoveredCollectibleImage = default(string), string ammoTypeHeavyIcon = default(string), string ammoTypeSpecialIcon = default(string), string ammoTypePrimaryIcon = default(string), int currentSeasonalArtifactHash = default(int), int currentSeasonHash = default(int), List<int> futureSeasonHashes = default(List<int>), List<int> pastSeasonHashes = default(List<int>))
+        public CommonModelsDestiny2CoreSettings(long collectionRootNode = default(long), long badgesRootNode = default(long), long recordsRootNode = default(long), long medalsRootNode = default(long), long metricsRootNode = default(long), List<long> currentRankProgressionHashes = default(List<long>), string undiscoveredCollectibleImage = default(string), string ammoTypeHeavyIcon = default(string), string ammoTypeSpecialIcon = default(string), string ammoTypePrimaryIcon = default(string), long currentSeasonalArtifactHash = default(long), long currentSeasonHash = default(long), List<long> futureSeasonHashes = default(List<long>), List<long> pastSeasonHashes = default(List<long>))
         {
             this.CollectionRootNode = collectionRootNode;
             this.BadgesRootNode = badgesRootNode;
@@ -70,37 +70,37 @@ namespace BungieNetApi.Model
         /// Gets or Sets CollectionRootNode
         /// </summary>
         [DataMember(Name="collectionRootNode", EmitDefaultValue=false)]
-        public int CollectionRootNode { get; set; }
+        public long CollectionRootNode { get; set; }
 
         /// <summary>
         /// Gets or Sets BadgesRootNode
         /// </summary>
         [DataMember(Name="badgesRootNode", EmitDefaultValue=false)]
-        public int BadgesRootNode { get; set; }
+        public long BadgesRootNode { get; set; }
 
         /// <summary>
         /// Gets or Sets RecordsRootNode
         /// </summary>
         [DataMember(Name="recordsRootNode", EmitDefaultValue=false)]
-        public int RecordsRootNode { get; set; }
+        public long RecordsRootNode { get; set; }
 
         /// <summary>
         /// Gets or Sets MedalsRootNode
         /// </summary>
         [DataMember(Name="medalsRootNode", EmitDefaultValue=false)]
-        public int MedalsRootNode { get; set; }
+        public long MedalsRootNode { get; set; }
 
         /// <summary>
         /// Gets or Sets MetricsRootNode
         /// </summary>
         [DataMember(Name="metricsRootNode", EmitDefaultValue=false)]
-        public int MetricsRootNode { get; set; }
+        public long MetricsRootNode { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentRankProgressionHashes
         /// </summary>
         [DataMember(Name="currentRankProgressionHashes", EmitDefaultValue=false)]
-        public List<int> CurrentRankProgressionHashes { get; set; }
+        public List<long> CurrentRankProgressionHashes { get; set; }
 
         /// <summary>
         /// Gets or Sets UndiscoveredCollectibleImage
@@ -130,25 +130,25 @@ namespace BungieNetApi.Model
         /// Gets or Sets CurrentSeasonalArtifactHash
         /// </summary>
         [DataMember(Name="currentSeasonalArtifactHash", EmitDefaultValue=false)]
-        public int CurrentSeasonalArtifactHash { get; set; }
+        public long CurrentSeasonalArtifactHash { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentSeasonHash
         /// </summary>
         [DataMember(Name="currentSeasonHash", EmitDefaultValue=false)]
-        public int CurrentSeasonHash { get; set; }
+        public long CurrentSeasonHash { get; set; }
 
         /// <summary>
         /// Gets or Sets FutureSeasonHashes
         /// </summary>
         [DataMember(Name="futureSeasonHashes", EmitDefaultValue=false)]
-        public List<int> FutureSeasonHashes { get; set; }
+        public List<long> FutureSeasonHashes { get; set; }
 
         /// <summary>
         /// Gets or Sets PastSeasonHashes
         /// </summary>
         [DataMember(Name="pastSeasonHashes", EmitDefaultValue=false)]
-        public List<int> PastSeasonHashes { get; set; }
+        public List<long> PastSeasonHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

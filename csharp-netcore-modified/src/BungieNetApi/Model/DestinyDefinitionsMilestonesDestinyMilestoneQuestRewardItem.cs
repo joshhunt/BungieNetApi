@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="itemHash">The hash identifier for the item in question. Use it to look up the item&#39;s DestinyInventoryItemDefinition..</param>
         /// <param name="itemInstanceId">If this quantity is referring to a specific instance of an item, this will have the item&#39;s instance ID. Normally, this will be null..</param>
         /// <param name="quantity">The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneQuestRewardItem(int vendorHash = default(int), int vendorItemIndex = default(int), int itemHash = default(int), long itemInstanceId = default(long), int quantity = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneQuestRewardItem(long vendorHash = default(long), int vendorItemIndex = default(int), long itemHash = default(long), long itemInstanceId = default(long), int quantity = default(int))
         {
             this.VendorHash = vendorHash;
             this.VendorItemIndex = vendorItemIndex;
@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The quest reward item *may* be associated with a vendor. If so, this is that vendor. Use this hash to look up the DestinyVendorDefinition.</value>
         [DataMember(Name="vendorHash", EmitDefaultValue=false)]
-        public int VendorHash { get; set; }
+        public long VendorHash { get; set; }
 
         /// <summary>
         /// The quest reward item *may* be associated with a vendor. If so, this is the index of the item being sold, which we can use at runtime to find instanced item information for the reward item.
@@ -67,7 +67,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the item in question. Use it to look up the item&#39;s DestinyInventoryItemDefinition.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If this quantity is referring to a specific instance of an item, this will have the item&#39;s instance ID. Normally, this will be null.

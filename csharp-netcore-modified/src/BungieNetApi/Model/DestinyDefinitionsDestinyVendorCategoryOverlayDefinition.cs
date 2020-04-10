@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="icon">icon.</param>
         /// <param name="title">title.</param>
         /// <param name="currencyItemHash">If this overlay has a currency item that it features, this is said featured item..</param>
-        public DestinyDefinitionsDestinyVendorCategoryOverlayDefinition(string choiceDescription = default(string), string description = default(string), string icon = default(string), string title = default(string), int currencyItemHash = default(int))
+        public DestinyDefinitionsDestinyVendorCategoryOverlayDefinition(string choiceDescription = default(string), string description = default(string), string icon = default(string), string title = default(string), long currencyItemHash = default(long))
         {
             this.ChoiceDescription = choiceDescription;
             this.Description = description;
@@ -77,7 +77,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this overlay has a currency item that it features, this is said featured item.</value>
         [DataMember(Name="currencyItemHash", EmitDefaultValue=false)]
-        public int CurrencyItemHash { get; set; }
+        public long CurrencyItemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

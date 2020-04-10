@@ -436,7 +436,7 @@ namespace BungieNetApi.Model
         /// <param name="activityHash">The hash identifier of this activity variant. Examine the activity&#39;s definition in the Manifest database to determine what makes it a distinct variant. Usually it will be difficulty level or whether or not it is a guided game variant of the activity, but theoretically it could be distinguished in any arbitrary way..</param>
         /// <param name="activityModeHash">The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it&#39;s not clear what mode the PVP map is being played under. If it&#39;s a playlist, this will be less specific: but hopefully useful in some way..</param>
         /// <param name="activityModeType">The enumeration equivalent of the most specific Activity Mode under which this activity is played..</param>
-        public DestinyMilestonesDestinyPublicMilestoneActivityVariant(int activityHash = default(int), int activityModeHash = default(int), ActivityModeTypeEnum? activityModeType = default(ActivityModeTypeEnum?))
+        public DestinyMilestonesDestinyPublicMilestoneActivityVariant(long activityHash = default(long), long activityModeHash = default(long), ActivityModeTypeEnum? activityModeType = default(ActivityModeTypeEnum?))
         {
             this.ActivityHash = activityHash;
             this.ActivityModeHash = activityModeHash;
@@ -448,14 +448,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of this activity variant. Examine the activity&#39;s definition in the Manifest database to determine what makes it a distinct variant. Usually it will be difficulty level or whether or not it is a guided game variant of the activity, but theoretically it could be distinguished in any arbitrary way.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it&#39;s not clear what mode the PVP map is being played under. If it&#39;s a playlist, this will be less specific: but hopefully useful in some way.
         /// </summary>
         /// <value>The hash identifier of the most specific Activity Mode under which this activity is played. This is useful for situations where the activity in question is - for instance - a PVP map, but it&#39;s not clear what mode the PVP map is being played under. If it&#39;s a playlist, this will be less specific: but hopefully useful in some way.</value>
         [DataMember(Name="activityModeHash", EmitDefaultValue=false)]
-        public int ActivityModeHash { get; set; }
+        public long ActivityModeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

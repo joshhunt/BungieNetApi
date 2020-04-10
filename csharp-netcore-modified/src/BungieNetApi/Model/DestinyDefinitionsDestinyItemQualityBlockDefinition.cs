@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="infusionCategoryHash">The hash identifier for the infusion. It does not map to a Definition entity.  DEPRECATED: Items can now have multiple infusion categories. Please use infusionCategoryHashes instead..</param>
         /// <param name="infusionCategoryHashes">If any one of these hashes matches any value in another item&#39;s infusionCategoryHashes, the two can infuse with each other..</param>
         /// <param name="progressionLevelRequirementHash">An item can refer to pre-set level requirements. They are defined in DestinyProgressionLevelRequirementDefinition, and you can use this hash to find the appropriate definition..</param>
-        public DestinyDefinitionsDestinyItemQualityBlockDefinition(List<int> itemLevels = default(List<int>), int qualityLevel = default(int), string infusionCategoryName = default(string), int infusionCategoryHash = default(int), List<int> infusionCategoryHashes = default(List<int>), int progressionLevelRequirementHash = default(int))
+        public DestinyDefinitionsDestinyItemQualityBlockDefinition(List<int> itemLevels = default(List<int>), int qualityLevel = default(int), string infusionCategoryName = default(string), long infusionCategoryHash = default(long), List<long> infusionCategoryHashes = default(List<long>), long progressionLevelRequirementHash = default(long))
         {
             this.ItemLevels = itemLevels;
             this.QualityLevel = qualityLevel;
@@ -76,21 +76,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the infusion. It does not map to a Definition entity.  DEPRECATED: Items can now have multiple infusion categories. Please use infusionCategoryHashes instead.</value>
         [DataMember(Name="infusionCategoryHash", EmitDefaultValue=false)]
-        public int InfusionCategoryHash { get; set; }
+        public long InfusionCategoryHash { get; set; }
 
         /// <summary>
         /// If any one of these hashes matches any value in another item&#39;s infusionCategoryHashes, the two can infuse with each other.
         /// </summary>
         /// <value>If any one of these hashes matches any value in another item&#39;s infusionCategoryHashes, the two can infuse with each other.</value>
         [DataMember(Name="infusionCategoryHashes", EmitDefaultValue=false)]
-        public List<int> InfusionCategoryHashes { get; set; }
+        public List<long> InfusionCategoryHashes { get; set; }
 
         /// <summary>
         /// An item can refer to pre-set level requirements. They are defined in DestinyProgressionLevelRequirementDefinition, and you can use this hash to find the appropriate definition.
         /// </summary>
         /// <value>An item can refer to pre-set level requirements. They are defined in DestinyProgressionLevelRequirementDefinition, and you can use this hash to find the appropriate definition.</value>
         [DataMember(Name="progressionLevelRequirementHash", EmitDefaultValue=false)]
-        public int ProgressionLevelRequirementHash { get; set; }
+        public long ProgressionLevelRequirementHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

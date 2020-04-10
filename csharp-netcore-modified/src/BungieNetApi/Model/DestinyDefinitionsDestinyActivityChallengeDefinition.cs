@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="objectiveHash">The hash for the Objective that matches this challenge. Use it to look up the DestinyObjectiveDefinition..</param>
         /// <param name="dummyRewards">The rewards as they&#39;re represented in the UI. Note that they generally link to \&quot;dummy\&quot; items that give a summary of rewards rather than direct, real items themselves.  If the quantity is 0, don&#39;t show the quantity..</param>
-        public DestinyDefinitionsDestinyActivityChallengeDefinition(int objectiveHash = default(int), List<DestinyDestinyItemQuantity> dummyRewards = default(List<DestinyDestinyItemQuantity>))
+        public DestinyDefinitionsDestinyActivityChallengeDefinition(long objectiveHash = default(long), List<DestinyDestinyItemQuantity> dummyRewards = default(List<DestinyDestinyItemQuantity>))
         {
             this.ObjectiveHash = objectiveHash;
             this.DummyRewards = dummyRewards;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the Objective that matches this challenge. Use it to look up the DestinyObjectiveDefinition.</value>
         [DataMember(Name="objectiveHash", EmitDefaultValue=false)]
-        public int ObjectiveHash { get; set; }
+        public long ObjectiveHash { get; set; }
 
         /// <summary>
         /// The rewards as they&#39;re represented in the UI. Note that they generally link to \&quot;dummy\&quot; items that give a summary of rewards rather than direct, real items themselves.  If the quantity is 0, don&#39;t show the quantity.

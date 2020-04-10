@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="equipmentSlotHash">equipmentSlotHash.</param>
         /// <param name="allowedEquippedItemHashes">allowedEquippedItemHashes.</param>
         /// <param name="allowedWeaponSubTypes">allowedWeaponSubTypes.</param>
-        public DestinyDefinitionsDestinyActivityLoadoutRequirement(int equipmentSlotHash = default(int), List<int> allowedEquippedItemHashes = default(List<int>), List<int> allowedWeaponSubTypes = default(List<int>))
+        public DestinyDefinitionsDestinyActivityLoadoutRequirement(long equipmentSlotHash = default(long), List<long> allowedEquippedItemHashes = default(List<long>), List<int> allowedWeaponSubTypes = default(List<int>))
         {
             this.EquipmentSlotHash = equipmentSlotHash;
             this.AllowedEquippedItemHashes = allowedEquippedItemHashes;
@@ -48,13 +48,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets EquipmentSlotHash
         /// </summary>
         [DataMember(Name="equipmentSlotHash", EmitDefaultValue=false)]
-        public int EquipmentSlotHash { get; set; }
+        public long EquipmentSlotHash { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowedEquippedItemHashes
         /// </summary>
         [DataMember(Name="allowedEquippedItemHashes", EmitDefaultValue=false)]
-        public List<int> AllowedEquippedItemHashes { get; set; }
+        public List<long> AllowedEquippedItemHashes { get; set; }
 
         /// <summary>
         /// Gets or Sets AllowedWeaponSubTypes

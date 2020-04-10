@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="currencyItemHash">currencyItemHash.</param>
         /// <param name="scalarValue">scalarValue.</param>
-        public DestinyDefinitionsSocketsDestinySocketTypeScalarMaterialRequirementEntry(int currencyItemHash = default(int), int scalarValue = default(int))
+        public DestinyDefinitionsSocketsDestinySocketTypeScalarMaterialRequirementEntry(long currencyItemHash = default(long), int scalarValue = default(int))
         {
             this.CurrencyItemHash = currencyItemHash;
             this.ScalarValue = scalarValue;
@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets CurrencyItemHash
         /// </summary>
         [DataMember(Name="currencyItemHash", EmitDefaultValue=false)]
-        public int CurrencyItemHash { get; set; }
+        public long CurrencyItemHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ScalarValue

@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="classHash">classHash.</param>
         /// <param name="artArrangementHash">artArrangementHash.</param>
-        public DestinyDefinitionsDestinyGearArtArrangementReference(int classHash = default(int), int artArrangementHash = default(int))
+        public DestinyDefinitionsDestinyGearArtArrangementReference(long classHash = default(long), long artArrangementHash = default(long))
         {
             this.ClassHash = classHash;
             this.ArtArrangementHash = artArrangementHash;
@@ -46,13 +46,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets ClassHash
         /// </summary>
         [DataMember(Name="classHash", EmitDefaultValue=false)]
-        public int ClassHash { get; set; }
+        public long ClassHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ArtArrangementHash
         /// </summary>
         [DataMember(Name="artArrangementHash", EmitDefaultValue=false)]
-        public int ArtArrangementHash { get; set; }
+        public long ArtArrangementHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

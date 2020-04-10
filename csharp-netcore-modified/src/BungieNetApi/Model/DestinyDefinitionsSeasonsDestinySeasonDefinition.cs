@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsSeasonsDestinySeasonDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string backgroundImagePath = default(string), int seasonNumber = default(int), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), int seasonPassHash = default(int), int seasonPassProgressionHash = default(int), int artifactItemHash = default(int), int sealPresentationNodeHash = default(int), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsSeasonsDestinySeasonDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string backgroundImagePath = default(string), int seasonNumber = default(int), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), long seasonPassHash = default(long), long seasonPassProgressionHash = default(long), long artifactItemHash = default(long), long sealPresentationNodeHash = default(long), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.BackgroundImagePath = backgroundImagePath;
@@ -96,32 +96,32 @@ namespace BungieNetApi.Model
         /// Gets or Sets SeasonPassHash
         /// </summary>
         [DataMember(Name="seasonPassHash", EmitDefaultValue=false)]
-        public int SeasonPassHash { get; set; }
+        public long SeasonPassHash { get; set; }
 
         /// <summary>
         /// Gets or Sets SeasonPassProgressionHash
         /// </summary>
         [DataMember(Name="seasonPassProgressionHash", EmitDefaultValue=false)]
-        public int SeasonPassProgressionHash { get; set; }
+        public long SeasonPassProgressionHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ArtifactItemHash
         /// </summary>
         [DataMember(Name="artifactItemHash", EmitDefaultValue=false)]
-        public int ArtifactItemHash { get; set; }
+        public long ArtifactItemHash { get; set; }
 
         /// <summary>
         /// Gets or Sets SealPresentationNodeHash
         /// </summary>
         [DataMember(Name="sealPresentationNodeHash", EmitDefaultValue=false)]
-        public int SealPresentationNodeHash { get; set; }
+        public long SealPresentationNodeHash { get; set; }
 
         /// <summary>
         /// The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

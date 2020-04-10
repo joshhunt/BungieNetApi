@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="collapsible">If true, the inventory bucket should be able to be collapsed visually..</param>
         /// <param name="inventoryBucketHash">The inventory bucket whose contents should be shown..</param>
         /// <param name="sortItemsBy">The methodology to use for sorting items from the flyout..</param>
-        public DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition(bool collapsible = default(bool), int inventoryBucketHash = default(int), int sortItemsBy = default(int))
+        public DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition(bool collapsible = default(bool), long inventoryBucketHash = default(long), int sortItemsBy = default(int))
         {
             this.Collapsible = collapsible;
             this.InventoryBucketHash = inventoryBucketHash;
@@ -56,7 +56,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The inventory bucket whose contents should be shown.</value>
         [DataMember(Name="inventoryBucketHash", EmitDefaultValue=false)]
-        public int InventoryBucketHash { get; set; }
+        public long InventoryBucketHash { get; set; }
 
         /// <summary>
         /// The methodology to use for sorting items from the flyout.

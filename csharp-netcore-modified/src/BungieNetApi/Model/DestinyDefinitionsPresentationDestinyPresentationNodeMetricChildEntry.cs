@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsPresentationDestinyPresentationNodeMetricChildEntry" /> class.
         /// </summary>
         /// <param name="metricHash">metricHash.</param>
-        public DestinyDefinitionsPresentationDestinyPresentationNodeMetricChildEntry(int metricHash = default(int))
+        public DestinyDefinitionsPresentationDestinyPresentationNodeMetricChildEntry(long metricHash = default(long))
         {
             this.MetricHash = metricHash;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets MetricHash
         /// </summary>
         [DataMember(Name="metricHash", EmitDefaultValue=false)]
-        public int MetricHash { get; set; }
+        public long MetricHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -5,8 +5,8 @@ These are pre-constructed collections of data that can be used to determine the 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **RequirementCurve** | [**List&lt;InterpolationInterpolationPointFloat&gt;**](InterpolationInterpolationPointFloat.md) | A curve of level requirements, weighted by the related progressions&#39; level.  Interpolate against this curve with the character&#39;s progression level to determine what the level requirement of the generated item that is using this data will be. | [optional] 
-**ProgressionHash** | **int** | The progression whose level should be used to determine the level requirement.  Look up the DestinyProgressionDefinition with this hash for more information about the progression in question. | [optional] 
-**Hash** | **int** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] 
+**ProgressionHash** | **long** | The progression whose level should be used to determine the level requirement.  Look up the DestinyProgressionDefinition with this hash for more information about the progression in question. | [optional] 
+**Hash** | **long** | The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to. | [optional] 
 **Index** | **int** | The index of the entity as it was found in the investment tables. | [optional] 
 **Redacted** | **bool** | If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry! | [optional] 
 

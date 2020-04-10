@@ -93,7 +93,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyInventoryItemDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), List<DestinyDefinitionsDestinyItemTooltipNotification> tooltipNotifications = default(List<DestinyDefinitionsDestinyItemTooltipNotification>), int collectibleHash = default(int), string secondaryIcon = default(string), string secondaryOverlay = default(string), string secondarySpecial = default(string), DestinyMiscDestinyColor backgroundColor = default(DestinyMiscDestinyColor), string screenshot = default(string), string itemTypeDisplayName = default(string), string uiItemDisplayStyle = default(string), string itemTypeAndTierDisplayName = default(string), string displaySource = default(string), string tooltipStyle = default(string), DestinyDefinitionsDestinyItemActionBlockDefinition action = default(DestinyDefinitionsDestinyItemActionBlockDefinition), DestinyDefinitionsDestinyItemInventoryBlockDefinition inventory = default(DestinyDefinitionsDestinyItemInventoryBlockDefinition), DestinyDefinitionsDestinyItemSetBlockDefinition setData = default(DestinyDefinitionsDestinyItemSetBlockDefinition), DestinyDefinitionsDestinyItemStatBlockDefinition stats = default(DestinyDefinitionsDestinyItemStatBlockDefinition), int emblemObjectiveHash = default(int), DestinyDefinitionsDestinyEquippingBlockDefinition equippingBlock = default(DestinyDefinitionsDestinyEquippingBlockDefinition), DestinyDefinitionsDestinyItemTranslationBlockDefinition translationBlock = default(DestinyDefinitionsDestinyItemTranslationBlockDefinition), DestinyDefinitionsDestinyItemPreviewBlockDefinition preview = default(DestinyDefinitionsDestinyItemPreviewBlockDefinition), DestinyDefinitionsDestinyItemQualityBlockDefinition quality = default(DestinyDefinitionsDestinyItemQualityBlockDefinition), DestinyDefinitionsDestinyItemValueBlockDefinition value = default(DestinyDefinitionsDestinyItemValueBlockDefinition), DestinyDefinitionsDestinyItemSourceBlockDefinition sourceData = default(DestinyDefinitionsDestinyItemSourceBlockDefinition), DestinyDefinitionsDestinyItemObjectiveBlockDefinition objectives = default(DestinyDefinitionsDestinyItemObjectiveBlockDefinition), DestinyDefinitionsDestinyItemMetricBlockDefinition metrics = default(DestinyDefinitionsDestinyItemMetricBlockDefinition), DestinyDefinitionsItemsDestinyItemPlugDefinition plug = default(DestinyDefinitionsItemsDestinyItemPlugDefinition), DestinyDefinitionsDestinyItemGearsetBlockDefinition gearset = default(DestinyDefinitionsDestinyItemGearsetBlockDefinition), DestinyDefinitionsDestinyItemSackBlockDefinition sack = default(DestinyDefinitionsDestinyItemSackBlockDefinition), DestinyDefinitionsDestinyItemSocketBlockDefinition sockets = default(DestinyDefinitionsDestinyItemSocketBlockDefinition), DestinyDefinitionsDestinyItemSummaryBlockDefinition summary = default(DestinyDefinitionsDestinyItemSummaryBlockDefinition), DestinyDefinitionsDestinyItemTalentGridBlockDefinition talentGrid = default(DestinyDefinitionsDestinyItemTalentGridBlockDefinition), List<DestinyDefinitionsDestinyItemInvestmentStatDefinition> investmentStats = default(List<DestinyDefinitionsDestinyItemInvestmentStatDefinition>), List<DestinyDefinitionsDestinyItemPerkEntryDefinition> perks = default(List<DestinyDefinitionsDestinyItemPerkEntryDefinition>), int loreHash = default(int), int summaryItemHash = default(int), List<DestinyDefinitionsAnimationsDestinyAnimationReference> animations = default(List<DestinyDefinitionsAnimationsDestinyAnimationReference>), bool allowActions = default(bool), List<LinksHyperlinkReference> links = default(List<LinksHyperlinkReference>), bool doesPostmasterPullHaveSideEffects = default(bool), bool nonTransferrable = default(bool), List<int> itemCategoryHashes = default(List<int>), int specialItemType = default(int), int itemType = default(int), int itemSubType = default(int), int classType = default(int), int breakerType = default(int), int breakerTypeHash = default(int), bool equippable = default(bool), List<int> damageTypeHashes = default(List<int>), List<int> damageTypes = default(List<int>), int defaultDamageType = default(int), int defaultDamageTypeHash = default(int), int seasonHash = default(int), bool isWrapper = default(bool), List<string> traitIds = default(List<string>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyInventoryItemDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), List<DestinyDefinitionsDestinyItemTooltipNotification> tooltipNotifications = default(List<DestinyDefinitionsDestinyItemTooltipNotification>), long collectibleHash = default(long), string secondaryIcon = default(string), string secondaryOverlay = default(string), string secondarySpecial = default(string), DestinyMiscDestinyColor backgroundColor = default(DestinyMiscDestinyColor), string screenshot = default(string), string itemTypeDisplayName = default(string), string uiItemDisplayStyle = default(string), string itemTypeAndTierDisplayName = default(string), string displaySource = default(string), string tooltipStyle = default(string), DestinyDefinitionsDestinyItemActionBlockDefinition action = default(DestinyDefinitionsDestinyItemActionBlockDefinition), DestinyDefinitionsDestinyItemInventoryBlockDefinition inventory = default(DestinyDefinitionsDestinyItemInventoryBlockDefinition), DestinyDefinitionsDestinyItemSetBlockDefinition setData = default(DestinyDefinitionsDestinyItemSetBlockDefinition), DestinyDefinitionsDestinyItemStatBlockDefinition stats = default(DestinyDefinitionsDestinyItemStatBlockDefinition), long emblemObjectiveHash = default(long), DestinyDefinitionsDestinyEquippingBlockDefinition equippingBlock = default(DestinyDefinitionsDestinyEquippingBlockDefinition), DestinyDefinitionsDestinyItemTranslationBlockDefinition translationBlock = default(DestinyDefinitionsDestinyItemTranslationBlockDefinition), DestinyDefinitionsDestinyItemPreviewBlockDefinition preview = default(DestinyDefinitionsDestinyItemPreviewBlockDefinition), DestinyDefinitionsDestinyItemQualityBlockDefinition quality = default(DestinyDefinitionsDestinyItemQualityBlockDefinition), DestinyDefinitionsDestinyItemValueBlockDefinition value = default(DestinyDefinitionsDestinyItemValueBlockDefinition), DestinyDefinitionsDestinyItemSourceBlockDefinition sourceData = default(DestinyDefinitionsDestinyItemSourceBlockDefinition), DestinyDefinitionsDestinyItemObjectiveBlockDefinition objectives = default(DestinyDefinitionsDestinyItemObjectiveBlockDefinition), DestinyDefinitionsDestinyItemMetricBlockDefinition metrics = default(DestinyDefinitionsDestinyItemMetricBlockDefinition), DestinyDefinitionsItemsDestinyItemPlugDefinition plug = default(DestinyDefinitionsItemsDestinyItemPlugDefinition), DestinyDefinitionsDestinyItemGearsetBlockDefinition gearset = default(DestinyDefinitionsDestinyItemGearsetBlockDefinition), DestinyDefinitionsDestinyItemSackBlockDefinition sack = default(DestinyDefinitionsDestinyItemSackBlockDefinition), DestinyDefinitionsDestinyItemSocketBlockDefinition sockets = default(DestinyDefinitionsDestinyItemSocketBlockDefinition), DestinyDefinitionsDestinyItemSummaryBlockDefinition summary = default(DestinyDefinitionsDestinyItemSummaryBlockDefinition), DestinyDefinitionsDestinyItemTalentGridBlockDefinition talentGrid = default(DestinyDefinitionsDestinyItemTalentGridBlockDefinition), List<DestinyDefinitionsDestinyItemInvestmentStatDefinition> investmentStats = default(List<DestinyDefinitionsDestinyItemInvestmentStatDefinition>), List<DestinyDefinitionsDestinyItemPerkEntryDefinition> perks = default(List<DestinyDefinitionsDestinyItemPerkEntryDefinition>), long loreHash = default(long), long summaryItemHash = default(long), List<DestinyDefinitionsAnimationsDestinyAnimationReference> animations = default(List<DestinyDefinitionsAnimationsDestinyAnimationReference>), bool allowActions = default(bool), List<LinksHyperlinkReference> links = default(List<LinksHyperlinkReference>), bool doesPostmasterPullHaveSideEffects = default(bool), bool nonTransferrable = default(bool), List<long> itemCategoryHashes = default(List<long>), int specialItemType = default(int), int itemType = default(int), int itemSubType = default(int), int classType = default(int), int breakerType = default(int), long breakerTypeHash = default(long), bool equippable = default(bool), List<long> damageTypeHashes = default(List<long>), List<int> damageTypes = default(List<int>), int defaultDamageType = default(int), long defaultDamageTypeHash = default(long), long seasonHash = default(long), bool isWrapper = default(bool), List<string> traitIds = default(List<string>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.TooltipNotifications = tooltipNotifications;
@@ -174,7 +174,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this item has a collectible related to it, this is the hash identifier of that collectible entry.</value>
         [DataMember(Name="collectibleHash", EmitDefaultValue=false)]
-        public int CollectibleHash { get; set; }
+        public long CollectibleHash { get; set; }
 
         /// <summary>
         /// A secondary icon associated with the item. Currently this is used in very context specific applications, such as Emblem Nameplates.
@@ -279,7 +279,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the item is an emblem that has a special Objective attached to it - for instance, if the emblem tracks PVP Kills, or what-have-you. This is a bit different from, for example, the Vanguard Kill Tracker mod, which pipes data into the \&quot;art channel\&quot;. When I get some time, I would like to standardize these so you can get at the values they expose without having to care about what they&#39;re being used for and how they are wired up, but for now here&#39;s the raw data.</value>
         [DataMember(Name="emblemObjectiveHash", EmitDefaultValue=false)]
-        public int EmblemObjectiveHash { get; set; }
+        public long EmblemObjectiveHash { get; set; }
 
         /// <summary>
         /// If this item can be equipped, this block will be non-null and will be populated with the conditions under which it can be equipped.
@@ -398,14 +398,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the item has any related Lore (DestinyLoreDefinition), this will be the hash identifier you can use to look up the lore definition.</value>
         [DataMember(Name="loreHash", EmitDefaultValue=false)]
-        public int LoreHash { get; set; }
+        public long LoreHash { get; set; }
 
         /// <summary>
         /// There are times when the game will show you a \&quot;summary/vague\&quot; version of an item - such as a description of its type represented as a DestinyInventoryItemDefinition - rather than display the item itself.  This happens sometimes when summarizing possible rewards in a tooltip. This is the item displayed instead, if it exists.
         /// </summary>
         /// <value>There are times when the game will show you a \&quot;summary/vague\&quot; version of an item - such as a description of its type represented as a DestinyInventoryItemDefinition - rather than display the item itself.  This happens sometimes when summarizing possible rewards in a tooltip. This is the item displayed instead, if it exists.</value>
         [DataMember(Name="summaryItemHash", EmitDefaultValue=false)]
-        public int SummaryItemHash { get; set; }
+        public long SummaryItemHash { get; set; }
 
         /// <summary>
         /// If any animations were extracted from game content for this item, these will be the definitions of those animations.
@@ -447,7 +447,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>BNet attempts to make a more formal definition of item \&quot;Categories\&quot;, as defined by DestinyItemCategoryDefinition. This is a list of all Categories that we were able to algorithmically determine that this item is a member of. (for instance, that it&#39;s a \&quot;Weapon\&quot;, that it&#39;s an \&quot;Auto Rifle\&quot;, etc...)  The algorithm for these is, unfortunately, volatile. If you believe you see a miscategorized item, please let us know on the Bungie API forums.</value>
         [DataMember(Name="itemCategoryHashes", EmitDefaultValue=false)]
-        public List<int> ItemCategoryHashes { get; set; }
+        public List<long> ItemCategoryHashes { get; set; }
 
         /// <summary>
         /// In Destiny 1, we identified some items as having particular categories that we&#39;d like to know about for various internal logic purposes. These are defined in SpecialItemType, and while these days the itemCategoryHashes are the preferred way of identifying types, we have retained this enum for its convenience.
@@ -489,7 +489,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Since we also have a breaker type definition, this is the hash for that breaker type for your convenience. Whether you use the enum or hash and look up the definition depends on what&#39;s cleanest for your code.</value>
         [DataMember(Name="breakerTypeHash", EmitDefaultValue=false)]
-        public int BreakerTypeHash { get; set; }
+        public long BreakerTypeHash { get; set; }
 
         /// <summary>
         /// If true, then you will be allowed to equip the item if you pass its other requirements.  This being false means that you cannot equip the item under any circumstances.
@@ -503,7 +503,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Theoretically, an item can have many possible damage types. In *practice*, this is not true, but just in case weapons start being made that have multiple (for instance, an item where a socket has reusable plugs for every possible damage type that you can choose from freely), this field will return all of the possible damage types that are available to the weapon by default.</value>
         [DataMember(Name="damageTypeHashes", EmitDefaultValue=false)]
-        public List<int> DamageTypeHashes { get; set; }
+        public List<long> DamageTypeHashes { get; set; }
 
         /// <summary>
         /// This is the list of all damage types that we know ahead of time the item can take on. Unfortunately, this does not preclude the possibility of something funky happening to give the item a damage type that cannot be predicted beforehand: for example, if some designer decides to create arbitrary non-reusable plugs that cause damage type to change.  This damage type prediction will only use the following to determine potential damage types:  - Intrinsic perks  - Talent Node perks  - Known, reusable plugs for sockets
@@ -524,14 +524,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Similar to defaultDamageType, but represented as the hash identifier for a DestinyDamageTypeDefinition.  I will likely regret leaving in the enumeration versions of these properties, but for now they&#39;re very convenient.</value>
         [DataMember(Name="defaultDamageTypeHash", EmitDefaultValue=false)]
-        public int DefaultDamageTypeHash { get; set; }
+        public long DefaultDamageTypeHash { get; set; }
 
         /// <summary>
         /// If this item is related directly to a Season of Destiny, this is the hash identifier for that season.
         /// </summary>
         /// <value>If this item is related directly to a Season of Destiny, this is the hash identifier for that season.</value>
         [DataMember(Name="seasonHash", EmitDefaultValue=false)]
-        public int SeasonHash { get; set; }
+        public long SeasonHash { get; set; }
 
         /// <summary>
         /// If true, this is a dummy vendor-wrapped item template. Items purchased from Eververse will be \&quot;wrapped\&quot; by one of these items so that we can safely provide refund capabilities before the item is \&quot;unwrapped\&quot;.
@@ -552,7 +552,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

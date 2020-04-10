@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// <param name="quantity">How much of the item you&#39;ll be getting..</param>
         /// <param name="costs">A summary of the current costs of the item..</param>
         /// <param name="overrideNextRefreshDate">If this item has its own custom date where it may be removed from the Vendor&#39;s rotation, this is that date.  Note that there&#39;s not actually any guarantee that it will go away: it could be chosen again and end up still being in the Vendor&#39;s sale items! But this is the next date where that test will occur, and is also the date that the game shows for availability on things like Bounties being sold. So it&#39;s the best we can give..</param>
-        public DestinyEntitiesVendorsDestinyVendorSaleItemComponent(int saleStatus = default(int), List<int> requiredUnlocks = default(List<int>), List<DestinyDestinyUnlockStatus> unlockStatuses = default(List<DestinyDestinyUnlockStatus>), List<int> failureIndexes = default(List<int>), int augments = default(int), int vendorItemIndex = default(int), int itemHash = default(int), int overrideStyleItemHash = default(int), int quantity = default(int), List<DestinyDestinyItemQuantity> costs = default(List<DestinyDestinyItemQuantity>), DateTime overrideNextRefreshDate = default(DateTime))
+        public DestinyEntitiesVendorsDestinyVendorSaleItemComponent(int saleStatus = default(int), List<long> requiredUnlocks = default(List<long>), List<DestinyDestinyUnlockStatus> unlockStatuses = default(List<DestinyDestinyUnlockStatus>), List<int> failureIndexes = default(List<int>), int augments = default(int), int vendorItemIndex = default(int), long itemHash = default(long), long overrideStyleItemHash = default(long), int quantity = default(int), List<DestinyDestinyItemQuantity> costs = default(List<DestinyDestinyItemQuantity>), DateTime overrideNextRefreshDate = default(DateTime))
         {
             this.SaleStatus = saleStatus;
             this.RequiredUnlocks = requiredUnlocks;
@@ -72,7 +72,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If you can&#39;t buy the item due to a complex character state, these will be hashes for DestinyUnlockDefinitions that you can check to see messages regarding the failure (if the unlocks have human readable information: it is not guaranteed that Unlocks will have human readable strings, and your application will have to handle that)  Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.</value>
         [DataMember(Name="requiredUnlocks", EmitDefaultValue=false)]
-        public List<int> RequiredUnlocks { get; set; }
+        public List<long> RequiredUnlocks { get; set; }
 
         /// <summary>
         /// If any complex unlock states are checked in determining purchasability, these will be returned here along with the status of the unlock check.  Prefer using failureIndexes instead. These are provided for informational purposes, but have largely been supplanted by failureIndexes.
@@ -107,14 +107,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of the item being sold, as a quick shortcut for looking up the DestinyInventoryItemDefinition of the sale item.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don&#39;t do this, certain items whose styles are being overridden by socketed items - such as the \&quot;Recycle Shader\&quot; item - would show whatever their default icon/style is, and it wouldn&#39;t be pretty or look accurate.
         /// </summary>
         /// <value>If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don&#39;t do this, certain items whose styles are being overridden by socketed items - such as the \&quot;Recycle Shader\&quot; item - would show whatever their default icon/style is, and it wouldn&#39;t be pretty or look accurate.</value>
         [DataMember(Name="overrideStyleItemHash", EmitDefaultValue=false)]
-        public int OverrideStyleItemHash { get; set; }
+        public long OverrideStyleItemHash { get; set; }
 
         /// <summary>
         /// How much of the item you&#39;ll be getting.

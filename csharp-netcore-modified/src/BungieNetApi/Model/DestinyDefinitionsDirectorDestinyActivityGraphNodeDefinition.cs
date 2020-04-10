@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="featuringStates">The node may have various visual accents placed on it, or styles applied. These are the list of possible styles that the Node can have. The game iterates through each, looking for the first one that passes a check of the required game/character/account state in order to show that style, and then renders the node in that style..</param>
         /// <param name="activities">The node may have various possible activities that could be active for it, however only one may be active at a time. See the DestinyActivityGraphNodeActivityDefinition for details..</param>
         /// <param name="states">Represents possible states that the graph node can be in. These are combined with some checking that happens in the game client and server to determine which state is actually active at any given time..</param>
-        public DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition(int nodeId = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition overrideDisplay = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), DestinyDefinitionsCommonDestinyPositionDefinition position = default(DestinyDefinitionsCommonDestinyPositionDefinition), List<DestinyDefinitionsDirectorDestinyActivityGraphNodeFeaturingStateDefinition> featuringStates = default(List<DestinyDefinitionsDirectorDestinyActivityGraphNodeFeaturingStateDefinition>), List<DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition> activities = default(List<DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition>), List<DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry> states = default(List<DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry>))
+        public DestinyDefinitionsDirectorDestinyActivityGraphNodeDefinition(long nodeId = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition overrideDisplay = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), DestinyDefinitionsCommonDestinyPositionDefinition position = default(DestinyDefinitionsCommonDestinyPositionDefinition), List<DestinyDefinitionsDirectorDestinyActivityGraphNodeFeaturingStateDefinition> featuringStates = default(List<DestinyDefinitionsDirectorDestinyActivityGraphNodeFeaturingStateDefinition>), List<DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition> activities = default(List<DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition>), List<DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry> states = default(List<DestinyDefinitionsDirectorDestinyActivityGraphNodeStateEntry>))
         {
             this.NodeId = nodeId;
             this.OverrideDisplay = overrideDisplay;
@@ -55,7 +55,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>An identifier for the Activity Graph Node, only guaranteed to be unique within its parent Activity Graph.</value>
         [DataMember(Name="nodeId", EmitDefaultValue=false)]
-        public int NodeId { get; set; }
+        public long NodeId { get; set; }
 
         /// <summary>
         /// The node *may* have display properties that override the active Activity&#39;s display properties.

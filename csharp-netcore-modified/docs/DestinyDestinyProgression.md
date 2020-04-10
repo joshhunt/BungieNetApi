@@ -4,7 +4,7 @@ Information about a current character's status with a Progression. A progression
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProgressionHash** | **int** | The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data. | [optional] 
+**ProgressionHash** | **long** | The hash identifier of the Progression in question. Use it to look up the DestinyProgressionDefinition in static data. | [optional] 
 **DailyProgress** | **int** | The amount of progress earned today for this progression. | [optional] 
 **DailyLimit** | **int** | If this progression has a daily limit, this is that limit. | [optional] 
 **WeeklyProgress** | **int** | The amount of progress earned toward this progression in the current week. | [optional] 

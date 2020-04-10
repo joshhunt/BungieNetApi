@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="deleteOnAction">If True, the material will be removed from the character&#39;s inventory when the action is performed..</param>
         /// <param name="count">The amount of the material required..</param>
         /// <param name="omitFromRequirements">If True, this requirement is \&quot;silent\&quot;: don&#39;t bother showing it in a material requirements display. I mean, I&#39;m not your mom: I&#39;m not going to tell you you *can&#39;t* show it. But we won&#39;t show it in our UI..</param>
-        public DestinyDefinitionsDestinyMaterialRequirement(int itemHash = default(int), bool deleteOnAction = default(bool), int count = default(int), bool omitFromRequirements = default(bool))
+        public DestinyDefinitionsDestinyMaterialRequirement(long itemHash = default(long), bool deleteOnAction = default(bool), int count = default(int), bool omitFromRequirements = default(bool))
         {
             this.ItemHash = itemHash;
             this.DeleteOnAction = deleteOnAction;
@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the material required. Use it to look up the material&#39;s DestinyInventoryItemDefinition.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If True, the material will be removed from the character&#39;s inventory when the action is performed.

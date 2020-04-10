@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyVendorGroupReference" /> class.
         /// </summary>
         /// <param name="vendorGroupHash">The DestinyVendorGroupDefinition to which this Vendor can belong..</param>
-        public DestinyDefinitionsDestinyVendorGroupReference(int vendorGroupHash = default(int))
+        public DestinyDefinitionsDestinyVendorGroupReference(long vendorGroupHash = default(long))
         {
             this.VendorGroupHash = vendorGroupHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The DestinyVendorGroupDefinition to which this Vendor can belong.</value>
         [DataMember(Name="vendorGroupHash", EmitDefaultValue=false)]
-        public int VendorGroupHash { get; set; }
+        public long VendorGroupHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

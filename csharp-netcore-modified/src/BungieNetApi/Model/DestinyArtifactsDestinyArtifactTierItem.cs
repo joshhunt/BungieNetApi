@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="itemHash">itemHash.</param>
         /// <param name="isActive">isActive.</param>
-        public DestinyArtifactsDestinyArtifactTierItem(int itemHash = default(int), bool isActive = default(bool))
+        public DestinyArtifactsDestinyArtifactTierItem(long itemHash = default(long), bool isActive = default(bool))
         {
             this.ItemHash = itemHash;
             this.IsActive = isActive;
@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ItemHash
         /// </summary>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// Gets or Sets IsActive

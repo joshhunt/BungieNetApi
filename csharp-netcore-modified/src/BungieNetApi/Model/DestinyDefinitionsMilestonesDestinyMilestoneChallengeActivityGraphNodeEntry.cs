@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="activityGraphHash">activityGraphHash.</param>
         /// <param name="activityGraphNodeHash">activityGraphNodeHash.</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry(int activityGraphHash = default(int), int activityGraphNodeHash = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry(long activityGraphHash = default(long), long activityGraphNodeHash = default(long))
         {
             this.ActivityGraphHash = activityGraphHash;
             this.ActivityGraphNodeHash = activityGraphNodeHash;
@@ -46,13 +46,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets ActivityGraphHash
         /// </summary>
         [DataMember(Name="activityGraphHash", EmitDefaultValue=false)]
-        public int ActivityGraphHash { get; set; }
+        public long ActivityGraphHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ActivityGraphNodeHash
         /// </summary>
         [DataMember(Name="activityGraphNodeHash", EmitDefaultValue=false)]
-        public int ActivityGraphNodeHash { get; set; }
+        public long ActivityGraphNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

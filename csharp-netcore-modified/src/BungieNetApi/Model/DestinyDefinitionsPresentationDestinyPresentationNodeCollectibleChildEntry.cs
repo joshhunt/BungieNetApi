@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsPresentationDestinyPresentationNodeCollectibleChildEntry" /> class.
         /// </summary>
         /// <param name="collectibleHash">collectibleHash.</param>
-        public DestinyDefinitionsPresentationDestinyPresentationNodeCollectibleChildEntry(int collectibleHash = default(int))
+        public DestinyDefinitionsPresentationDestinyPresentationNodeCollectibleChildEntry(long collectibleHash = default(long))
         {
             this.CollectibleHash = collectibleHash;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets CollectibleHash
         /// </summary>
         [DataMember(Name="collectibleHash", EmitDefaultValue=false)]
-        public int CollectibleHash { get; set; }
+        public long CollectibleHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

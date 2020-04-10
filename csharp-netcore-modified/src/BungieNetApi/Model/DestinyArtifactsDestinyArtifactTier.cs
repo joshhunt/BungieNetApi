@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="isUnlocked">isUnlocked.</param>
         /// <param name="pointsToUnlock">pointsToUnlock.</param>
         /// <param name="items">items.</param>
-        public DestinyArtifactsDestinyArtifactTier(int tierHash = default(int), bool isUnlocked = default(bool), int pointsToUnlock = default(int), List<DestinyArtifactsDestinyArtifactTierItem> items = default(List<DestinyArtifactsDestinyArtifactTierItem>))
+        public DestinyArtifactsDestinyArtifactTier(long tierHash = default(long), bool isUnlocked = default(bool), int pointsToUnlock = default(int), List<DestinyArtifactsDestinyArtifactTierItem> items = default(List<DestinyArtifactsDestinyArtifactTierItem>))
         {
             this.TierHash = tierHash;
             this.IsUnlocked = isUnlocked;
@@ -50,7 +50,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets TierHash
         /// </summary>
         [DataMember(Name="tierHash", EmitDefaultValue=false)]
-        public int TierHash { get; set; }
+        public long TierHash { get; set; }
 
         /// <summary>
         /// Gets or Sets IsUnlocked

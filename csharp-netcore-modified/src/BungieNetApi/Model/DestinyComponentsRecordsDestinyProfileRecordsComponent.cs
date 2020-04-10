@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="records">records.</param>
         /// <param name="recordCategoriesRootNodeHash">The hash for the root presentation node definition of Triumph categories..</param>
         /// <param name="recordSealsRootNodeHash">The hash for the root presentation node definition of Triumph Seals..</param>
-        public DestinyComponentsRecordsDestinyProfileRecordsComponent(int score = default(int), int trackedRecordHash = default(int), Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent> records = default(Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent>), int recordCategoriesRootNodeHash = default(int), int recordSealsRootNodeHash = default(int))
+        public DestinyComponentsRecordsDestinyProfileRecordsComponent(int score = default(int), long trackedRecordHash = default(long), Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent> records = default(Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent>), long recordCategoriesRootNodeHash = default(long), long recordSealsRootNodeHash = default(long))
         {
             this.Score = score;
             this.TrackedRecordHash = trackedRecordHash;
@@ -60,7 +60,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this profile is tracking a record, this is the hash identifier of the record it is tracking.</value>
         [DataMember(Name="trackedRecordHash", EmitDefaultValue=false)]
-        public int TrackedRecordHash { get; set; }
+        public long TrackedRecordHash { get; set; }
 
         /// <summary>
         /// Gets or Sets Records
@@ -73,14 +73,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the root presentation node definition of Triumph categories.</value>
         [DataMember(Name="recordCategoriesRootNodeHash", EmitDefaultValue=false)]
-        public int RecordCategoriesRootNodeHash { get; set; }
+        public long RecordCategoriesRootNodeHash { get; set; }
 
         /// <summary>
         /// The hash for the root presentation node definition of Triumph Seals.
         /// </summary>
         /// <value>The hash for the root presentation node definition of Triumph Seals.</value>
         [DataMember(Name="recordSealsRootNodeHash", EmitDefaultValue=false)]
-        public int RecordSealsRootNodeHash { get; set; }
+        public long RecordSealsRootNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

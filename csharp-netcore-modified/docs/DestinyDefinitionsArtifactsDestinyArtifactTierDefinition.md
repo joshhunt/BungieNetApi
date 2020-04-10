@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TierHash** | **int** | An identifier, unique within the Artifact, for this specific tier. | [optional] 
+**TierHash** | **long** | An identifier, unique within the Artifact, for this specific tier. | [optional] 
 **DisplayTitle** | **string** | The human readable title of this tier, if any. | [optional] 
 **ProgressRequirementMessage** | **string** | A string representing the localized minimum requirement text for this Tier, if any. | [optional] 
 **Items** | [**List&lt;DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition&gt;**](DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition.md) | The items that can be earned within this tier. | [optional] 

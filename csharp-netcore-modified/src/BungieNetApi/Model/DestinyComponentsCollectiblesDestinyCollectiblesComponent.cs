@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="collectibles">collectibles.</param>
         /// <param name="collectionCategoriesRootNodeHash">The hash for the root presentation node definition of Collection categories..</param>
         /// <param name="collectionBadgesRootNodeHash">The hash for the root presentation node definition of Collection Badges..</param>
-        public DestinyComponentsCollectiblesDestinyCollectiblesComponent(Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles = default(Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent>), int collectionCategoriesRootNodeHash = default(int), int collectionBadgesRootNodeHash = default(int))
+        public DestinyComponentsCollectiblesDestinyCollectiblesComponent(Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles = default(Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent>), long collectionCategoriesRootNodeHash = default(long), long collectionBadgesRootNodeHash = default(long))
         {
             this.Collectibles = collectibles;
             this.CollectionCategoriesRootNodeHash = collectionCategoriesRootNodeHash;
@@ -55,14 +55,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the root presentation node definition of Collection categories.</value>
         [DataMember(Name="collectionCategoriesRootNodeHash", EmitDefaultValue=false)]
-        public int CollectionCategoriesRootNodeHash { get; set; }
+        public long CollectionCategoriesRootNodeHash { get; set; }
 
         /// <summary>
         /// The hash for the root presentation node definition of Collection Badges.
         /// </summary>
         /// <value>The hash for the root presentation node definition of Collection Badges.</value>
         [DataMember(Name="collectionBadgesRootNodeHash", EmitDefaultValue=false)]
-        public int CollectionBadgesRootNodeHash { get; set; }
+        public long CollectionBadgesRootNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

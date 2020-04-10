@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="trackingValueMax">The maximum possible number of items that can be collected..</param>
         /// <param name="itemList">The list of hashes for items in the gearset. Use them to look up DestinyInventoryItemDefinition entries for the items in the set..</param>
-        public DestinyDefinitionsDestinyItemGearsetBlockDefinition(int trackingValueMax = default(int), List<int> itemList = default(List<int>))
+        public DestinyDefinitionsDestinyItemGearsetBlockDefinition(int trackingValueMax = default(int), List<long> itemList = default(List<long>))
         {
             this.TrackingValueMax = trackingValueMax;
             this.ItemList = itemList;
@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The list of hashes for items in the gearset. Use them to look up DestinyInventoryItemDefinition entries for the items in the set.</value>
         [DataMember(Name="itemList", EmitDefaultValue=false)]
-        public List<int> ItemList { get; set; }
+        public List<long> ItemList { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

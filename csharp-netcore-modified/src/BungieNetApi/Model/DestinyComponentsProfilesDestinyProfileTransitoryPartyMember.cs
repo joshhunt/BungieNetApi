@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="emblemHash">The identifier for the DestinyInventoryItemDefinition of the player&#39;s emblem..</param>
         /// <param name="displayName">The player&#39;s last known display name..</param>
         /// <param name="status">A Flags Enumeration value indicating the states that the player is in relevant to being on a fireteam..</param>
-        public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember(long membershipId = default(long), int emblemHash = default(int), string displayName = default(string), int status = default(int))
+        public DestinyComponentsProfilesDestinyProfileTransitoryPartyMember(long membershipId = default(long), long emblemHash = default(long), string displayName = default(string), int status = default(int))
         {
             this.MembershipId = membershipId;
             this.EmblemHash = emblemHash;
@@ -58,7 +58,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for the DestinyInventoryItemDefinition of the player&#39;s emblem.</value>
         [DataMember(Name="emblemHash", EmitDefaultValue=false)]
-        public int EmblemHash { get; set; }
+        public long EmblemHash { get; set; }
 
         /// <summary>
         /// The player&#39;s last known display name.

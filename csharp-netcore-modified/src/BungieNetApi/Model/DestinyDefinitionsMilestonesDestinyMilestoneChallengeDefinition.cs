@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition" /> class.
         /// </summary>
         /// <param name="challengeObjectiveHash">The challenge related to this milestone..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition(int challengeObjectiveHash = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition(long challengeObjectiveHash = default(long))
         {
             this.ChallengeObjectiveHash = challengeObjectiveHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The challenge related to this milestone.</value>
         [DataMember(Name="challengeObjectiveHash", EmitDefaultValue=false)]
-        public int ChallengeObjectiveHash { get; set; }
+        public long ChallengeObjectiveHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

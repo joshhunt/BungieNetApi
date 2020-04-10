@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyItemMetricBlockDefinition" /> class.
         /// </summary>
         /// <param name="availableMetricCategoryNodeHashes">Hash identifiers for any DestinyPresentationNodeDefinition entry that can be used to list available metrics. Any metric listed directly below these nodes, or in any of these nodes&#39; children will be made available for selection..</param>
-        public DestinyDefinitionsDestinyItemMetricBlockDefinition(List<int> availableMetricCategoryNodeHashes = default(List<int>))
+        public DestinyDefinitionsDestinyItemMetricBlockDefinition(List<long> availableMetricCategoryNodeHashes = default(List<long>))
         {
             this.AvailableMetricCategoryNodeHashes = availableMetricCategoryNodeHashes;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Hash identifiers for any DestinyPresentationNodeDefinition entry that can be used to list available metrics. Any metric listed directly below these nodes, or in any of these nodes&#39; children will be made available for selection.</value>
         [DataMember(Name="availableMetricCategoryNodeHashes", EmitDefaultValue=false)]
-        public List<int> AvailableMetricCategoryNodeHashes { get; set; }
+        public List<long> AvailableMetricCategoryNodeHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

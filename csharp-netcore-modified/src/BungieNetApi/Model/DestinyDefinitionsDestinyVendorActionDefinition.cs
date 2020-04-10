@@ -43,7 +43,7 @@ namespace BungieNetApi.Model
         /// <param name="actionId">actionId.</param>
         /// <param name="actionHash">actionHash.</param>
         /// <param name="autoPerformAction">autoPerformAction.</param>
-        public DestinyDefinitionsDestinyVendorActionDefinition(string description = default(string), int executeSeconds = default(int), string icon = default(string), string name = default(string), string verb = default(string), bool isPositive = default(bool), string actionId = default(string), int actionHash = default(int), bool autoPerformAction = default(bool))
+        public DestinyDefinitionsDestinyVendorActionDefinition(string description = default(string), int executeSeconds = default(int), string icon = default(string), string name = default(string), string verb = default(string), bool isPositive = default(bool), string actionId = default(string), long actionHash = default(long), bool autoPerformAction = default(bool))
         {
             this.Description = description;
             this.ExecuteSeconds = executeSeconds;
@@ -102,7 +102,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ActionHash
         /// </summary>
         [DataMember(Name="actionHash", EmitDefaultValue=false)]
-        public int ActionHash { get; set; }
+        public long ActionHash { get; set; }
 
         /// <summary>
         /// Gets or Sets AutoPerformAction

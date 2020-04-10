@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="referenceId">The hash ID of the item definition that describes the weapon..</param>
         /// <param name="values">Collection of stats for the period..</param>
-        public DestinyHistoricalStatsDestinyHistoricalWeaponStats(int referenceId = default(int), Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue> values = default(Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue>))
+        public DestinyHistoricalStatsDestinyHistoricalWeaponStats(long referenceId = default(long), Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue> values = default(Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue>))
         {
             this.ReferenceId = referenceId;
             this.Values = values;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash ID of the item definition that describes the weapon.</value>
         [DataMember(Name="referenceId", EmitDefaultValue=false)]
-        public int ReferenceId { get; set; }
+        public long ReferenceId { get; set; }
 
         /// <summary>
         /// Collection of stats for the period.

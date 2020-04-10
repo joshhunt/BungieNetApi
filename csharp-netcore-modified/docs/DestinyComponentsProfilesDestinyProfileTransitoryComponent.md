@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **CurrentActivity** | [**DestinyComponentsProfilesDestinyProfileTransitoryCurrentActivity**](DestinyComponentsProfilesDestinyProfileTransitoryCurrentActivity.md) | If you are in an activity, this is some transitory info about the activity currently being played. | [optional] 
 **Joinability** | [**DestinyComponentsProfilesDestinyProfileTransitoryJoinability**](DestinyComponentsProfilesDestinyProfileTransitoryJoinability.md) | Information about whether and what might prevent you from joining this person on a fireteam. | [optional] 
 **Tracking** | [**List&lt;DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry&gt;**](DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry.md) | Information about tracked entities. | [optional] 
-**LastOrbitedDestinationHash** | **int** | The hash identifier for the DestinyDestinationDefinition of the last location you were orbiting when in orbit. | [optional] 
+**LastOrbitedDestinationHash** | **long** | The hash identifier for the DestinyDestinationDefinition of the last location you were orbiting when in orbit. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

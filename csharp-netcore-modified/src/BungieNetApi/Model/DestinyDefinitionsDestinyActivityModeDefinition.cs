@@ -48,7 +48,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyActivityModeDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string pgcrImage = default(string), int modeType = default(int), int activityModeCategory = default(int), bool isTeamBased = default(bool), bool isAggregateMode = default(bool), List<int> parentHashes = default(List<int>), string friendlyName = default(string), Dictionary<string, int> activityModeMappings = default(Dictionary<string, int>), bool display = default(bool), int order = default(int), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyActivityModeDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string pgcrImage = default(string), int modeType = default(int), int activityModeCategory = default(int), bool isTeamBased = default(bool), bool isAggregateMode = default(bool), List<long> parentHashes = default(List<long>), string friendlyName = default(string), Dictionary<string, int> activityModeMappings = default(Dictionary<string, int>), bool display = default(bool), int order = default(int), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.PgcrImage = pgcrImage;
@@ -112,7 +112,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifiers of the DestinyActivityModeDefinitions that represent all of the \&quot;parent\&quot; modes for this mode. For instance, the Nightfall Mode is also a member of AllStrikes and AllPvE.</value>
         [DataMember(Name="parentHashes", EmitDefaultValue=false)]
-        public List<int> ParentHashes { get; set; }
+        public List<long> ParentHashes { get; set; }
 
         /// <summary>
         /// A Friendly identifier you can use for referring to this Activity Mode. We really only used this in our URLs, so... you know, take that for whatever it&#39;s worth.
@@ -147,7 +147,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

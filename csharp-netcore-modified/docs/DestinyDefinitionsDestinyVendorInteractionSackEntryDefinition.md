@@ -4,7 +4,7 @@ Compare this sackType to the sack identifier in the DestinyInventoryItemDefiniti
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SackType** | **int** |  | [optional] 
+**SackType** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

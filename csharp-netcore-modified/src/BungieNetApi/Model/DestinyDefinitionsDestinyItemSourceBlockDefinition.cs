@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="sources">A collection of details about the stats that were computed for the ways we found that the item could be spawned..</param>
         /// <param name="exclusive">If we found that this item is exclusive to a specific platform, this will be set to the BungieMembershipType enumeration that matches that platform..</param>
         /// <param name="vendorSources">A denormalized reference back to vendors that potentially sell this item..</param>
-        public DestinyDefinitionsDestinyItemSourceBlockDefinition(List<int> sourceHashes = default(List<int>), List<DestinyDefinitionsSourcesDestinyItemSourceDefinition> sources = default(List<DestinyDefinitionsSourcesDestinyItemSourceDefinition>), int exclusive = default(int), List<DestinyDefinitionsDestinyItemVendorSourceReference> vendorSources = default(List<DestinyDefinitionsDestinyItemVendorSourceReference>))
+        public DestinyDefinitionsDestinyItemSourceBlockDefinition(List<long> sourceHashes = default(List<long>), List<DestinyDefinitionsSourcesDestinyItemSourceDefinition> sources = default(List<DestinyDefinitionsSourcesDestinyItemSourceDefinition>), int exclusive = default(int), List<DestinyDefinitionsDestinyItemVendorSourceReference> vendorSources = default(List<DestinyDefinitionsDestinyItemVendorSourceReference>))
         {
             this.SourceHashes = sourceHashes;
             this.Sources = sources;
@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The list of hash identifiers for Reward Sources that hint where the item can be found (DestinyRewardSourceDefinition).</value>
         [DataMember(Name="sourceHashes", EmitDefaultValue=false)]
-        public List<int> SourceHashes { get; set; }
+        public List<long> SourceHashes { get; set; }
 
         /// <summary>
         /// A collection of details about the stats that were computed for the ways we found that the item could be spawned.

@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// <param name="parentItemOverride">Do you ever get the feeling that a system has become so overburdened by edge cases that it probably should have become some other system entirely? So do I!  In totally unrelated news, Plugs can now override properties of their parent items. This is some of the relevant definition data for those overrides.  If this is populated, it will have the override data to be applied when this plug is applied to an item..</param>
         /// <param name="energyCapacity">IF not null, this plug provides Energy capacity to the item in which it is socketed. In Armor 2.0 for example, is implemented in a similar way to Masterworks, where visually it&#39;s a single area of the UI being clicked on to \&quot;Upgrade\&quot; to higher energy levels, but it&#39;s actually socketing new plugs..</param>
         /// <param name="energyCost">IF not null, this plug has an energy cost. This contains the details of that cost..</param>
-        public DestinyDefinitionsItemsDestinyItemPlugDefinition(List<DestinyDefinitionsItemsDestinyPlugRuleDefinition> insertionRules = default(List<DestinyDefinitionsItemsDestinyPlugRuleDefinition>), string plugCategoryIdentifier = default(string), int plugCategoryHash = default(int), bool onActionRecreateSelf = default(bool), int insertionMaterialRequirementHash = default(int), int previewItemOverrideHash = default(int), int enabledMaterialRequirementHash = default(int), List<DestinyDefinitionsItemsDestinyPlugRuleDefinition> enabledRules = default(List<DestinyDefinitionsItemsDestinyPlugRuleDefinition>), string uiPlugLabel = default(string), int plugStyle = default(int), int plugAvailability = default(int), string alternateUiPlugLabel = default(string), int alternatePlugStyle = default(int), bool isDummyPlug = default(bool), DestinyDefinitionsItemsDestinyParentItemOverride parentItemOverride = default(DestinyDefinitionsItemsDestinyParentItemOverride), DestinyDefinitionsItemsDestinyEnergyCapacityEntry energyCapacity = default(DestinyDefinitionsItemsDestinyEnergyCapacityEntry), DestinyDefinitionsItemsDestinyEnergyCostEntry energyCost = default(DestinyDefinitionsItemsDestinyEnergyCostEntry))
+        public DestinyDefinitionsItemsDestinyItemPlugDefinition(List<DestinyDefinitionsItemsDestinyPlugRuleDefinition> insertionRules = default(List<DestinyDefinitionsItemsDestinyPlugRuleDefinition>), string plugCategoryIdentifier = default(string), long plugCategoryHash = default(long), bool onActionRecreateSelf = default(bool), long insertionMaterialRequirementHash = default(long), long previewItemOverrideHash = default(long), long enabledMaterialRequirementHash = default(long), List<DestinyDefinitionsItemsDestinyPlugRuleDefinition> enabledRules = default(List<DestinyDefinitionsItemsDestinyPlugRuleDefinition>), string uiPlugLabel = default(string), int plugStyle = default(int), int plugAvailability = default(int), string alternateUiPlugLabel = default(string), int alternatePlugStyle = default(int), bool isDummyPlug = default(bool), DestinyDefinitionsItemsDestinyParentItemOverride parentItemOverride = default(DestinyDefinitionsItemsDestinyParentItemOverride), DestinyDefinitionsItemsDestinyEnergyCapacityEntry energyCapacity = default(DestinyDefinitionsItemsDestinyEnergyCapacityEntry), DestinyDefinitionsItemsDestinyEnergyCostEntry energyCost = default(DestinyDefinitionsItemsDestinyEnergyCostEntry))
         {
             this.InsertionRules = insertionRules;
             this.PlugCategoryIdentifier = plugCategoryIdentifier;
@@ -91,7 +91,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the plugCategoryIdentifier. You can use this instead if you wish: I put both in the definition for debugging purposes.</value>
         [DataMember(Name="plugCategoryHash", EmitDefaultValue=false)]
-        public int PlugCategoryHash { get; set; }
+        public long PlugCategoryHash { get; set; }
 
         /// <summary>
         /// If you successfully socket the item, this will determine whether or not you get \&quot;refunded\&quot; on the plug.
@@ -105,21 +105,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If inserting this plug requires materials, this is the hash identifier for looking up the DestinyMaterialRequirementSetDefinition for those requirements.</value>
         [DataMember(Name="insertionMaterialRequirementHash", EmitDefaultValue=false)]
-        public int InsertionMaterialRequirementHash { get; set; }
+        public long InsertionMaterialRequirementHash { get; set; }
 
         /// <summary>
         /// In the game, if you&#39;re inspecting a plug item directly, this will be the item shown with the plug attached. Look up the DestinyInventoryItemDefinition for this hash for the item.
         /// </summary>
         /// <value>In the game, if you&#39;re inspecting a plug item directly, this will be the item shown with the plug attached. Look up the DestinyInventoryItemDefinition for this hash for the item.</value>
         [DataMember(Name="previewItemOverrideHash", EmitDefaultValue=false)]
-        public int PreviewItemOverrideHash { get; set; }
+        public long PreviewItemOverrideHash { get; set; }
 
         /// <summary>
         /// It&#39;s not enough for the plug to be inserted. It has to be enabled as well. For it to be enabled, it may require materials. This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements, if there is one.
         /// </summary>
         /// <value>It&#39;s not enough for the plug to be inserted. It has to be enabled as well. For it to be enabled, it may require materials. This is the hash identifier for the DestinyMaterialRequirementSetDefinition for those requirements, if there is one.</value>
         [DataMember(Name="enabledMaterialRequirementHash", EmitDefaultValue=false)]
-        public int EnabledMaterialRequirementHash { get; set; }
+        public long EnabledMaterialRequirementHash { get; set; }
 
         /// <summary>
         /// The rules around whether the plug, once inserted, is enabled and providing its benefits.  The live data DestinyItemPlugComponent.enableFailIndexes will be an index into this array, so you can pull out the failure strings appropriate for the user.

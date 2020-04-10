@@ -68,7 +68,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyVendorDefinition(DestinyDefinitionsDestinyVendorDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsDestinyVendorDisplayPropertiesDefinition), string buyString = default(string), string sellString = default(string), int displayItemHash = default(int), bool inhibitBuying = default(bool), bool inhibitSelling = default(bool), int factionHash = default(int), int resetIntervalMinutes = default(int), int resetOffsetMinutes = default(int), List<string> failureStrings = default(List<string>), List<DatesDateRange> unlockRanges = default(List<DatesDateRange>), string vendorIdentifier = default(string), string vendorPortrait = default(string), string vendorBanner = default(string), bool enabled = default(bool), bool visible = default(bool), string vendorSubcategoryIdentifier = default(string), bool consolidateCategories = default(bool), List<DestinyDefinitionsDestinyVendorActionDefinition> actions = default(List<DestinyDefinitionsDestinyVendorActionDefinition>), List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition> categories = default(List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition>), List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition> originalCategories = default(List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition>), List<DestinyDefinitionsDestinyDisplayCategoryDefinition> displayCategories = default(List<DestinyDefinitionsDestinyDisplayCategoryDefinition>), List<DestinyDefinitionsDestinyVendorInteractionDefinition> interactions = default(List<DestinyDefinitionsDestinyVendorInteractionDefinition>), List<DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition> inventoryFlyouts = default(List<DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition>), List<DestinyDefinitionsDestinyVendorItemDefinition> itemList = default(List<DestinyDefinitionsDestinyVendorItemDefinition>), List<DestinyDefinitionsDestinyVendorServiceDefinition> services = default(List<DestinyDefinitionsDestinyVendorServiceDefinition>), List<DestinyDefinitionsDestinyVendorAcceptedItemDefinition> acceptedItems = default(List<DestinyDefinitionsDestinyVendorAcceptedItemDefinition>), bool returnWithVendorRequest = default(bool), List<DestinyDefinitionsVendorsDestinyVendorLocationDefinition> locations = default(List<DestinyDefinitionsVendorsDestinyVendorLocationDefinition>), List<DestinyDefinitionsDestinyVendorGroupReference> groups = default(List<DestinyDefinitionsDestinyVendorGroupReference>), List<int> ignoreSaleItemHashes = default(List<int>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyVendorDefinition(DestinyDefinitionsDestinyVendorDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsDestinyVendorDisplayPropertiesDefinition), string buyString = default(string), string sellString = default(string), long displayItemHash = default(long), bool inhibitBuying = default(bool), bool inhibitSelling = default(bool), long factionHash = default(long), int resetIntervalMinutes = default(int), int resetOffsetMinutes = default(int), List<string> failureStrings = default(List<string>), List<DatesDateRange> unlockRanges = default(List<DatesDateRange>), string vendorIdentifier = default(string), string vendorPortrait = default(string), string vendorBanner = default(string), bool enabled = default(bool), bool visible = default(bool), string vendorSubcategoryIdentifier = default(string), bool consolidateCategories = default(bool), List<DestinyDefinitionsDestinyVendorActionDefinition> actions = default(List<DestinyDefinitionsDestinyVendorActionDefinition>), List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition> categories = default(List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition>), List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition> originalCategories = default(List<DestinyDefinitionsDestinyVendorCategoryEntryDefinition>), List<DestinyDefinitionsDestinyDisplayCategoryDefinition> displayCategories = default(List<DestinyDefinitionsDestinyDisplayCategoryDefinition>), List<DestinyDefinitionsDestinyVendorInteractionDefinition> interactions = default(List<DestinyDefinitionsDestinyVendorInteractionDefinition>), List<DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition> inventoryFlyouts = default(List<DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition>), List<DestinyDefinitionsDestinyVendorItemDefinition> itemList = default(List<DestinyDefinitionsDestinyVendorItemDefinition>), List<DestinyDefinitionsDestinyVendorServiceDefinition> services = default(List<DestinyDefinitionsDestinyVendorServiceDefinition>), List<DestinyDefinitionsDestinyVendorAcceptedItemDefinition> acceptedItems = default(List<DestinyDefinitionsDestinyVendorAcceptedItemDefinition>), bool returnWithVendorRequest = default(bool), List<DestinyDefinitionsVendorsDestinyVendorLocationDefinition> locations = default(List<DestinyDefinitionsVendorsDestinyVendorLocationDefinition>), List<DestinyDefinitionsDestinyVendorGroupReference> groups = default(List<DestinyDefinitionsDestinyVendorGroupReference>), List<long> ignoreSaleItemHashes = default(List<long>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.BuyString = buyString;
@@ -131,7 +131,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the vendor has an item that should be displayed as the \&quot;featured\&quot; item, this is the hash identifier for that DestinyVendorItemDefinition.  Apparently this is usually a related currency, like a reputation token. But it need not be restricted to that.</value>
         [DataMember(Name="displayItemHash", EmitDefaultValue=false)]
-        public int DisplayItemHash { get; set; }
+        public long DisplayItemHash { get; set; }
 
         /// <summary>
         /// If this is true, you aren&#39;t allowed to buy whatever the vendor is selling.
@@ -152,7 +152,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the Vendor has a faction, this hash will be valid and point to a DestinyFactionDefinition.  The game UI and BNet often mine the faction definition for additional elements and details to place on the screen, such as the faction&#39;s Progression status (aka \&quot;Reputation\&quot;).</value>
         [DataMember(Name="factionHash", EmitDefaultValue=false)]
-        public int FactionHash { get; set; }
+        public long FactionHash { get; set; }
 
         /// <summary>
         /// A number used for calculating the frequency of a vendor&#39;s inventory resetting/refreshing.  Don&#39;t worry about calculating this - we do it on the server side and send you the next refresh date with the live data.
@@ -320,14 +320,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Some items don&#39;t make sense to return in the API, for example because they represent an action to be performed rather than an item being sold. I&#39;d rather we not do this, but at least in the short term this is a workable workaround.</value>
         [DataMember(Name="ignoreSaleItemHashes", EmitDefaultValue=false)]
-        public List<int> IgnoreSaleItemHashes { get; set; }
+        public List<long> IgnoreSaleItemHashes { get; set; }
 
         /// <summary>
         /// The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

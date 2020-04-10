@@ -3,8 +3,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AcquireMaterialRequirementHash** | **int** |  | [optional] 
-**AcquireTimestampUnlockValueHash** | **int** |  | [optional] 
+**AcquireMaterialRequirementHash** | **long** |  | [optional] 
+**AcquireTimestampUnlockValueHash** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

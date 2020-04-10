@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="artifactHash">If this item should show you Artifact information when you preview it, this is the hash identifier of the DestinyArtifactDefinition for the artifact whose data should be shown..</param>
         /// <param name="previewActionString">If the preview has an associated action (like \&quot;Open\&quot;), this will be the localized string for that action..</param>
         /// <param name="derivedItemCategories">This is a list of the items being previewed, categorized in the same way as they are in the preview UI..</param>
-        public DestinyDefinitionsDestinyItemPreviewBlockDefinition(string screenStyle = default(string), int previewVendorHash = default(int), int artifactHash = default(int), string previewActionString = default(string), List<DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition> derivedItemCategories = default(List<DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition>))
+        public DestinyDefinitionsDestinyItemPreviewBlockDefinition(string screenStyle = default(string), long previewVendorHash = default(long), long artifactHash = default(long), string previewActionString = default(string), List<DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition> derivedItemCategories = default(List<DestinyDefinitionsItemsDestinyDerivedItemCategoryDefinition>))
         {
             this.ScreenStyle = screenStyle;
             this.PreviewVendorHash = previewVendorHash;
@@ -60,14 +60,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the preview data is derived from a fake \&quot;Preview\&quot; Vendor, this will be the hash identifier for the DestinyVendorDefinition of that fake vendor.</value>
         [DataMember(Name="previewVendorHash", EmitDefaultValue=false)]
-        public int PreviewVendorHash { get; set; }
+        public long PreviewVendorHash { get; set; }
 
         /// <summary>
         /// If this item should show you Artifact information when you preview it, this is the hash identifier of the DestinyArtifactDefinition for the artifact whose data should be shown.
         /// </summary>
         /// <value>If this item should show you Artifact information when you preview it, this is the hash identifier of the DestinyArtifactDefinition for the artifact whose data should be shown.</value>
         [DataMember(Name="artifactHash", EmitDefaultValue=false)]
-        public int ArtifactHash { get; set; }
+        public long ArtifactHash { get; set; }
 
         /// <summary>
         /// If the preview has an associated action (like \&quot;Open\&quot;), this will be the localized string for that action.

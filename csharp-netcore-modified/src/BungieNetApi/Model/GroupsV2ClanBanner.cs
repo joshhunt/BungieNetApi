@@ -41,7 +41,7 @@ namespace BungieNetApi.Model
         /// <param name="gonfalonColorId">gonfalonColorId.</param>
         /// <param name="gonfalonDetailId">gonfalonDetailId.</param>
         /// <param name="gonfalonDetailColorId">gonfalonDetailColorId.</param>
-        public GroupsV2ClanBanner(int decalId = default(int), int decalColorId = default(int), int decalBackgroundColorId = default(int), int gonfalonId = default(int), int gonfalonColorId = default(int), int gonfalonDetailId = default(int), int gonfalonDetailColorId = default(int))
+        public GroupsV2ClanBanner(long decalId = default(long), long decalColorId = default(long), long decalBackgroundColorId = default(long), long gonfalonId = default(long), long gonfalonColorId = default(long), long gonfalonDetailId = default(long), long gonfalonDetailColorId = default(long))
         {
             this.DecalId = decalId;
             this.DecalColorId = decalColorId;
@@ -56,43 +56,43 @@ namespace BungieNetApi.Model
         /// Gets or Sets DecalId
         /// </summary>
         [DataMember(Name="decalId", EmitDefaultValue=false)]
-        public int DecalId { get; set; }
+        public long DecalId { get; set; }
 
         /// <summary>
         /// Gets or Sets DecalColorId
         /// </summary>
         [DataMember(Name="decalColorId", EmitDefaultValue=false)]
-        public int DecalColorId { get; set; }
+        public long DecalColorId { get; set; }
 
         /// <summary>
         /// Gets or Sets DecalBackgroundColorId
         /// </summary>
         [DataMember(Name="decalBackgroundColorId", EmitDefaultValue=false)]
-        public int DecalBackgroundColorId { get; set; }
+        public long DecalBackgroundColorId { get; set; }
 
         /// <summary>
         /// Gets or Sets GonfalonId
         /// </summary>
         [DataMember(Name="gonfalonId", EmitDefaultValue=false)]
-        public int GonfalonId { get; set; }
+        public long GonfalonId { get; set; }
 
         /// <summary>
         /// Gets or Sets GonfalonColorId
         /// </summary>
         [DataMember(Name="gonfalonColorId", EmitDefaultValue=false)]
-        public int GonfalonColorId { get; set; }
+        public long GonfalonColorId { get; set; }
 
         /// <summary>
         /// Gets or Sets GonfalonDetailId
         /// </summary>
         [DataMember(Name="gonfalonDetailId", EmitDefaultValue=false)]
-        public int GonfalonDetailId { get; set; }
+        public long GonfalonDetailId { get; set; }
 
         /// <summary>
         /// Gets or Sets GonfalonDetailColorId
         /// </summary>
         [DataMember(Name="gonfalonDetailColorId", EmitDefaultValue=false)]
-        public int GonfalonDetailColorId { get; set; }
+        public long GonfalonDetailColorId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

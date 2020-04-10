@@ -43,7 +43,7 @@ namespace BungieNetApi.Model
         /// <param name="reusablePlugSetHash">If this socket&#39;s plugs come from a reusable DestinyPlugSetDefinition, this is the identifier for that set. We added this concept to reduce some major duplication that&#39;s going to come from sockets as replacements for what was once implemented as large sets of items and kiosks (like Emotes).   As of Shadowkeep, these will come up much more frequently and be driven by game content rather than custom curation..</param>
         /// <param name="randomizedPlugSetHash">This field replaces \&quot;randomizedPlugItems\&quot; as of Shadowkeep launch. If a socket has randomized plugs, this is a pointer to the set of plugs that could be used, as defined in DestinyPlugSetDefinition.   If null, the item has no randomized plugs..</param>
         /// <param name="defaultVisible">If true, then this socket is visible in the item&#39;s \&quot;default\&quot; state. If you have an instance, you should always check the runtime state, as that can override this visibility setting: but if you&#39;re looking at the item on a conceptual level, this property can be useful for hiding data such as legacy sockets - which remain defined on items for infrastructure purposes, but can be confusing for users to see..</param>
-        public DestinyDefinitionsDestinyItemSocketEntryDefinition(int socketTypeHash = default(int), int singleInitialItemHash = default(int), List<DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition> reusablePlugItems = default(List<DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition>), bool preventInitializationOnVendorPurchase = default(bool), bool hidePerksInItemTooltip = default(bool), int plugSources = default(int), int reusablePlugSetHash = default(int), int randomizedPlugSetHash = default(int), bool defaultVisible = default(bool))
+        public DestinyDefinitionsDestinyItemSocketEntryDefinition(long socketTypeHash = default(long), long singleInitialItemHash = default(long), List<DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition> reusablePlugItems = default(List<DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition>), bool preventInitializationOnVendorPurchase = default(bool), bool hidePerksInItemTooltip = default(bool), int plugSources = default(int), long reusablePlugSetHash = default(long), long randomizedPlugSetHash = default(long), bool defaultVisible = default(bool))
         {
             this.SocketTypeHash = socketTypeHash;
             this.SingleInitialItemHash = singleInitialItemHash;
@@ -61,14 +61,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>All sockets have a type, and this is the hash identifier for this particular type. Use it to look up the DestinySocketTypeDefinition: read there for more information on how socket types affect the behavior of the socket.</value>
         [DataMember(Name="socketTypeHash", EmitDefaultValue=false)]
-        public int SocketTypeHash { get; set; }
+        public long SocketTypeHash { get; set; }
 
         /// <summary>
         /// If a valid hash, this is the hash identifier for the DestinyInventoryItemDefinition representing the Plug that will be initially inserted into the item on item creation. Otherwise, this Socket will either start without a plug inserted, or will have one randomly inserted.
         /// </summary>
         /// <value>If a valid hash, this is the hash identifier for the DestinyInventoryItemDefinition representing the Plug that will be initially inserted into the item on item creation. Otherwise, this Socket will either start without a plug inserted, or will have one randomly inserted.</value>
         [DataMember(Name="singleInitialItemHash", EmitDefaultValue=false)]
-        public int SingleInitialItemHash { get; set; }
+        public long SingleInitialItemHash { get; set; }
 
         /// <summary>
         /// This is a list of pre-determined plugs that can *always* be plugged into this socket, without the character having the plug in their inventory.  If this list is populated, you will not be allowed to plug an arbitrary item in the socket: you will only be able to choose from one of these reusable plugs.
@@ -103,14 +103,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this socket&#39;s plugs come from a reusable DestinyPlugSetDefinition, this is the identifier for that set. We added this concept to reduce some major duplication that&#39;s going to come from sockets as replacements for what was once implemented as large sets of items and kiosks (like Emotes).   As of Shadowkeep, these will come up much more frequently and be driven by game content rather than custom curation.</value>
         [DataMember(Name="reusablePlugSetHash", EmitDefaultValue=false)]
-        public int ReusablePlugSetHash { get; set; }
+        public long ReusablePlugSetHash { get; set; }
 
         /// <summary>
         /// This field replaces \&quot;randomizedPlugItems\&quot; as of Shadowkeep launch. If a socket has randomized plugs, this is a pointer to the set of plugs that could be used, as defined in DestinyPlugSetDefinition.   If null, the item has no randomized plugs.
         /// </summary>
         /// <value>This field replaces \&quot;randomizedPlugItems\&quot; as of Shadowkeep launch. If a socket has randomized plugs, this is a pointer to the set of plugs that could be used, as defined in DestinyPlugSetDefinition.   If null, the item has no randomized plugs.</value>
         [DataMember(Name="randomizedPlugSetHash", EmitDefaultValue=false)]
-        public int RandomizedPlugSetHash { get; set; }
+        public long RandomizedPlugSetHash { get; set; }
 
         /// <summary>
         /// If true, then this socket is visible in the item&#39;s \&quot;default\&quot; state. If you have an instance, you should always check the runtime state, as that can override this visibility setting: but if you&#39;re looking at the item on a conceptual level, this property can be useful for hiding data such as legacy sockets - which remain defined on items for infrastructure purposes, but can be confusing for users to see.

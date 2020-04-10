@@ -48,7 +48,7 @@ namespace BungieNetApi.Model
         /// <param name="activityPathDestination">If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man..</param>
         /// <param name="navPointType">The type of Nav Point that this represents. See the enumeration for more info..</param>
         /// <param name="worldPosition">Looks like it should be the position on the map, but sadly it does not look populated... yet?.</param>
-        public DestinyDefinitionsDestinyLocationReleaseDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string smallTransparentIcon = default(string), string mapIcon = default(string), string largeTransparentIcon = default(string), int spawnPoint = default(int), int destinationHash = default(int), int activityHash = default(int), int activityGraphHash = default(int), int activityGraphNodeHash = default(int), int activityBubbleName = default(int), int activityPathBundle = default(int), int activityPathDestination = default(int), int navPointType = default(int), List<int> worldPosition = default(List<int>))
+        public DestinyDefinitionsDestinyLocationReleaseDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string smallTransparentIcon = default(string), string mapIcon = default(string), string largeTransparentIcon = default(string), long spawnPoint = default(long), long destinationHash = default(long), long activityHash = default(long), long activityGraphHash = default(long), long activityGraphNodeHash = default(long), long activityBubbleName = default(long), long activityPathBundle = default(long), long activityPathDestination = default(long), int navPointType = default(int), List<int> worldPosition = default(List<int>))
         {
             this.DisplayProperties = displayProperties;
             this.SmallTransparentIcon = smallTransparentIcon;
@@ -96,56 +96,56 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If we had map information, this spawnPoint would be interesting. But sadly, we don&#39;t have that info.</value>
         [DataMember(Name="spawnPoint", EmitDefaultValue=false)]
-        public int SpawnPoint { get; set; }
+        public long SpawnPoint { get; set; }
 
         /// <summary>
         /// The Destination being pointed to by this location.
         /// </summary>
         /// <value>The Destination being pointed to by this location.</value>
         [DataMember(Name="destinationHash", EmitDefaultValue=false)]
-        public int DestinationHash { get; set; }
+        public long DestinationHash { get; set; }
 
         /// <summary>
         /// The Activity being pointed to by this location.
         /// </summary>
         /// <value>The Activity being pointed to by this location.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// The Activity Graph being pointed to by this location.
         /// </summary>
         /// <value>The Activity Graph being pointed to by this location.</value>
         [DataMember(Name="activityGraphHash", EmitDefaultValue=false)]
-        public int ActivityGraphHash { get; set; }
+        public long ActivityGraphHash { get; set; }
 
         /// <summary>
         /// The Activity Graph Node being pointed to by this location. (Remember that Activity Graph Node hashes are only unique within an Activity Graph: so use the combination to find the node being spoken of)
         /// </summary>
         /// <value>The Activity Graph Node being pointed to by this location. (Remember that Activity Graph Node hashes are only unique within an Activity Graph: so use the combination to find the node being spoken of)</value>
         [DataMember(Name="activityGraphNodeHash", EmitDefaultValue=false)]
-        public int ActivityGraphNodeHash { get; set; }
+        public long ActivityGraphNodeHash { get; set; }
 
         /// <summary>
         /// The Activity Bubble within the Destination. Look this up in the DestinyDestinationDefinition&#39;s bubbles and bubbleSettings properties.
         /// </summary>
         /// <value>The Activity Bubble within the Destination. Look this up in the DestinyDestinationDefinition&#39;s bubbles and bubbleSettings properties.</value>
         [DataMember(Name="activityBubbleName", EmitDefaultValue=false)]
-        public int ActivityBubbleName { get; set; }
+        public long ActivityBubbleName { get; set; }
 
         /// <summary>
         /// If we had map information, this would tell us something cool about the path this location wants you to take. I wish we had map information.
         /// </summary>
         /// <value>If we had map information, this would tell us something cool about the path this location wants you to take. I wish we had map information.</value>
         [DataMember(Name="activityPathBundle", EmitDefaultValue=false)]
-        public int ActivityPathBundle { get; set; }
+        public long ActivityPathBundle { get; set; }
 
         /// <summary>
         /// If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man.
         /// </summary>
         /// <value>If we had map information, this would tell us about path information related to destination on the map. Sad. Maybe you can do something cool with it. Go to town man.</value>
         [DataMember(Name="activityPathDestination", EmitDefaultValue=false)]
-        public int ActivityPathDestination { get; set; }
+        public long ActivityPathDestination { get; set; }
 
         /// <summary>
         /// The type of Nav Point that this represents. See the enumeration for more info.

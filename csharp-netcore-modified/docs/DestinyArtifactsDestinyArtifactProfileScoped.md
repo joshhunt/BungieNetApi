@@ -4,7 +4,7 @@ Represents a Seasonal Artifact and all data related to it for the requested Acco
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactHash** | **int** |  | [optional] 
+**ArtifactHash** | **long** |  | [optional] 
 **PointProgression** | [**DestinyDestinyProgression**](DestinyDestinyProgression.md) |  | [optional] 
 **PointsAcquired** | **int** |  | [optional] 
 **PowerBonusProgression** | [**DestinyDestinyProgression**](DestinyDestinyProgression.md) |  | [optional] 

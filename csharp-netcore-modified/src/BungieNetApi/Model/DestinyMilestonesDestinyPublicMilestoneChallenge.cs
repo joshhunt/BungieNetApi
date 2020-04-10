@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="objectiveHash">The objective for the Challenge, which should have human-readable data about what needs to be done to accomplish the objective. Use this hash to look up the DestinyObjectiveDefinition..</param>
         /// <param name="activityHash">IF the Objective is related to a specific Activity, this will be that activity&#39;s hash. Use it to look up the DestinyActivityDefinition for additional data to show..</param>
-        public DestinyMilestonesDestinyPublicMilestoneChallenge(int objectiveHash = default(int), int activityHash = default(int))
+        public DestinyMilestonesDestinyPublicMilestoneChallenge(long objectiveHash = default(long), long activityHash = default(long))
         {
             this.ObjectiveHash = objectiveHash;
             this.ActivityHash = activityHash;
@@ -47,14 +47,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The objective for the Challenge, which should have human-readable data about what needs to be done to accomplish the objective. Use this hash to look up the DestinyObjectiveDefinition.</value>
         [DataMember(Name="objectiveHash", EmitDefaultValue=false)]
-        public int ObjectiveHash { get; set; }
+        public long ObjectiveHash { get; set; }
 
         /// <summary>
         /// IF the Objective is related to a specific Activity, this will be that activity&#39;s hash. Use it to look up the DestinyActivityDefinition for additional data to show.
         /// </summary>
         /// <value>IF the Objective is related to a specific Activity, this will be that activity&#39;s hash. Use it to look up the DestinyActivityDefinition for additional data to show.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

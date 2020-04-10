@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition" /> class.
         /// </summary>
         /// <param name="sackType">sackType.</param>
-        public DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition(int sackType = default(int))
+        public DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition(long sackType = default(long))
         {
             this.SackType = sackType;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets SackType
         /// </summary>
         [DataMember(Name="sackType", EmitDefaultValue=false)]
-        public int SackType { get; set; }
+        public long SackType { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Description** | **string** |  | [optional] 
 **Name** | **string** |  | [optional] 
 **UnlockExpression** | [**DestinyDefinitionsDestinyUnlockExpressionDefinition**](DestinyDefinitionsDestinyUnlockExpressionDefinition.md) |  | [optional] 
-**LinkedGraphId** | **int** |  | [optional] 
+**LinkedGraphId** | **long** |  | [optional] 
 **LinkedGraphs** | [**List&lt;DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition&gt;**](DestinyDefinitionsDirectorDestinyLinkedGraphEntryDefinition.md) |  | [optional] 
 **Overview** | **string** |  | [optional] 
 

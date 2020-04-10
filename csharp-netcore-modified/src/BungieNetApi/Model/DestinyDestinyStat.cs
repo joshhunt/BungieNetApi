@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="statHash">The hash identifier for the Stat. Use it to look up the DestinyStatDefinition for static data about the stat..</param>
         /// <param name="value">The current value of the Stat..</param>
-        public DestinyDestinyStat(int statHash = default(int), int value = default(int))
+        public DestinyDestinyStat(long statHash = default(long), int value = default(int))
         {
             this.StatHash = statHash;
             this.Value = value;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the Stat. Use it to look up the DestinyStatDefinition for static data about the stat.</value>
         [DataMember(Name="statHash", EmitDefaultValue=false)]
-        public int StatHash { get; set; }
+        public long StatHash { get; set; }
 
         /// <summary>
         /// The current value of the Stat.

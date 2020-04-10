@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="perkHash">The hash identifier of the DestinySandboxPerkDefinition that will be applied to the character..</param>
         /// <param name="style">An enumeration indicating whether it will be applied as long as the Objective is active, when it&#39;s completed, or until it&#39;s completed..</param>
-        public DestinyDefinitionsDestinyObjectivePerkEntryDefinition(int perkHash = default(int), int style = default(int))
+        public DestinyDefinitionsDestinyObjectivePerkEntryDefinition(long perkHash = default(long), int style = default(int))
         {
             this.PerkHash = perkHash;
             this.Style = style;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the DestinySandboxPerkDefinition that will be applied to the character.</value>
         [DataMember(Name="perkHash", EmitDefaultValue=false)]
-        public int PerkHash { get; set; }
+        public long PerkHash { get; set; }
 
         /// <summary>
         /// An enumeration indicating whether it will be applied as long as the Objective is active, when it&#39;s completed, or until it&#39;s completed.

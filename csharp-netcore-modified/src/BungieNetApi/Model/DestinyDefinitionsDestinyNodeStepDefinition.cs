@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// <param name="stepGroups">In Destiny 1, the Armory&#39;s Perk Filtering was driven by a concept of TalentNodeStepGroups: categorizations of talent nodes based on their functionality. While the Armory isn&#39;t a BNet-facing thing for now, and the new Armory will need to account for Sockets rather than Talent Nodes, this categorization capability feels useful enough to still keep around..</param>
         /// <param name="affectsLevel">If true, this step can affect the level of the item. See DestinyInventoryItemDefintion for more information about item levels and their effect on stats..</param>
         /// <param name="socketReplacements">If this step is activated, this will be a list of information used to replace socket items with new Plugs. See DestinyInventoryItemDefinition for more information about sockets and plugs..</param>
-        public DestinyDefinitionsDestinyNodeStepDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int stepIndex = default(int), int nodeStepHash = default(int), string interactionDescription = default(string), int damageType = default(int), int damageTypeHash = default(int), DestinyDefinitionsDestinyNodeActivationRequirement activationRequirement = default(DestinyDefinitionsDestinyNodeActivationRequirement), bool canActivateNextStep = default(bool), int nextStepIndex = default(int), bool isNextStepRandom = default(bool), List<int> perkHashes = default(List<int>), int startProgressionBarAtProgress = default(int), List<int> statHashes = default(List<int>), bool affectsQuality = default(bool), DestinyDefinitionsDestinyTalentNodeStepGroups stepGroups = default(DestinyDefinitionsDestinyTalentNodeStepGroups), bool affectsLevel = default(bool), List<DestinyDefinitionsDestinyNodeSocketReplaceResponse> socketReplacements = default(List<DestinyDefinitionsDestinyNodeSocketReplaceResponse>))
+        public DestinyDefinitionsDestinyNodeStepDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int stepIndex = default(int), long nodeStepHash = default(long), string interactionDescription = default(string), int damageType = default(int), long damageTypeHash = default(long), DestinyDefinitionsDestinyNodeActivationRequirement activationRequirement = default(DestinyDefinitionsDestinyNodeActivationRequirement), bool canActivateNextStep = default(bool), int nextStepIndex = default(int), bool isNextStepRandom = default(bool), List<long> perkHashes = default(List<long>), int startProgressionBarAtProgress = default(int), List<long> statHashes = default(List<long>), bool affectsQuality = default(bool), DestinyDefinitionsDestinyTalentNodeStepGroups stepGroups = default(DestinyDefinitionsDestinyTalentNodeStepGroups), bool affectsLevel = default(bool), List<DestinyDefinitionsDestinyNodeSocketReplaceResponse> socketReplacements = default(List<DestinyDefinitionsDestinyNodeSocketReplaceResponse>))
         {
             this.DisplayProperties = displayProperties;
             this.StepIndex = stepIndex;
@@ -91,7 +91,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of this node step. Unfortunately, while it can be used to uniquely identify the step within a node, it is also content version dependent and should not be relied on without ensuring you have the latest vesion of content.</value>
         [DataMember(Name="nodeStepHash", EmitDefaultValue=false)]
-        public int NodeStepHash { get; set; }
+        public long NodeStepHash { get; set; }
 
         /// <summary>
         /// If you can interact with this node in some way, this is the localized description of that interaction.
@@ -112,7 +112,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the step provides a damage type, this will be the hash identifier used to look up the damage type&#39;s DestinyDamageTypeDefinition.</value>
         [DataMember(Name="damageTypeHash", EmitDefaultValue=false)]
-        public int DamageTypeHash { get; set; }
+        public long DamageTypeHash { get; set; }
 
         /// <summary>
         /// If the step has requirements for activation (they almost always do, if nothing else than for the Talent Grid&#39;s Progression to have reached a certain level), they will be defined here.
@@ -147,7 +147,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The list of hash identifiers for Perks (DestinySandboxPerkDefinition) that are applied when this step is active. Perks provide a variety of benefits and modifications - examine DestinySandboxPerkDefinition to learn more.</value>
         [DataMember(Name="perkHashes", EmitDefaultValue=false)]
-        public List<int> PerkHashes { get; set; }
+        public List<long> PerkHashes { get; set; }
 
         /// <summary>
         /// When the Talent Grid&#39;s progression reaches this value, the circular \&quot;progress bar\&quot; that surrounds the talent node should be shown.  This also indicates the lower bound of said progress bar, with the upper bound being the progress required to reach activationRequirement.gridLevel. (at some point I should precalculate the upper bound and put it in the definition to save people time)
@@ -161,7 +161,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>When the step provides stat benefits on the item or character, this is the list of hash identifiers for stats (DestinyStatDefinition) that are provided.</value>
         [DataMember(Name="statHashes", EmitDefaultValue=false)]
-        public List<int> StatHashes { get; set; }
+        public List<long> StatHashes { get; set; }
 
         /// <summary>
         /// If this is true, the step affects the item&#39;s Quality in some way. See DestinyInventoryItemDefinition for more information about the meaning of Quality. I already made a joke about Zen and the Art of Motorcycle Maintenance elsewhere in the documentation, so I will avoid doing it again. Oops too late

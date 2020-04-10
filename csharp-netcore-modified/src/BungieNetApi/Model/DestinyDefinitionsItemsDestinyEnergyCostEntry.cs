@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="energyCost">The Energy cost for inserting this plug..</param>
         /// <param name="energyTypeHash">The type of energy that this plug costs, as a reference to the DestinyEnergyTypeDefinition of the energy type..</param>
         /// <param name="energyType">The type of energy that this plug costs, in enum form..</param>
-        public DestinyDefinitionsItemsDestinyEnergyCostEntry(int energyCost = default(int), int energyTypeHash = default(int), int energyType = default(int))
+        public DestinyDefinitionsItemsDestinyEnergyCostEntry(int energyCost = default(int), long energyTypeHash = default(long), int energyType = default(int))
         {
             this.EnergyCost = energyCost;
             this.EnergyTypeHash = energyTypeHash;
@@ -56,7 +56,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The type of energy that this plug costs, as a reference to the DestinyEnergyTypeDefinition of the energy type.</value>
         [DataMember(Name="energyTypeHash", EmitDefaultValue=false)]
-        public int EnergyTypeHash { get; set; }
+        public long EnergyTypeHash { get; set; }
 
         /// <summary>
         /// The type of energy that this plug costs, in enum form.

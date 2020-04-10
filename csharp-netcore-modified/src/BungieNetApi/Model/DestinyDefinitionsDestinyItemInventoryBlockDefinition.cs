@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// <param name="expiredInActivityMessage">If the item expires while playing in an activity, we show a different message..</param>
         /// <param name="expiredInOrbitMessage">If the item expires in orbit, we show a... more different message. (\&quot;Consummate V&#39;s, consummate!\&quot;).</param>
         /// <param name="suppressExpirationWhenObjectivesComplete">suppressExpirationWhenObjectivesComplete.</param>
-        public DestinyDefinitionsDestinyItemInventoryBlockDefinition(string stackUniqueLabel = default(string), int maxStackSize = default(int), int bucketTypeHash = default(int), int recoveryBucketTypeHash = default(int), int tierTypeHash = default(int), bool isInstanceItem = default(bool), string tierTypeName = default(string), int tierType = default(int), string expirationTooltip = default(string), string expiredInActivityMessage = default(string), string expiredInOrbitMessage = default(string), bool suppressExpirationWhenObjectivesComplete = default(bool))
+        public DestinyDefinitionsDestinyItemInventoryBlockDefinition(string stackUniqueLabel = default(string), int maxStackSize = default(int), long bucketTypeHash = default(long), long recoveryBucketTypeHash = default(long), long tierTypeHash = default(long), bool isInstanceItem = default(bool), string tierTypeName = default(string), int tierType = default(int), string expirationTooltip = default(string), string expiredInActivityMessage = default(string), string expiredInOrbitMessage = default(string), bool suppressExpirationWhenObjectivesComplete = default(bool))
         {
             this.StackUniqueLabel = stackUniqueLabel;
             this.MaxStackSize = maxStackSize;
@@ -81,21 +81,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the DestinyInventoryBucketDefinition to which this item belongs. I should have named this \&quot;bucketHash\&quot;, but too many things refer to it now. Sigh.</value>
         [DataMember(Name="bucketTypeHash", EmitDefaultValue=false)]
-        public int BucketTypeHash { get; set; }
+        public long BucketTypeHash { get; set; }
 
         /// <summary>
         /// If the item is picked up by the lost loot queue, this is the hash identifier for the DestinyInventoryBucketDefinition into which it will be placed. Again, I should have named this recoveryBucketHash instead.
         /// </summary>
         /// <value>If the item is picked up by the lost loot queue, this is the hash identifier for the DestinyInventoryBucketDefinition into which it will be placed. Again, I should have named this recoveryBucketHash instead.</value>
         [DataMember(Name="recoveryBucketTypeHash", EmitDefaultValue=false)]
-        public int RecoveryBucketTypeHash { get; set; }
+        public long RecoveryBucketTypeHash { get; set; }
 
         /// <summary>
         /// The hash identifier for the Tier Type of the item, use to look up its DestinyItemTierTypeDefinition if you need to show localized data for the item&#39;s tier.
         /// </summary>
         /// <value>The hash identifier for the Tier Type of the item, use to look up its DestinyItemTierTypeDefinition if you need to show localized data for the item&#39;s tier.</value>
         [DataMember(Name="tierTypeHash", EmitDefaultValue=false)]
-        public int TierTypeHash { get; set; }
+        public long TierTypeHash { get; set; }
 
         /// <summary>
         /// If TRUE, this item is instanced. Otherwise, it is a generic item that merely has a quantity in a stack (like Glimmer).

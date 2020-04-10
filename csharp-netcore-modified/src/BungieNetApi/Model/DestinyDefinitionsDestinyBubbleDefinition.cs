@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="hash">The identifier for the bubble: only guaranteed to be unique within the Destination..</param>
         /// <param name="displayProperties">The display properties of this bubble, so you don&#39;t have to look them up in a separate list anymore..</param>
-        public DestinyDefinitionsDestinyBubbleDefinition(int hash = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition))
+        public DestinyDefinitionsDestinyBubbleDefinition(long hash = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition))
         {
             this.Hash = hash;
             this.DisplayProperties = displayProperties;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for the bubble: only guaranteed to be unique within the Destination.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The display properties of this bubble, so you don&#39;t have to look them up in a separate list anymore.

@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyProgressionDefinition(DestinyDefinitionsDestinyProgressionDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsDestinyProgressionDisplayPropertiesDefinition), int scope = default(int), bool repeatLastStep = default(bool), string source = default(string), List<DestinyDefinitionsDestinyProgressionStepDefinition> steps = default(List<DestinyDefinitionsDestinyProgressionStepDefinition>), bool visible = default(bool), int factionHash = default(int), DestinyMiscDestinyColor color = default(DestinyMiscDestinyColor), string rankIcon = default(string), List<DestinyDefinitionsDestinyProgressionRewardItemQuantity> rewardItems = default(List<DestinyDefinitionsDestinyProgressionRewardItemQuantity>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyProgressionDefinition(DestinyDefinitionsDestinyProgressionDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsDestinyProgressionDisplayPropertiesDefinition), int scope = default(int), bool repeatLastStep = default(bool), string source = default(string), List<DestinyDefinitionsDestinyProgressionStepDefinition> steps = default(List<DestinyDefinitionsDestinyProgressionStepDefinition>), bool visible = default(bool), long factionHash = default(long), DestinyMiscDestinyColor color = default(DestinyMiscDestinyColor), string rankIcon = default(string), List<DestinyDefinitionsDestinyProgressionRewardItemQuantity> rewardItems = default(List<DestinyDefinitionsDestinyProgressionRewardItemQuantity>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.Scope = scope;
@@ -110,7 +110,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the value exists, this is the hash identifier for the Faction that owns this Progression.  This is purely for convenience, if you&#39;re looking at a progression and want to know if and who it&#39;s related to in terms of Faction Reputation.</value>
         [DataMember(Name="factionHash", EmitDefaultValue=false)]
-        public int FactionHash { get; set; }
+        public long FactionHash { get; set; }
 
         /// <summary>
         /// The #RGB string value for the color related to this progression, if there is one.
@@ -137,7 +137,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

@@ -4,7 +4,7 @@ The character-specific data for a milestone's reward entry. See DestinyMilestone
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RewardEntryHash** | **int** | The identifier for the reward entry in question. It is important to look up the related DestinyMilestoneRewardEntryDefinition to get the static details about the reward, which you can do by looking up the milestone&#39;s DestinyMilestoneDefinition and examining the DestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data. | [optional] 
+**RewardEntryHash** | **long** | The identifier for the reward entry in question. It is important to look up the related DestinyMilestoneRewardEntryDefinition to get the static details about the reward, which you can do by looking up the milestone&#39;s DestinyMilestoneDefinition and examining the DestinyMilestoneDefinition.rewards[rewardCategoryHash].rewardEntries[rewardEntryHash] data. | [optional] 
 **Earned** | **bool** | If TRUE, the player has earned this reward. | [optional] 
 **Redeemed** | **bool** | If TRUE, the player has redeemed/picked up/obtained this reward. Feel free to alias this to \&quot;gotTheShinyBauble\&quot; in your own codebase. | [optional] 
 

@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="complete">Indicates if the phase has been completed..</param>
         /// <param name="phaseHash">In DestinyActivityDefinition, if the activity has phases, there will be a set of phases defined in the \&quot;insertionPoints\&quot; property. This is the hash that maps to that phase..</param>
-        public DestinyMilestonesDestinyMilestoneActivityPhase(bool complete = default(bool), int phaseHash = default(int))
+        public DestinyMilestonesDestinyMilestoneActivityPhase(bool complete = default(bool), long phaseHash = default(long))
         {
             this.Complete = complete;
             this.PhaseHash = phaseHash;
@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>In DestinyActivityDefinition, if the activity has phases, there will be a set of phases defined in the \&quot;insertionPoints\&quot; property. This is the hash that maps to that phase.</value>
         [DataMember(Name="phaseHash", EmitDefaultValue=false)]
-        public int PhaseHash { get; set; }
+        public long PhaseHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

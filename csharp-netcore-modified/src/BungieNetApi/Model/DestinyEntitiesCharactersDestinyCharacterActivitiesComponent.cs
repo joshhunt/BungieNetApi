@@ -442,7 +442,7 @@ namespace BungieNetApi.Model
         /// <param name="currentActivityModeTypes">All Activity Modes that apply to the current activity being played, in enum form..</param>
         /// <param name="currentPlaylistActivityHash">If the user is in a playlist, this is the hash identifier for the playlist that they chose..</param>
         /// <param name="lastCompletedStoryHash">This will have the activity hash of the last completed story/campaign mission, in case you care about that..</param>
-        public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent(DateTime dateActivityStarted = default(DateTime), List<DestinyDestinyActivity> availableActivities = default(List<DestinyDestinyActivity>), int currentActivityHash = default(int), int currentActivityModeHash = default(int), CurrentActivityModeTypeEnum? currentActivityModeType = default(CurrentActivityModeTypeEnum?), List<int> currentActivityModeHashes = default(List<int>), List<int> currentActivityModeTypes = default(List<int>), int currentPlaylistActivityHash = default(int), int lastCompletedStoryHash = default(int))
+        public DestinyEntitiesCharactersDestinyCharacterActivitiesComponent(DateTime dateActivityStarted = default(DateTime), List<DestinyDestinyActivity> availableActivities = default(List<DestinyDestinyActivity>), long currentActivityHash = default(long), long currentActivityModeHash = default(long), CurrentActivityModeTypeEnum? currentActivityModeType = default(CurrentActivityModeTypeEnum?), List<long> currentActivityModeHashes = default(List<long>), List<int> currentActivityModeTypes = default(List<int>), long currentPlaylistActivityHash = default(long), long lastCompletedStoryHash = default(long))
         {
             this.DateActivityStarted = dateActivityStarted;
             this.AvailableActivities = availableActivities;
@@ -474,21 +474,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the user is in an activity, this will be the hash of the Activity being played. Note that you must combine this info with currentActivityModeHash to get a real picture of what the user is doing right now. For instance, PVP \&quot;Activities\&quot; are just maps: it&#39;s the ActivityMode that determines what type of PVP game they&#39;re playing.</value>
         [DataMember(Name="currentActivityHash", EmitDefaultValue=false)]
-        public int CurrentActivityHash { get; set; }
+        public long CurrentActivityHash { get; set; }
 
         /// <summary>
         /// If the user is in an activity, this will be the hash of the activity mode being played. Combine with currentActivityHash to give a person a full picture of what they&#39;re doing right now.
         /// </summary>
         /// <value>If the user is in an activity, this will be the hash of the activity mode being played. Combine with currentActivityHash to give a person a full picture of what they&#39;re doing right now.</value>
         [DataMember(Name="currentActivityModeHash", EmitDefaultValue=false)]
-        public int CurrentActivityModeHash { get; set; }
+        public long CurrentActivityModeHash { get; set; }
 
         /// <summary>
         /// If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they&#39;re doing right now.
         /// </summary>
         /// <value>If the user is in an activity, this will be the hashes of the DestinyActivityModeDefinition being played. Combine with currentActivityHash to give a person a full picture of what they&#39;re doing right now.</value>
         [DataMember(Name="currentActivityModeHashes", EmitDefaultValue=false)]
-        public List<int> CurrentActivityModeHashes { get; set; }
+        public List<long> CurrentActivityModeHashes { get; set; }
 
         /// <summary>
         /// All Activity Modes that apply to the current activity being played, in enum form.
@@ -502,14 +502,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the user is in a playlist, this is the hash identifier for the playlist that they chose.</value>
         [DataMember(Name="currentPlaylistActivityHash", EmitDefaultValue=false)]
-        public int CurrentPlaylistActivityHash { get; set; }
+        public long CurrentPlaylistActivityHash { get; set; }
 
         /// <summary>
         /// This will have the activity hash of the last completed story/campaign mission, in case you care about that.
         /// </summary>
         /// <value>This will have the activity hash of the last completed story/campaign mission, in case you care about that.</value>
         [DataMember(Name="lastCompletedStoryHash", EmitDefaultValue=false)]
-        public int LastCompletedStoryHash { get; set; }
+        public long LastCompletedStoryHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

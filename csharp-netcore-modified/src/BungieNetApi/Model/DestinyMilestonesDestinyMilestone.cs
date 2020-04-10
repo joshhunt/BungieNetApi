@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// <param name="startDate">If known, this is the date when the event last began or refreshed. It will only be populated for events with fixed and repeating start and end dates..</param>
         /// <param name="endDate">If known, this is the date when the event will next end or repeat. It will only be populated for events with fixed and repeating start and end dates..</param>
         /// <param name="order">Used for ordering milestones in a display to match how we order them in BNet. May pull from static data, or possibly in the future from dynamic information..</param>
-        public DestinyMilestonesDestinyMilestone(int milestoneHash = default(int), List<DestinyMilestonesDestinyMilestoneQuest> availableQuests = default(List<DestinyMilestonesDestinyMilestoneQuest>), List<DestinyMilestonesDestinyMilestoneChallengeActivity> activities = default(List<DestinyMilestonesDestinyMilestoneChallengeActivity>), Dictionary<string, float> values = default(Dictionary<string, float>), List<int> vendorHashes = default(List<int>), List<DestinyMilestonesDestinyMilestoneVendor> vendors = default(List<DestinyMilestonesDestinyMilestoneVendor>), List<DestinyMilestonesDestinyMilestoneRewardCategory> rewards = default(List<DestinyMilestonesDestinyMilestoneRewardCategory>), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), int order = default(int))
+        public DestinyMilestonesDestinyMilestone(long milestoneHash = default(long), List<DestinyMilestonesDestinyMilestoneQuest> availableQuests = default(List<DestinyMilestonesDestinyMilestoneQuest>), List<DestinyMilestonesDestinyMilestoneChallengeActivity> activities = default(List<DestinyMilestonesDestinyMilestoneChallengeActivity>), Dictionary<string, float> values = default(Dictionary<string, float>), List<long> vendorHashes = default(List<long>), List<DestinyMilestonesDestinyMilestoneVendor> vendors = default(List<DestinyMilestonesDestinyMilestoneVendor>), List<DestinyMilestonesDestinyMilestoneRewardCategory> rewards = default(List<DestinyMilestonesDestinyMilestoneRewardCategory>), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), int order = default(int))
         {
             this.MilestoneHash = milestoneHash;
             this.AvailableQuests = availableQuests;
@@ -63,7 +63,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for the Milestone. Use it to look up the DestinyMilestoneDefinition, so you can combine the other data in this contract with static definition data.</value>
         [DataMember(Name="milestoneHash", EmitDefaultValue=false)]
-        public int MilestoneHash { get; set; }
+        public long MilestoneHash { get; set; }
 
         /// <summary>
         /// Indicates what quests are available for this Milestone. Usually this will be only a single Quest, but some quests have multiple available that you can choose from at any given time. All possible quests for a milestone can be found in the DestinyMilestoneDefinition, but they must be combined with this Live data to determine which one(s) are actually active right now. It is possible for Milestones to not have any quests.
@@ -91,7 +91,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A milestone may have one or more active vendors that are \&quot;related\&quot; to it (that provide rewards, or that are the initiators of the Milestone). I already regret this, even as I&#39;m typing it. [I told you I&#39;d regret this] You see, sometimes a milestone may be directly correlated with a set of vendors that provide varying tiers of rewards. The player may not be able to interact with one or more of those vendors. This will return the hashes of the Vendors that the player *can* interact with, allowing you to show their current inventory as rewards or related items to the Milestone or its activities.  Before we even use it, it&#39;s already deprecated! How much of a bummer is that? We need more data.</value>
         [DataMember(Name="vendorHashes", EmitDefaultValue=false)]
-        public List<int> VendorHashes { get; set; }
+        public List<long> VendorHashes { get; set; }
 
         /// <summary>
         /// Replaces vendorHashes, which I knew was going to be trouble the day it walked in the door. This will return not only what Vendors are active and relevant to the activity (in an implied order that you can choose to ignore), but also other data - for example, if the Vendor is featuring a specific item relevant to this event that you should show with them.

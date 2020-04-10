@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyItemCategoryDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), bool visible = default(bool), bool deprecated = default(bool), string shortTitle = default(string), string itemTypeRegex = default(string), int grantDestinyBreakerType = default(int), string plugCategoryIdentifier = default(string), string itemTypeRegexNot = default(string), string originBucketIdentifier = default(string), int grantDestinyItemType = default(int), int grantDestinySubType = default(int), int grantDestinyClass = default(int), string traitId = default(string), List<int> groupedCategoryHashes = default(List<int>), List<int> parentCategoryHashes = default(List<int>), bool groupCategoryOnly = default(bool), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyItemCategoryDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), bool visible = default(bool), bool deprecated = default(bool), string shortTitle = default(string), string itemTypeRegex = default(string), int grantDestinyBreakerType = default(int), string plugCategoryIdentifier = default(string), string itemTypeRegexNot = default(string), string originBucketIdentifier = default(string), int grantDestinyItemType = default(int), int grantDestinySubType = default(int), int grantDestinyClass = default(int), string traitId = default(string), List<long> groupedCategoryHashes = default(List<long>), List<long> parentCategoryHashes = default(List<long>), bool groupCategoryOnly = default(bool), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.Visible = visible;
@@ -171,14 +171,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this category is a \&quot;parent\&quot; category of other categories, those children will have their hashes listed in rendering order here, and can be looked up using these hashes against DestinyItemCategoryDefinition.  In this way, you can build up a visual hierarchy of item categories. That&#39;s what we did, and you can do it too. I believe in you. Yes, you, Carl.  (I hope someone named Carl reads this someday)</value>
         [DataMember(Name="groupedCategoryHashes", EmitDefaultValue=false)]
-        public List<int> GroupedCategoryHashes { get; set; }
+        public List<long> GroupedCategoryHashes { get; set; }
 
         /// <summary>
         /// All item category hashes of \&quot;parent\&quot; categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It&#39;s a bit redundant, but having this child-centric list speeds up some calculations.
         /// </summary>
         /// <value>All item category hashes of \&quot;parent\&quot; categories: categories that contain this as a child through the hierarchy of groupedCategoryHashes. It&#39;s a bit redundant, but having this child-centric list speeds up some calculations.</value>
         [DataMember(Name="parentCategoryHashes", EmitDefaultValue=false)]
-        public List<int> ParentCategoryHashes { get; set; }
+        public List<long> ParentCategoryHashes { get; set; }
 
         /// <summary>
         /// If true, this category is only used for grouping, and should not be evaluated with its own checks. Rather, the item only has this category if it has one of its child categories.
@@ -192,7 +192,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

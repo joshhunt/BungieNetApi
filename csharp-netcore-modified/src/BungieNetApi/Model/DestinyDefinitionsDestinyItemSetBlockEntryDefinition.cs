@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="trackingValue">Used for tracking which step a user reached. These values will be populated in the user&#39;s internal state, which we expose externally as a more usable DestinyQuestStatus object. If this item has been obtained, this value will be set in trackingUnlockValueHash..</param>
         /// <param name="itemHash">This is the hash identifier for a DestinyInventoryItemDefinition representing this quest step..</param>
-        public DestinyDefinitionsDestinyItemSetBlockEntryDefinition(int trackingValue = default(int), int itemHash = default(int))
+        public DestinyDefinitionsDestinyItemSetBlockEntryDefinition(int trackingValue = default(int), long itemHash = default(long))
         {
             this.TrackingValue = trackingValue;
             this.ItemHash = itemHash;
@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>This is the hash identifier for a DestinyInventoryItemDefinition representing this quest step.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

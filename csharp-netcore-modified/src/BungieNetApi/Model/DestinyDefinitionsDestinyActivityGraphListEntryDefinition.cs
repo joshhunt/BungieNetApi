@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyActivityGraphListEntryDefinition" /> class.
         /// </summary>
         /// <param name="activityGraphHash">The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening the director..</param>
-        public DestinyDefinitionsDestinyActivityGraphListEntryDefinition(int activityGraphHash = default(int))
+        public DestinyDefinitionsDestinyActivityGraphListEntryDefinition(long activityGraphHash = default(long))
         {
             this.ActivityGraphHash = activityGraphHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening the director.</value>
         [DataMember(Name="activityGraphHash", EmitDefaultValue=false)]
-        public int ActivityGraphHash { get; set; }
+        public long ActivityGraphHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

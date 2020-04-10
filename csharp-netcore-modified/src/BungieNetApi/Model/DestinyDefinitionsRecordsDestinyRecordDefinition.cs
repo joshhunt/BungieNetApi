@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsRecordsDestinyRecordDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int scope = default(int), DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo = default(DestinyDefinitionsPresentationDestinyPresentationChildBlock), int loreHash = default(int), List<int> objectiveHashes = default(List<int>), int recordValueStyle = default(int), DestinyDefinitionsRecordsDestinyRecordTitleBlock titleInfo = default(DestinyDefinitionsRecordsDestinyRecordTitleBlock), DestinyDefinitionsRecordsDestinyRecordCompletionBlock completionInfo = default(DestinyDefinitionsRecordsDestinyRecordCompletionBlock), DestinyDefinitionsRecordsSchemaRecordStateBlock stateInfo = default(DestinyDefinitionsRecordsSchemaRecordStateBlock), DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements = default(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock), DestinyDefinitionsRecordsDestinyRecordExpirationBlock expirationInfo = default(DestinyDefinitionsRecordsDestinyRecordExpirationBlock), DestinyDefinitionsRecordsDestinyRecordIntervalBlock intervalInfo = default(DestinyDefinitionsRecordsDestinyRecordIntervalBlock), List<DestinyDestinyItemQuantity> rewardItems = default(List<DestinyDestinyItemQuantity>), int presentationNodeType = default(int), List<string> traitIds = default(List<string>), List<int> traitHashes = default(List<int>), List<int> parentNodeHashes = default(List<int>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsRecordsDestinyRecordDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int scope = default(int), DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo = default(DestinyDefinitionsPresentationDestinyPresentationChildBlock), long loreHash = default(long), List<long> objectiveHashes = default(List<long>), int recordValueStyle = default(int), DestinyDefinitionsRecordsDestinyRecordTitleBlock titleInfo = default(DestinyDefinitionsRecordsDestinyRecordTitleBlock), DestinyDefinitionsRecordsDestinyRecordCompletionBlock completionInfo = default(DestinyDefinitionsRecordsDestinyRecordCompletionBlock), DestinyDefinitionsRecordsSchemaRecordStateBlock stateInfo = default(DestinyDefinitionsRecordsSchemaRecordStateBlock), DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements = default(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock), DestinyDefinitionsRecordsDestinyRecordExpirationBlock expirationInfo = default(DestinyDefinitionsRecordsDestinyRecordExpirationBlock), DestinyDefinitionsRecordsDestinyRecordIntervalBlock intervalInfo = default(DestinyDefinitionsRecordsDestinyRecordIntervalBlock), List<DestinyDestinyItemQuantity> rewardItems = default(List<DestinyDestinyItemQuantity>), int presentationNodeType = default(int), List<string> traitIds = default(List<string>), List<long> traitHashes = default(List<long>), List<long> parentNodeHashes = default(List<long>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.Scope = scope;
@@ -101,13 +101,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets LoreHash
         /// </summary>
         [DataMember(Name="loreHash", EmitDefaultValue=false)]
-        public int LoreHash { get; set; }
+        public long LoreHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ObjectiveHashes
         /// </summary>
         [DataMember(Name="objectiveHashes", EmitDefaultValue=false)]
-        public List<int> ObjectiveHashes { get; set; }
+        public List<long> ObjectiveHashes { get; set; }
 
         /// <summary>
         /// Gets or Sets RecordValueStyle
@@ -175,21 +175,21 @@ namespace BungieNetApi.Model
         /// Gets or Sets TraitHashes
         /// </summary>
         [DataMember(Name="traitHashes", EmitDefaultValue=false)]
-        public List<int> TraitHashes { get; set; }
+        public List<long> TraitHashes { get; set; }
 
         /// <summary>
         /// A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
         /// </summary>
         /// <value>A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.</value>
         [DataMember(Name="parentNodeHashes", EmitDefaultValue=false)]
-        public List<int> ParentNodeHashes { get; set; }
+        public List<long> ParentNodeHashes { get; set; }
 
         /// <summary>
         /// The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

@@ -4,7 +4,7 @@ Destinations and Activities may have default Activity Graphs that should be show
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActivityGraphHash** | **int** | The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening the director. | [optional] 
+**ActivityGraphHash** | **long** | The hash identifier of the DestinyActivityGraphDefinition that should be shown when opening the director. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

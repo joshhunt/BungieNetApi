@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **ProgressionRewards** | [**List&lt;DestinyDefinitionsDestinyProgressionRewardDefinition&gt;**](DestinyDefinitionsDestinyProgressionRewardDefinition.md) | If performing this action earns you Progression, this is the list of progressions and values granted for those progressions by performing this action. | [optional] 
 **ActionTypeLabel** | **string** | The internal identifier for the action. | [optional] 
 **RequiredLocation** | **string** | Theoretically, an item could have a localized string for a hint about the location in which the action should be performed. In practice, no items yet have this property. | [optional] 
-**RequiredCooldownHash** | **int** | The identifier hash for the Cooldown associated with this action. We have not pulled this data yet for you to have more data to use for cooldowns. | [optional] 
+**RequiredCooldownHash** | **long** | The identifier hash for the Cooldown associated with this action. We have not pulled this data yet for you to have more data to use for cooldowns. | [optional] 
 **DeleteOnAction** | **bool** | If true, the item is deleted when the action completes. | [optional] 
 **ConsumeEntireStack** | **bool** | If true, the entire stack is deleted when the action completes. | [optional] 
 **UseOnAcquire** | **bool** | If true, this action will be performed as soon as you earn this item. Some rewards work this way, providing you a single item to pick up from a reward-granting vendor in-game and then immediately consuming itself to provide you multiple items. | [optional] 

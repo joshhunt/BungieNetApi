@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="gridLevel">The Progression level on the Talent Grid required to activate this node.  See DestinyTalentGridDefinition.progressionHash for the related Progression, and read DestinyProgressionDefinition&#39;s documentation to learn more about Progressions..</param>
         /// <param name="materialRequirementHashes">The list of hash identifiers for material requirement sets: materials that are required for the node to be activated. See DestinyMaterialRequirementSetDefinition for more information about material requirements.  In this case, only a single DestinyMaterialRequirementSetDefinition will be chosen from this list, and we won&#39;t know which one will be chosen until an instance of the item is created..</param>
-        public DestinyDefinitionsDestinyNodeActivationRequirement(int gridLevel = default(int), List<int> materialRequirementHashes = default(List<int>))
+        public DestinyDefinitionsDestinyNodeActivationRequirement(int gridLevel = default(int), List<long> materialRequirementHashes = default(List<long>))
         {
             this.GridLevel = gridLevel;
             this.MaterialRequirementHashes = materialRequirementHashes;
@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The list of hash identifiers for material requirement sets: materials that are required for the node to be activated. See DestinyMaterialRequirementSetDefinition for more information about material requirements.  In this case, only a single DestinyMaterialRequirementSetDefinition will be chosen from this list, and we won&#39;t know which one will be chosen until an instance of the item is created.</value>
         [DataMember(Name="materialRequirementHashes", EmitDefaultValue=false)]
-        public List<int> MaterialRequirementHashes { get; set; }
+        public List<long> MaterialRequirementHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

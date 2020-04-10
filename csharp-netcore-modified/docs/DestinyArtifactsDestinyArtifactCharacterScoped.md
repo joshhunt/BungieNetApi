@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactHash** | **int** |  | [optional] 
+**ArtifactHash** | **long** |  | [optional] 
 **PointsUsed** | **int** |  | [optional] 
 **ResetCount** | **int** |  | [optional] 
 **Tiers** | [**List&lt;DestinyArtifactsDestinyArtifactTier&gt;**](DestinyArtifactsDestinyArtifactTier.md) |  | [optional] 

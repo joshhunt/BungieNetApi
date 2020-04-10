@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="id">id.</param>
         /// <param name="progressionHash">progressionHash.</param>
-        public DestinyDefinitionsDirectorDestinyActivityGraphDisplayProgressionDefinition(int id = default(int), int progressionHash = default(int))
+        public DestinyDefinitionsDirectorDestinyActivityGraphDisplayProgressionDefinition(long id = default(long), long progressionHash = default(long))
         {
             this.Id = id;
             this.ProgressionHash = progressionHash;
@@ -46,13 +46,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Gets or Sets ProgressionHash
         /// </summary>
         [DataMember(Name="progressionHash", EmitDefaultValue=false)]
-        public int ProgressionHash { get; set; }
+        public long ProgressionHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

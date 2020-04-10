@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="metrics">metrics.</param>
         /// <param name="metricsRootNodeHash">metricsRootNodeHash.</param>
-        public DestinyComponentsMetricsDestinyMetricsComponent(Dictionary<string, DestinyComponentsMetricsDestinyMetricComponent> metrics = default(Dictionary<string, DestinyComponentsMetricsDestinyMetricComponent>), int metricsRootNodeHash = default(int))
+        public DestinyComponentsMetricsDestinyMetricsComponent(Dictionary<string, DestinyComponentsMetricsDestinyMetricComponent> metrics = default(Dictionary<string, DestinyComponentsMetricsDestinyMetricComponent>), long metricsRootNodeHash = default(long))
         {
             this.Metrics = metrics;
             this.MetricsRootNodeHash = metricsRootNodeHash;
@@ -52,7 +52,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets MetricsRootNodeHash
         /// </summary>
         [DataMember(Name="metricsRootNodeHash", EmitDefaultValue=false)]
-        public int MetricsRootNodeHash { get; set; }
+        public long MetricsRootNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="itemDescription">A brief description of the item..</param>
         /// <param name="iconPath">An icon for the item..</param>
         /// <param name="vendorItemIndex">If the item was derived from a \&quot;Preview Vendor\&quot;, this will be an index into the DestinyVendorDefinition&#39;s itemList property. Otherwise, -1..</param>
-        public DestinyDefinitionsItemsDestinyDerivedItemDefinition(int itemHash = default(int), string itemName = default(string), string itemDetail = default(string), string itemDescription = default(string), string iconPath = default(string), int vendorItemIndex = default(int))
+        public DestinyDefinitionsItemsDestinyDerivedItemDefinition(long itemHash = default(long), string itemName = default(string), string itemDetail = default(string), string itemDescription = default(string), string iconPath = default(string), int vendorItemIndex = default(int))
         {
             this.ItemHash = itemHash;
             this.ItemName = itemName;
@@ -55,7 +55,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the DestinyInventoryItemDefinition of this derived item, if there is one. Sometimes we are given this information as a manual override, in which case there won&#39;t be an actual DestinyInventoryItemDefinition for what we display, but you can still show the strings from this object itself.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// The name of the derived item.

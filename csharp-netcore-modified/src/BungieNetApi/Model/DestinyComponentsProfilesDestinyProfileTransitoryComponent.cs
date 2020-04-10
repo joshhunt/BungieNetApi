@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="joinability">Information about whether and what might prevent you from joining this person on a fireteam..</param>
         /// <param name="tracking">Information about tracked entities..</param>
         /// <param name="lastOrbitedDestinationHash">The hash identifier for the DestinyDestinationDefinition of the last location you were orbiting when in orbit..</param>
-        public DestinyComponentsProfilesDestinyProfileTransitoryComponent(List<DestinyComponentsProfilesDestinyProfileTransitoryPartyMember> partyMembers = default(List<DestinyComponentsProfilesDestinyProfileTransitoryPartyMember>), DestinyComponentsProfilesDestinyProfileTransitoryCurrentActivity currentActivity = default(DestinyComponentsProfilesDestinyProfileTransitoryCurrentActivity), DestinyComponentsProfilesDestinyProfileTransitoryJoinability joinability = default(DestinyComponentsProfilesDestinyProfileTransitoryJoinability), List<DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry> tracking = default(List<DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry>), int lastOrbitedDestinationHash = default(int))
+        public DestinyComponentsProfilesDestinyProfileTransitoryComponent(List<DestinyComponentsProfilesDestinyProfileTransitoryPartyMember> partyMembers = default(List<DestinyComponentsProfilesDestinyProfileTransitoryPartyMember>), DestinyComponentsProfilesDestinyProfileTransitoryCurrentActivity currentActivity = default(DestinyComponentsProfilesDestinyProfileTransitoryCurrentActivity), DestinyComponentsProfilesDestinyProfileTransitoryJoinability joinability = default(DestinyComponentsProfilesDestinyProfileTransitoryJoinability), List<DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry> tracking = default(List<DestinyComponentsProfilesDestinyProfileTransitoryTrackingEntry>), long lastOrbitedDestinationHash = default(long))
         {
             this.PartyMembers = partyMembers;
             this.CurrentActivity = currentActivity;
@@ -81,7 +81,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the DestinyDestinationDefinition of the last location you were orbiting when in orbit.</value>
         [DataMember(Name="lastOrbitedDestinationHash", EmitDefaultValue=false)]
-        public int LastOrbitedDestinationHash { get; set; }
+        public long LastOrbitedDestinationHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

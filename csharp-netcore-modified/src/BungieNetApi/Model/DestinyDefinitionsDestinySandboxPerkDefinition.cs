@@ -43,7 +43,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinySandboxPerkDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string perkIdentifier = default(string), bool isDisplayable = default(bool), int damageType = default(int), int damageTypeHash = default(int), DestinyDefinitionsDestinyTalentNodeStepGroups perkGroups = default(DestinyDefinitionsDestinyTalentNodeStepGroups), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinySandboxPerkDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string perkIdentifier = default(string), bool isDisplayable = default(bool), int damageType = default(int), long damageTypeHash = default(long), DestinyDefinitionsDestinyTalentNodeStepGroups perkGroups = default(DestinyDefinitionsDestinyTalentNodeStepGroups), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.PerkIdentifier = perkIdentifier;
@@ -89,7 +89,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for looking up the DestinyDamageTypeDefinition, if this perk has a damage type.  This is preferred over using the damageType enumeration value, which has been left purely because it is occasionally convenient.</value>
         [DataMember(Name="damageTypeHash", EmitDefaultValue=false)]
-        public int DamageTypeHash { get; set; }
+        public long DamageTypeHash { get; set; }
 
         /// <summary>
         /// An old holdover from the original Armory, this was an attempt to group perks by functionality.  It is as yet unpopulated, and there will be quite a bit of work needed to restore it to its former working order.
@@ -103,7 +103,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

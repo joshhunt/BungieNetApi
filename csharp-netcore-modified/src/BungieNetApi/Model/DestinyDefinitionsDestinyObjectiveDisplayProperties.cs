@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="activityHash">The activity associated with this objective in the context of this item, if any..</param>
         /// <param name="displayOnItemPreviewScreen">If true, the game shows this objective on item preview screens..</param>
-        public DestinyDefinitionsDestinyObjectiveDisplayProperties(int activityHash = default(int), bool displayOnItemPreviewScreen = default(bool))
+        public DestinyDefinitionsDestinyObjectiveDisplayProperties(long activityHash = default(long), bool displayOnItemPreviewScreen = default(bool))
         {
             this.ActivityHash = activityHash;
             this.DisplayOnItemPreviewScreen = displayOnItemPreviewScreen;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The activity associated with this objective in the context of this item, if any.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// If true, the game shows this objective on item preview screens.

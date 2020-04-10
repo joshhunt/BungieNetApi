@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="challenges">challenges.</param>
         /// <param name="activityGraphNodes">If the activity and its challenge is visible on any of these nodes, it will be returned..</param>
         /// <param name="phases">Phases related to this activity, if there are any.  These will be listed in the order in which they will appear in the actual activity..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityDefinition(int activityHash = default(int), List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition> challenges = default(List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition>), List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry> activityGraphNodes = default(List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry>), List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase> phases = default(List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase>))
+        public DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityDefinition(long activityHash = default(long), List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition> challenges = default(List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeDefinition>), List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry> activityGraphNodes = default(List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityGraphNodeEntry>), List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase> phases = default(List<DestinyDefinitionsMilestonesDestinyMilestoneChallengeActivityPhase>))
         {
             this.ActivityHash = activityHash;
             this.Challenges = challenges;
@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The activity for which this challenge is active.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Gets or Sets Challenges

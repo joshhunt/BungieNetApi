@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsPresentationDestinyPresentationNodeRecordChildEntry" /> class.
         /// </summary>
         /// <param name="recordHash">recordHash.</param>
-        public DestinyDefinitionsPresentationDestinyPresentationNodeRecordChildEntry(int recordHash = default(int))
+        public DestinyDefinitionsPresentationDestinyPresentationNodeRecordChildEntry(long recordHash = default(long))
         {
             this.RecordHash = recordHash;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets RecordHash
         /// </summary>
         [DataMember(Name="recordHash", EmitDefaultValue=false)]
-        public int RecordHash { get; set; }
+        public long RecordHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

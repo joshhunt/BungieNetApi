@@ -41,7 +41,7 @@ namespace BungieNetApi.Model
         /// <param name="maxLevelRequired">The maximum Character Level required for equipping the item when the item spawns at the item level defined on this DestinyItemSourceDefinition, as far as we saw in our processing..</param>
         /// <param name="computedStats">The stats computed for this level/quality range..</param>
         /// <param name="sourceHashes">The DestinyRewardSourceDefinitions found that can spawn the item at this level..</param>
-        public DestinyDefinitionsSourcesDestinyItemSourceDefinition(int level = default(int), int minQuality = default(int), int maxQuality = default(int), int minLevelRequired = default(int), int maxLevelRequired = default(int), Dictionary<string, DestinyDefinitionsDestinyInventoryItemStatDefinition> computedStats = default(Dictionary<string, DestinyDefinitionsDestinyInventoryItemStatDefinition>), List<int> sourceHashes = default(List<int>))
+        public DestinyDefinitionsSourcesDestinyItemSourceDefinition(int level = default(int), int minQuality = default(int), int maxQuality = default(int), int minLevelRequired = default(int), int maxLevelRequired = default(int), Dictionary<string, DestinyDefinitionsDestinyInventoryItemStatDefinition> computedStats = default(Dictionary<string, DestinyDefinitionsDestinyInventoryItemStatDefinition>), List<long> sourceHashes = default(List<long>))
         {
             this.Level = level;
             this.MinQuality = minQuality;
@@ -99,7 +99,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The DestinyRewardSourceDefinitions found that can spawn the item at this level.</value>
         [DataMember(Name="sourceHashes", EmitDefaultValue=false)]
-        public List<int> SourceHashes { get; set; }
+        public List<long> SourceHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

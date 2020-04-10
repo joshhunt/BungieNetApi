@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TierHash** | **int** |  | [optional] 
+**TierHash** | **long** |  | [optional] 
 **IsUnlocked** | **bool** |  | [optional] 
 **PointsToUnlock** | **int** |  | [optional] 
 **Items** | [**List&lt;DestinyArtifactsDestinyArtifactTierItem&gt;**](DestinyArtifactsDestinyArtifactTierItem.md) |  | [optional] 

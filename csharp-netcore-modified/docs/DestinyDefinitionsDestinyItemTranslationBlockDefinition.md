@@ -5,7 +5,7 @@ This Block defines the rendering data associated with the item, if any.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **WeaponPatternIdentifier** | **string** |  | [optional] 
-**WeaponPatternHash** | **int** |  | [optional] 
+**WeaponPatternHash** | **long** |  | [optional] 
 **DefaultDyes** | [**List&lt;DestinyDyeReference&gt;**](DestinyDyeReference.md) |  | [optional] 
 **LockedDyes** | [**List&lt;DestinyDyeReference&gt;**](DestinyDyeReference.md) |  | [optional] 
 **CustomDyes** | [**List&lt;DestinyDyeReference&gt;**](DestinyDyeReference.md) |  | [optional] 

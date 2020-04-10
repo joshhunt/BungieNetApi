@@ -4,7 +4,7 @@ Inventory Items can reward progression when actions are performed on them. A com
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProgressionMappingHash** | **int** | The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions for which experience should be applied. | [optional] 
+**ProgressionMappingHash** | **long** | The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions for which experience should be applied. | [optional] 
 **Amount** | **int** | The amount of experience to give to each of the mapped progressions. | [optional] 
 **ApplyThrottles** | **bool** | If true, the game&#39;s internal mechanisms to throttle progression should be applied. | [optional] 
 

@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="activityHash">Hash ID that can be looked up in the DestinyActivityTable..</param>
         /// <param name="values">Collection of stats for the player in this activity..</param>
-        public DestinyHistoricalStatsDestinyAggregateActivityStats(int activityHash = default(int), Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue> values = default(Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue>))
+        public DestinyHistoricalStatsDestinyAggregateActivityStats(long activityHash = default(long), Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue> values = default(Dictionary<string, DestinyHistoricalStatsDestinyHistoricalStatsValue>))
         {
             this.ActivityHash = activityHash;
             this.Values = values;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Hash ID that can be looked up in the DestinyActivityTable.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Collection of stats for the player in this activity.

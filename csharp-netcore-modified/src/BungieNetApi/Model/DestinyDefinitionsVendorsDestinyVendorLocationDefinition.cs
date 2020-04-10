@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="destinationHash">The hash identifier for a Destination at which this vendor may be located. Each destination where a Vendor may exist will only ever have a single entry..</param>
         /// <param name="backgroundImagePath">The relative path to the background image representing this Vendor at this location, for use in a banner..</param>
-        public DestinyDefinitionsVendorsDestinyVendorLocationDefinition(int destinationHash = default(int), string backgroundImagePath = default(string))
+        public DestinyDefinitionsVendorsDestinyVendorLocationDefinition(long destinationHash = default(long), string backgroundImagePath = default(string))
         {
             this.DestinationHash = destinationHash;
             this.BackgroundImagePath = backgroundImagePath;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for a Destination at which this vendor may be located. Each destination where a Vendor may exist will only ever have a single entry.</value>
         [DataMember(Name="destinationHash", EmitDefaultValue=false)]
-        public int DestinationHash { get; set; }
+        public long DestinationHash { get; set; }
 
         /// <summary>
         /// The relative path to the background image representing this Vendor at this location, for use in a banner.

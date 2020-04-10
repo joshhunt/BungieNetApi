@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="energyCapacity">The total capacity of Energy that the item currently has, regardless of if it is currently being used..</param>
         /// <param name="energyUsed">The amount of Energy currently in use by inserted plugs..</param>
         /// <param name="energyUnused">The amount of energy still available for inserting new plugs..</param>
-        public DestinyEntitiesItemsDestinyItemInstanceEnergy(int energyTypeHash = default(int), int energyType = default(int), int energyCapacity = default(int), int energyUsed = default(int), int energyUnused = default(int))
+        public DestinyEntitiesItemsDestinyItemInstanceEnergy(long energyTypeHash = default(long), int energyType = default(int), int energyCapacity = default(int), int energyUsed = default(int), int energyUnused = default(int))
         {
             this.EnergyTypeHash = energyTypeHash;
             this.EnergyType = energyType;
@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The type of energy for this item. Plugs that require Energy can only be inserted if they have the \&quot;Any\&quot; Energy Type or the matching energy type of this item. This is a reference to the DestinyEnergyTypeDefinition for the energy type, where you can find extended info about it.</value>
         [DataMember(Name="energyTypeHash", EmitDefaultValue=false)]
-        public int EnergyTypeHash { get; set; }
+        public long EnergyTypeHash { get; set; }
 
         /// <summary>
         /// This is the enum version of the Energy Type value, for convenience.

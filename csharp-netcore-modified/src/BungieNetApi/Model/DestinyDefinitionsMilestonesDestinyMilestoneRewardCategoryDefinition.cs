@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="displayProperties">Hopefully this is obvious by now..</param>
         /// <param name="rewardEntries">If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we&#39;ll use at runtime to determine whether you&#39;ve already earned or redeemed this set of rewards, and the category that this reward should be placed under..</param>
         /// <param name="order">If you want to use BNet&#39;s recommended order for rendering categories programmatically, use this value and compare it to other categories to determine the order in which they should be rendered. I don&#39;t feel great about putting this here, I won&#39;t lie..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneRewardCategoryDefinition(int categoryHash = default(int), string categoryIdentifier = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), Dictionary<string, DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition> rewardEntries = default(Dictionary<string, DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition>), int order = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneRewardCategoryDefinition(long categoryHash = default(long), string categoryIdentifier = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), Dictionary<string, DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition> rewardEntries = default(Dictionary<string, DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition>), int order = default(int))
         {
             this.CategoryHash = categoryHash;
             this.CategoryIdentifier = categoryIdentifier;
@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Identifies the reward category. Only guaranteed unique within this specific component!</value>
         [DataMember(Name="categoryHash", EmitDefaultValue=false)]
-        public int CategoryHash { get; set; }
+        public long CategoryHash { get; set; }
 
         /// <summary>
         /// The string identifier for the category, if you want to use it for some end. Guaranteed unique within the specific component.

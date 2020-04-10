@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="title">title.</param>
         /// <param name="itemHashes">itemHashes.</param>
-        public DestinyMilestonesDestinyMilestoneContentItemCategory(string title = default(string), List<int> itemHashes = default(List<int>))
+        public DestinyMilestonesDestinyMilestoneContentItemCategory(string title = default(string), List<long> itemHashes = default(List<long>))
         {
             this.Title = title;
             this.ItemHashes = itemHashes;
@@ -52,7 +52,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ItemHashes
         /// </summary>
         [DataMember(Name="itemHashes", EmitDefaultValue=false)]
-        public List<int> ItemHashes { get; set; }
+        public List<long> ItemHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

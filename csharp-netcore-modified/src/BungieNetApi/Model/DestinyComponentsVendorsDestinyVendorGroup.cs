@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="vendorGroupHash">vendorGroupHash.</param>
         /// <param name="vendorHashes">The ordered list of vendors within a particular group..</param>
-        public DestinyComponentsVendorsDestinyVendorGroup(int vendorGroupHash = default(int), List<int> vendorHashes = default(List<int>))
+        public DestinyComponentsVendorsDestinyVendorGroup(long vendorGroupHash = default(long), List<long> vendorHashes = default(List<long>))
         {
             this.VendorGroupHash = vendorGroupHash;
             this.VendorHashes = vendorHashes;
@@ -46,14 +46,14 @@ namespace BungieNetApi.Model
         /// Gets or Sets VendorGroupHash
         /// </summary>
         [DataMember(Name="vendorGroupHash", EmitDefaultValue=false)]
-        public int VendorGroupHash { get; set; }
+        public long VendorGroupHash { get; set; }
 
         /// <summary>
         /// The ordered list of vendors within a particular group.
         /// </summary>
         /// <value>The ordered list of vendors within a particular group.</value>
         [DataMember(Name="vendorHashes", EmitDefaultValue=false)]
-        public List<int> VendorHashes { get; set; }
+        public List<long> VendorHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

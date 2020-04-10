@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsSocketsDestinySocketCategoryDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int uiCategoryStyle = default(int), int categoryStyle = default(int), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsSocketsDestinySocketCategoryDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), long uiCategoryStyle = default(long), int categoryStyle = default(int), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.UiCategoryStyle = uiCategoryStyle;
@@ -61,7 +61,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A string hinting to the game&#39;s UI system about how the sockets in this category should be displayed.  BNet doesn&#39;t use it: it&#39;s up to you to find valid values and make your own special UI if you want to honor this category style.</value>
         [DataMember(Name="uiCategoryStyle", EmitDefaultValue=false)]
-        public int UiCategoryStyle { get; set; }
+        public long UiCategoryStyle { get; set; }
 
         /// <summary>
         /// Same as uiCategoryStyle, but in a more usable enumeration form.
@@ -75,7 +75,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

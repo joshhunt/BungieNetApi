@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="vendorHash">The identifier for the vendor that may sell this item..</param>
         /// <param name="vendorItemIndexes">The Vendor sale item indexes that represent the sale information for this item. The same vendor may sell an item in multiple \&quot;ways\&quot;, hence why this is a list. (for instance, a weapon may be \&quot;sold\&quot; as a reward in a quest, for Glimmer, and for Masterwork Cores: each of those ways would be represented by a different vendor sale item with a different index).</param>
-        public DestinyDefinitionsDestinyItemVendorSourceReference(int vendorHash = default(int), List<int> vendorItemIndexes = default(List<int>))
+        public DestinyDefinitionsDestinyItemVendorSourceReference(long vendorHash = default(long), List<int> vendorItemIndexes = default(List<int>))
         {
             this.VendorHash = vendorHash;
             this.VendorItemIndexes = vendorItemIndexes;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for the vendor that may sell this item.</value>
         [DataMember(Name="vendorHash", EmitDefaultValue=false)]
-        public int VendorHash { get; set; }
+        public long VendorHash { get; set; }
 
         /// <summary>
         /// The Vendor sale item indexes that represent the sale information for this item. The same vendor may sell an item in multiple \&quot;ways\&quot;, hence why this is a list. (for instance, a weapon may be \&quot;sold\&quot; as a reward in a quest, for Glimmer, and for Masterwork Cores: each of those ways would be represented by a different vendor sale item with a different index)

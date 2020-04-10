@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="socketCategoryHash">The hash for the Socket Category: a quick way to go get the header display information for the category. Use it to look up DestinySocketCategoryDefinition info..</param>
         /// <param name="socketIndexes">Use these indexes to look up the sockets in the \&quot;sockets.socketEntries\&quot; property on the item definition. These are the indexes under the category, in game-rendered order..</param>
-        public DestinyDefinitionsDestinyItemSocketCategoryDefinition(int socketCategoryHash = default(int), List<int> socketIndexes = default(List<int>))
+        public DestinyDefinitionsDestinyItemSocketCategoryDefinition(long socketCategoryHash = default(long), List<int> socketIndexes = default(List<int>))
         {
             this.SocketCategoryHash = socketCategoryHash;
             this.SocketIndexes = socketIndexes;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the Socket Category: a quick way to go get the header display information for the category. Use it to look up DestinySocketCategoryDefinition info.</value>
         [DataMember(Name="socketCategoryHash", EmitDefaultValue=false)]
-        public int SocketCategoryHash { get; set; }
+        public long SocketCategoryHash { get; set; }
 
         /// <summary>
         /// Use these indexes to look up the sockets in the \&quot;sockets.socketEntries\&quot; property on the item definition. These are the indexes under the category, in game-rendered order.

@@ -4,7 +4,7 @@ The definition of a category of rewards, that contains many individual rewards.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CategoryHash** | **int** | Identifies the reward category. Only guaranteed unique within this specific component! | [optional] 
+**CategoryHash** | **long** | Identifies the reward category. Only guaranteed unique within this specific component! | [optional] 
 **CategoryIdentifier** | **string** | The string identifier for the category, if you want to use it for some end. Guaranteed unique within the specific component. | [optional] 
 **DisplayProperties** | [**DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition**](DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition.md) | Hopefully this is obvious by now. | [optional] 
 **RewardEntries** | [**Dictionary&lt;string, DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition&gt;**](DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition.md) | If this milestone can provide rewards, this will define the sets of rewards that can be earned, the conditions under which they can be acquired, internal data that we&#39;ll use at runtime to determine whether you&#39;ve already earned or redeemed this set of rewards, and the category that this reward should be placed under. | [optional] 

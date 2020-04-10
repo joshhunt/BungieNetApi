@@ -81,7 +81,7 @@ namespace BungieNetApi.Model
         /// <param name="breakerType">If populated, this item has a breaker type corresponding to the given value. See DestinyBreakerTypeDefinition for more details..</param>
         /// <param name="breakerTypeHash">If populated, this is the hash identifier for the item&#39;s breaker type. See DestinyBreakerTypeDefinition for more details..</param>
         /// <param name="energy">IF populated, this item supports Energy mechanics (i.e. Armor 2.0), and these are the current details of its energy type and available capacity to spend energy points..</param>
-        public DestinyEntitiesItemsDestinyItemInstanceComponent(int damageType = default(int), int damageTypeHash = default(int), DestinyDestinyStat primaryStat = default(DestinyDestinyStat), int itemLevel = default(int), int quality = default(int), bool isEquipped = default(bool), bool canEquip = default(bool), int equipRequiredLevel = default(int), List<int> unlockHashesRequiredToEquip = default(List<int>), int cannotEquipReason = default(int), BreakerTypeEnum? breakerType = default(BreakerTypeEnum?), int breakerTypeHash = default(int), DestinyEntitiesItemsDestinyItemInstanceEnergy energy = default(DestinyEntitiesItemsDestinyItemInstanceEnergy))
+        public DestinyEntitiesItemsDestinyItemInstanceComponent(int damageType = default(int), long damageTypeHash = default(long), DestinyDestinyStat primaryStat = default(DestinyDestinyStat), int itemLevel = default(int), int quality = default(int), bool isEquipped = default(bool), bool canEquip = default(bool), int equipRequiredLevel = default(int), List<long> unlockHashesRequiredToEquip = default(List<long>), int cannotEquipReason = default(int), BreakerTypeEnum? breakerType = default(BreakerTypeEnum?), long breakerTypeHash = default(long), DestinyEntitiesItemsDestinyItemInstanceEnergy energy = default(DestinyEntitiesItemsDestinyItemInstanceEnergy))
         {
             this.DamageType = damageType;
             this.DamageTypeHash = damageTypeHash;
@@ -110,7 +110,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The current damage type&#39;s hash, so you can look up localized info and icons for it.</value>
         [DataMember(Name="damageTypeHash", EmitDefaultValue=false)]
-        public int DamageTypeHash { get; set; }
+        public long DamageTypeHash { get; set; }
 
         /// <summary>
         /// The item stat that we consider to be \&quot;primary\&quot; for the item. For instance, this would be \&quot;Attack\&quot; for Weapons or \&quot;Defense\&quot; for armor.
@@ -159,7 +159,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Sometimes, there are limitations to equipping that are represented by character-level flags called \&quot;unlocks\&quot;.  This is a list of flags that they need in order to equip the item that the character has not met. Use these to look up the descriptions to show in your UI by looking up the relevant DestinyUnlockDefinitions for the hashes.</value>
         [DataMember(Name="unlockHashesRequiredToEquip", EmitDefaultValue=false)]
-        public List<int> UnlockHashesRequiredToEquip { get; set; }
+        public List<long> UnlockHashesRequiredToEquip { get; set; }
 
         /// <summary>
         /// If you cannot equip the item, this is a flags enum that enumerates all of the reasons why you couldn&#39;t equip the item. You may need to refine your UI further by using unlockHashesRequiredToEquip and equipRequiredLevel.
@@ -173,7 +173,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If populated, this is the hash identifier for the item&#39;s breaker type. See DestinyBreakerTypeDefinition for more details.</value>
         [DataMember(Name="breakerTypeHash", EmitDefaultValue=false)]
-        public int BreakerTypeHash { get; set; }
+        public long BreakerTypeHash { get; set; }
 
         /// <summary>
         /// IF populated, this item supports Energy mechanics (i.e. Armor 2.0), and these are the current details of its energy type and available capacity to spend energy points.

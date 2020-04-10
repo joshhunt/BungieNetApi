@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="id">$NOTE $amola 2017-01-19 This field is apparently something that CUI uses to manually wire up objectives to display info. I am unsure how it works..</param>
         /// <param name="objectiveHash">The objective being shown on the map..</param>
-        public DestinyDefinitionsDirectorDestinyActivityGraphDisplayObjectiveDefinition(int id = default(int), int objectiveHash = default(int))
+        public DestinyDefinitionsDirectorDestinyActivityGraphDisplayObjectiveDefinition(long id = default(long), long objectiveHash = default(long))
         {
             this.Id = id;
             this.ObjectiveHash = objectiveHash;
@@ -47,14 +47,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>$NOTE $amola 2017-01-19 This field is apparently something that CUI uses to manually wire up objectives to display info. I am unsure how it works.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public int Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// The objective being shown on the map.
         /// </summary>
         /// <value>The objective being shown on the map.</value>
         [DataMember(Name="objectiveHash", EmitDefaultValue=false)]
-        public int ObjectiveHash { get; set; }
+        public long ObjectiveHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

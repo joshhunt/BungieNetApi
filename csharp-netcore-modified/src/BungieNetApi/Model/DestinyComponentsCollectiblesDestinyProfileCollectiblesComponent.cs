@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="collectibles">collectibles.</param>
         /// <param name="collectionCategoriesRootNodeHash">The hash for the root presentation node definition of Collection categories..</param>
         /// <param name="collectionBadgesRootNodeHash">The hash for the root presentation node definition of Collection Badges..</param>
-        public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent(List<int> recentCollectibleHashes = default(List<int>), List<int> newnessFlaggedCollectibleHashes = default(List<int>), Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles = default(Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent>), int collectionCategoriesRootNodeHash = default(int), int collectionBadgesRootNodeHash = default(int))
+        public DestinyComponentsCollectiblesDestinyProfileCollectiblesComponent(List<long> recentCollectibleHashes = default(List<long>), List<long> newnessFlaggedCollectibleHashes = default(List<long>), Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles = default(Dictionary<string, DestinyComponentsCollectiblesDestinyCollectibleComponent>), long collectionCategoriesRootNodeHash = default(long), long collectionBadgesRootNodeHash = default(long))
         {
             this.RecentCollectibleHashes = recentCollectibleHashes;
             this.NewnessFlaggedCollectibleHashes = newnessFlaggedCollectibleHashes;
@@ -53,14 +53,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The list of collectibles determined by the game as having been \&quot;recently\&quot; acquired.</value>
         [DataMember(Name="recentCollectibleHashes", EmitDefaultValue=false)]
-        public List<int> RecentCollectibleHashes { get; set; }
+        public List<long> RecentCollectibleHashes { get; set; }
 
         /// <summary>
         /// The list of collectibles determined by the game as having been \&quot;recently\&quot; acquired.  The game client itself actually controls this data, so I personally question whether anyone will get much use out of this: because we can&#39;t edit this value through the API. But in case anyone finds it useful, here it is.
         /// </summary>
         /// <value>The list of collectibles determined by the game as having been \&quot;recently\&quot; acquired.  The game client itself actually controls this data, so I personally question whether anyone will get much use out of this: because we can&#39;t edit this value through the API. But in case anyone finds it useful, here it is.</value>
         [DataMember(Name="newnessFlaggedCollectibleHashes", EmitDefaultValue=false)]
-        public List<int> NewnessFlaggedCollectibleHashes { get; set; }
+        public List<long> NewnessFlaggedCollectibleHashes { get; set; }
 
         /// <summary>
         /// Gets or Sets Collectibles
@@ -73,14 +73,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the root presentation node definition of Collection categories.</value>
         [DataMember(Name="collectionCategoriesRootNodeHash", EmitDefaultValue=false)]
-        public int CollectionCategoriesRootNodeHash { get; set; }
+        public long CollectionCategoriesRootNodeHash { get; set; }
 
         /// <summary>
         /// The hash for the root presentation node definition of Collection Badges.
         /// </summary>
         /// <value>The hash for the root presentation node definition of Collection Badges.</value>
         [DataMember(Name="collectionBadgesRootNodeHash", EmitDefaultValue=false)]
-        public int CollectionBadgesRootNodeHash { get; set; }
+        public long CollectionBadgesRootNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -465,7 +465,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyActivityDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition originalDisplayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition selectionScreenDisplayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string releaseIcon = default(string), int releaseTime = default(int), int activityLevel = default(int), int activityLightLevel = default(int), int destinationHash = default(int), int placeHash = default(int), int activityTypeHash = default(int), int tier = default(int), string pgcrImage = default(string), List<DestinyDefinitionsDestinyActivityRewardDefinition> rewards = default(List<DestinyDefinitionsDestinyActivityRewardDefinition>), List<DestinyDefinitionsDestinyActivityModifierReferenceDefinition> modifiers = default(List<DestinyDefinitionsDestinyActivityModifierReferenceDefinition>), bool isPlaylist = default(bool), List<DestinyDefinitionsDestinyActivityChallengeDefinition> challenges = default(List<DestinyDefinitionsDestinyActivityChallengeDefinition>), List<DestinyDefinitionsDestinyActivityUnlockStringDefinition> optionalUnlockStrings = default(List<DestinyDefinitionsDestinyActivityUnlockStringDefinition>), List<DestinyDefinitionsDestinyActivityPlaylistItemDefinition> playlistItems = default(List<DestinyDefinitionsDestinyActivityPlaylistItemDefinition>), List<DestinyDefinitionsDestinyActivityGraphListEntryDefinition> activityGraphList = default(List<DestinyDefinitionsDestinyActivityGraphListEntryDefinition>), DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition matchmaking = default(DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition), DestinyDefinitionsDestinyActivityGuidedBlockDefinition guidedGame = default(DestinyDefinitionsDestinyActivityGuidedBlockDefinition), int directActivityModeHash = default(int), DirectActivityModeTypeEnum? directActivityModeType = default(DirectActivityModeTypeEnum?), List<DestinyDefinitionsDestinyActivityLoadoutRequirementSet> loadouts = default(List<DestinyDefinitionsDestinyActivityLoadoutRequirementSet>), List<int> activityModeHashes = default(List<int>), List<int> activityModeTypes = default(List<int>), bool isPvP = default(bool), List<DestinyDefinitionsDestinyActivityInsertionPointDefinition> insertionPoints = default(List<DestinyDefinitionsDestinyActivityInsertionPointDefinition>), List<DestinyConstantsDestinyEnvironmentLocationMapping> activityLocationMappings = default(List<DestinyConstantsDestinyEnvironmentLocationMapping>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyActivityDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition originalDisplayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition selectionScreenDisplayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string releaseIcon = default(string), int releaseTime = default(int), int activityLevel = default(int), int activityLightLevel = default(int), long destinationHash = default(long), long placeHash = default(long), long activityTypeHash = default(long), int tier = default(int), string pgcrImage = default(string), List<DestinyDefinitionsDestinyActivityRewardDefinition> rewards = default(List<DestinyDefinitionsDestinyActivityRewardDefinition>), List<DestinyDefinitionsDestinyActivityModifierReferenceDefinition> modifiers = default(List<DestinyDefinitionsDestinyActivityModifierReferenceDefinition>), bool isPlaylist = default(bool), List<DestinyDefinitionsDestinyActivityChallengeDefinition> challenges = default(List<DestinyDefinitionsDestinyActivityChallengeDefinition>), List<DestinyDefinitionsDestinyActivityUnlockStringDefinition> optionalUnlockStrings = default(List<DestinyDefinitionsDestinyActivityUnlockStringDefinition>), List<DestinyDefinitionsDestinyActivityPlaylistItemDefinition> playlistItems = default(List<DestinyDefinitionsDestinyActivityPlaylistItemDefinition>), List<DestinyDefinitionsDestinyActivityGraphListEntryDefinition> activityGraphList = default(List<DestinyDefinitionsDestinyActivityGraphListEntryDefinition>), DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition matchmaking = default(DestinyDefinitionsDestinyActivityMatchmakingBlockDefinition), DestinyDefinitionsDestinyActivityGuidedBlockDefinition guidedGame = default(DestinyDefinitionsDestinyActivityGuidedBlockDefinition), long directActivityModeHash = default(long), DirectActivityModeTypeEnum? directActivityModeType = default(DirectActivityModeTypeEnum?), List<DestinyDefinitionsDestinyActivityLoadoutRequirementSet> loadouts = default(List<DestinyDefinitionsDestinyActivityLoadoutRequirementSet>), List<long> activityModeHashes = default(List<long>), List<int> activityModeTypes = default(List<int>), bool isPvP = default(bool), List<DestinyDefinitionsDestinyActivityInsertionPointDefinition> insertionPoints = default(List<DestinyDefinitionsDestinyActivityInsertionPointDefinition>), List<DestinyConstantsDestinyEnvironmentLocationMapping> activityLocationMappings = default(List<DestinyConstantsDestinyEnvironmentLocationMapping>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.OriginalDisplayProperties = originalDisplayProperties;
@@ -555,21 +555,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the Destination on which this Activity is played. Use it to look up the DestinyDestinationDefinition for human readable info about the destination. A Destination can be thought of as a more specific location than a \&quot;Place\&quot;. For instance, if the \&quot;Place\&quot; is Earth, the \&quot;Destination\&quot; would be a specific city or region on Earth.</value>
         [DataMember(Name="destinationHash", EmitDefaultValue=false)]
-        public int DestinationHash { get; set; }
+        public long DestinationHash { get; set; }
 
         /// <summary>
         /// The hash identifier for the \&quot;Place\&quot; on which this Activity is played. Use it to look up the DestinyPlaceDefinition for human readable info about the Place. A Place is the largest-scoped concept for location information. For instance, if the \&quot;Place\&quot; is Earth, the \&quot;Destination\&quot; would be a specific city or region on Earth.
         /// </summary>
         /// <value>The hash identifier for the \&quot;Place\&quot; on which this Activity is played. Use it to look up the DestinyPlaceDefinition for human readable info about the Place. A Place is the largest-scoped concept for location information. For instance, if the \&quot;Place\&quot; is Earth, the \&quot;Destination\&quot; would be a specific city or region on Earth.</value>
         [DataMember(Name="placeHash", EmitDefaultValue=false)]
-        public int PlaceHash { get; set; }
+        public long PlaceHash { get; set; }
 
         /// <summary>
         /// The hash identifier for the Activity Type of this Activity. You may use it to look up the DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists and many PVP Map Activities will map to generic Activity Types. You&#39;ll have to use your knowledge of the Activity Mode being played to get more specific information about what the user is playing.
         /// </summary>
         /// <value>The hash identifier for the Activity Type of this Activity. You may use it to look up the DestinyActivityTypeDefinition for human readable info, but be forewarned: Playlists and many PVP Map Activities will map to generic Activity Types. You&#39;ll have to use your knowledge of the Activity Mode being played to get more specific information about what the user is playing.</value>
         [DataMember(Name="activityTypeHash", EmitDefaultValue=false)]
-        public int ActivityTypeHash { get; set; }
+        public long ActivityTypeHash { get; set; }
 
         /// <summary>
         /// The difficulty tier of the activity.
@@ -653,7 +653,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this activity had an activity mode directly defined on it, this will be the hash of that mode.</value>
         [DataMember(Name="directActivityModeHash", EmitDefaultValue=false)]
-        public int DirectActivityModeHash { get; set; }
+        public long DirectActivityModeHash { get; set; }
 
         /// <summary>
         /// The set of all possible loadout requirements that could be active for this activity. Only one will be active at any given time, and you can discover which one through activity-associated data such as Milestones that have activity info on them.
@@ -667,7 +667,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifiers for Activity Modes relevant to this activity.  Note that if this is a playlist, the specific playlist entry chosen will determine the actual activity modes that end up being relevant.</value>
         [DataMember(Name="activityModeHashes", EmitDefaultValue=false)]
-        public List<int> ActivityModeHashes { get; set; }
+        public List<long> ActivityModeHashes { get; set; }
 
         /// <summary>
         /// The activity modes - if any - in enum form. Because we can&#39;t seem to escape the enums.
@@ -702,7 +702,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

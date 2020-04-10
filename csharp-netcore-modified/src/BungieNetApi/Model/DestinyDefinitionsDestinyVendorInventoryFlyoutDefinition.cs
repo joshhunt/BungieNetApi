@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="flyoutId">An identifier for the flyout, in case anything else needs to refer to them..</param>
         /// <param name="suppressNewness">If this is true, don&#39;t show any of the glistening \&quot;this is a new item\&quot; UI elements, like we show on the inventory items themselves in in-game UI..</param>
         /// <param name="equipmentSlotHash">If this flyout is meant to show you the contents of the player&#39;s equipment slot, this is the slot to show..</param>
-        public DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition(string lockedDescription = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), List<DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition> buckets = default(List<DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition>), int flyoutId = default(int), bool suppressNewness = default(bool), int equipmentSlotHash = default(int))
+        public DestinyDefinitionsDestinyVendorInventoryFlyoutDefinition(string lockedDescription = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), List<DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition> buckets = default(List<DestinyDefinitionsDestinyVendorInventoryFlyoutBucketDefinition>), long flyoutId = default(long), bool suppressNewness = default(bool), long equipmentSlotHash = default(long))
         {
             this.LockedDescription = lockedDescription;
             this.DisplayProperties = displayProperties;
@@ -76,7 +76,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>An identifier for the flyout, in case anything else needs to refer to them.</value>
         [DataMember(Name="flyoutId", EmitDefaultValue=false)]
-        public int FlyoutId { get; set; }
+        public long FlyoutId { get; set; }
 
         /// <summary>
         /// If this is true, don&#39;t show any of the glistening \&quot;this is a new item\&quot; UI elements, like we show on the inventory items themselves in in-game UI.
@@ -90,7 +90,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this flyout is meant to show you the contents of the player&#39;s equipment slot, this is the slot to show.</value>
         [DataMember(Name="equipmentSlotHash", EmitDefaultValue=false)]
-        public int EquipmentSlotHash { get; set; }
+        public long EquipmentSlotHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

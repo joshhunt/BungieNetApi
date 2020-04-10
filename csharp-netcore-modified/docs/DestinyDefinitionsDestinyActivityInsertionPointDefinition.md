@@ -4,7 +4,7 @@ A point of entry into an activity, gated by an unlock flag and with some more-or
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PhaseHash** | **int** | A unique hash value representing the phase. This can be useful for, for example, comparing how different instances of Raids have phases in different orders! | [optional] 
+**PhaseHash** | **long** | A unique hash value representing the phase. This can be useful for, for example, comparing how different instances of Raids have phases in different orders! | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

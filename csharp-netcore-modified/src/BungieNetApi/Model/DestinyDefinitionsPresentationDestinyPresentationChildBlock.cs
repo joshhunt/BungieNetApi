@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="presentationNodeType">presentationNodeType.</param>
         /// <param name="parentPresentationNodeHashes">parentPresentationNodeHashes.</param>
         /// <param name="displayStyle">displayStyle.</param>
-        public DestinyDefinitionsPresentationDestinyPresentationChildBlock(int presentationNodeType = default(int), List<int> parentPresentationNodeHashes = default(List<int>), int displayStyle = default(int))
+        public DestinyDefinitionsPresentationDestinyPresentationChildBlock(int presentationNodeType = default(int), List<long> parentPresentationNodeHashes = default(List<long>), int displayStyle = default(int))
         {
             this.PresentationNodeType = presentationNodeType;
             this.ParentPresentationNodeHashes = parentPresentationNodeHashes;
@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ParentPresentationNodeHashes
         /// </summary>
         [DataMember(Name="parentPresentationNodeHashes", EmitDefaultValue=false)]
-        public List<int> ParentPresentationNodeHashes { get; set; }
+        public List<long> ParentPresentationNodeHashes { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayStyle

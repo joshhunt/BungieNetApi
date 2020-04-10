@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// <param name="vendorHash">vendorHash.</param>
         /// <param name="vendorInteractionIndex">vendorInteractionIndex.</param>
         /// <param name="scope">The scope at which this specific entry can be computed..</param>
-        public DestinyDefinitionsChecklistsDestinyChecklistEntryDefinition(int hash = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int destinationHash = default(int), int locationHash = default(int), int bubbleHash = default(int), int activityHash = default(int), int itemHash = default(int), int vendorHash = default(int), int vendorInteractionIndex = default(int), int scope = default(int))
+        public DestinyDefinitionsChecklistsDestinyChecklistEntryDefinition(long hash = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), long destinationHash = default(long), long locationHash = default(long), long bubbleHash = default(long), long activityHash = default(long), long itemHash = default(long), long vendorHash = default(long), int vendorInteractionIndex = default(int), int scope = default(int))
         {
             this.Hash = hash;
             this.DisplayProperties = displayProperties;
@@ -63,7 +63,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for this Checklist entry. Guaranteed unique only within this Checklist Definition, and not globally/for all checklists.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// Even if no other associations exist, we will give you *something* for display properties. In cases where we have no associated entities, it may be as simple as a numerical identifier.
@@ -76,38 +76,38 @@ namespace BungieNetApi.Model
         /// Gets or Sets DestinationHash
         /// </summary>
         [DataMember(Name="destinationHash", EmitDefaultValue=false)]
-        public int DestinationHash { get; set; }
+        public long DestinationHash { get; set; }
 
         /// <summary>
         /// Gets or Sets LocationHash
         /// </summary>
         [DataMember(Name="locationHash", EmitDefaultValue=false)]
-        public int LocationHash { get; set; }
+        public long LocationHash { get; set; }
 
         /// <summary>
         /// Note that a Bubble&#39;s hash doesn&#39;t uniquely identify a \&quot;top level\&quot; entity in Destiny. Only the combination of location and bubble can uniquely identify a place in the world of Destiny: so if bubbleHash is populated, locationHash must too be populated for it to have any meaning.  You can use this property if it is populated to look up the DestinyLocationDefinition&#39;s associated .locationReleases[].activityBubbleName property.
         /// </summary>
         /// <value>Note that a Bubble&#39;s hash doesn&#39;t uniquely identify a \&quot;top level\&quot; entity in Destiny. Only the combination of location and bubble can uniquely identify a place in the world of Destiny: so if bubbleHash is populated, locationHash must too be populated for it to have any meaning.  You can use this property if it is populated to look up the DestinyLocationDefinition&#39;s associated .locationReleases[].activityBubbleName property.</value>
         [DataMember(Name="bubbleHash", EmitDefaultValue=false)]
-        public int BubbleHash { get; set; }
+        public long BubbleHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ActivityHash
         /// </summary>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Gets or Sets ItemHash
         /// </summary>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// Gets or Sets VendorHash
         /// </summary>
         [DataMember(Name="vendorHash", EmitDefaultValue=false)]
-        public int VendorHash { get; set; }
+        public long VendorHash { get; set; }
 
         /// <summary>
         /// Gets or Sets VendorInteractionIndex

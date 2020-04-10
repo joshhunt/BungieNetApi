@@ -43,7 +43,7 @@ namespace BungieNetApi.Model
         /// <param name="redeemed">Whether or not you have redeemed rewards for this quest..</param>
         /// <param name="started">Whether or not you have started this quest..</param>
         /// <param name="vendorHash">If the quest has a related Vendor that you should talk to in order to initiate the quest/earn rewards/continue the quest, this will be the hash identifier of that Vendor. Look it up its DestinyVendorDefinition..</param>
-        public DestinyQuestsDestinyQuestStatus(int questHash = default(int), int stepHash = default(int), List<DestinyQuestsDestinyObjectiveProgress> stepObjectives = default(List<DestinyQuestsDestinyObjectiveProgress>), bool tracked = default(bool), long itemInstanceId = default(long), bool completed = default(bool), bool redeemed = default(bool), bool started = default(bool), int vendorHash = default(int))
+        public DestinyQuestsDestinyQuestStatus(long questHash = default(long), long stepHash = default(long), List<DestinyQuestsDestinyObjectiveProgress> stepObjectives = default(List<DestinyQuestsDestinyObjectiveProgress>), bool tracked = default(bool), long itemInstanceId = default(long), bool completed = default(bool), bool redeemed = default(bool), bool started = default(bool), long vendorHash = default(long))
         {
             this.QuestHash = questHash;
             this.StepHash = stepHash;
@@ -61,14 +61,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the Quest Item. (Note: Quests are defined as Items, and thus you would use this to look up the quest&#39;s DestinyInventoryItemDefinition). For information on all steps in the quest, you can then examine its DestinyInventoryItemDefinition.setData property for Quest Steps (which are *also* items). You can use the Item Definition to display human readable data about the overall quest.</value>
         [DataMember(Name="questHash", EmitDefaultValue=false)]
-        public int QuestHash { get; set; }
+        public long QuestHash { get; set; }
 
         /// <summary>
         /// The hash identifier of the current Quest Step, which is also a DestinyInventoryItemDefinition. You can use this to get human readable data about the current step and what to do in that step.
         /// </summary>
         /// <value>The hash identifier of the current Quest Step, which is also a DestinyInventoryItemDefinition. You can use this to get human readable data about the current step and what to do in that step.</value>
         [DataMember(Name="stepHash", EmitDefaultValue=false)]
-        public int StepHash { get; set; }
+        public long StepHash { get; set; }
 
         /// <summary>
         /// A step can have multiple objectives. This will give you the progress for each objective in the current step, in the order in which they are rendered in-game.
@@ -117,7 +117,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If the quest has a related Vendor that you should talk to in order to initiate the quest/earn rewards/continue the quest, this will be the hash identifier of that Vendor. Look it up its DestinyVendorDefinition.</value>
         [DataMember(Name="vendorHash", EmitDefaultValue=false)]
-        public int VendorHash { get; set; }
+        public long VendorHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

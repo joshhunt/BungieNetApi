@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsMilestonesDestinyMilestoneVendorDefinition" /> class.
         /// </summary>
         /// <param name="vendorHash">The hash of the vendor whose wares should be shown as associated with the Milestone..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneVendorDefinition(int vendorHash = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneVendorDefinition(long vendorHash = default(long))
         {
             this.VendorHash = vendorHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of the vendor whose wares should be shown as associated with the Milestone.</value>
         [DataMember(Name="vendorHash", EmitDefaultValue=false)]
-        public int VendorHash { get; set; }
+        public long VendorHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

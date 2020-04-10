@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="isLoreDriven">If true, we found the localized content in a related DestinyLoreDefinition instead of local BNet localization files. This is mostly for ease of my own future investigations..</param>
         /// <param name="displayProperties">Will contain at least the \&quot;name\&quot;, which will be the title of the category. We will likely not have description and an icon yet, but I&#39;m going to keep my options open..</param>
         /// <param name="nodeHashes">The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category..</param>
-        public DestinyDefinitionsDestinyTalentNodeCategory(string identifier = default(string), bool isLoreDriven = default(bool), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), List<int> nodeHashes = default(List<int>))
+        public DestinyDefinitionsDestinyTalentNodeCategory(string identifier = default(string), bool isLoreDriven = default(bool), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), List<long> nodeHashes = default(List<long>))
         {
             this.Identifier = identifier;
             this.IsLoreDriven = isLoreDriven;
@@ -72,7 +72,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The set of all hash identifiers for Talent Nodes (DestinyTalentNodeDefinition) in this Talent Grid that are part of this Category.</value>
         [DataMember(Name="nodeHashes", EmitDefaultValue=false)]
-        public List<int> NodeHashes { get; set; }
+        public List<long> NodeHashes { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -5,7 +5,7 @@ I see you've come to find out more about Talent Nodes. I'm so sorry. Talent Node
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NodeIndex** | **int** | The index of the Talent Node being referred to (an index into DestinyTalentGridDefinition.nodes[]). CONTENT VERSION DEPENDENT. | [optional] 
-**NodeHash** | **int** | The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes). Deceptively CONTENT VERSION DEPENDENT. We have no guarantee of the hash&#39;s immutability between content versions. | [optional] 
+**NodeHash** | **long** | The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes). Deceptively CONTENT VERSION DEPENDENT. We have no guarantee of the hash&#39;s immutability between content versions. | [optional] 
 **State** | **int** | An DestinyTalentNodeState enum value indicating the node&#39;s state: whether it can be activated or swapped, and why not if neither can be performed. | [optional] 
 **IsActivated** | **bool** | If true, the node is activated: it&#39;s current step then provides its benefits. | [optional] 
 **StepIndex** | **int** | The currently relevant Step for the node. It is this step that has rendering data for the node and the benefits that are provided if the node is activated. (the actual rules for benefits provided are extremely complicated in theory, but with how Talent Grids are being used in Destiny 2 you don&#39;t have to worry about a lot of those old Destiny 1 rules.) This is an index into: DestinyTalentGridDefinition.nodes[nodeIndex].steps[stepIndex] | [optional] 

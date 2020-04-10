@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="statHash">The hash identifier of the stat whose display properties are being overridden..</param>
         /// <param name="displayProperties">The display properties to show instead of the base DestinyStatDefinition display properties..</param>
-        public DestinyDefinitionsDestinyStatOverrideDefinition(int statHash = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition))
+        public DestinyDefinitionsDestinyStatOverrideDefinition(long statHash = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition))
         {
             this.StatHash = statHash;
             this.DisplayProperties = displayProperties;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the stat whose display properties are being overridden.</value>
         [DataMember(Name="statHash", EmitDefaultValue=false)]
-        public int StatHash { get; set; }
+        public long StatHash { get; set; }
 
         /// <summary>
         /// The display properties to show instead of the base DestinyStatDefinition display properties.

@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsDestinyTalentGridDefinition(int maxGridLevel = default(int), int gridLevelPerColumn = default(int), int progressionHash = default(int), List<DestinyDefinitionsDestinyTalentNodeDefinition> nodes = default(List<DestinyDefinitionsDestinyTalentNodeDefinition>), List<DestinyDefinitionsDestinyTalentNodeExclusiveSetDefinition> exclusiveSets = default(List<DestinyDefinitionsDestinyTalentNodeExclusiveSetDefinition>), List<int> independentNodeIndexes = default(List<int>), Dictionary<string, DestinyDefinitionsDestinyTalentExclusiveGroup> groups = default(Dictionary<string, DestinyDefinitionsDestinyTalentExclusiveGroup>), List<DestinyDefinitionsDestinyTalentNodeCategory> nodeCategories = default(List<DestinyDefinitionsDestinyTalentNodeCategory>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsDestinyTalentGridDefinition(int maxGridLevel = default(int), int gridLevelPerColumn = default(int), long progressionHash = default(long), List<DestinyDefinitionsDestinyTalentNodeDefinition> nodes = default(List<DestinyDefinitionsDestinyTalentNodeDefinition>), List<DestinyDefinitionsDestinyTalentNodeExclusiveSetDefinition> exclusiveSets = default(List<DestinyDefinitionsDestinyTalentNodeExclusiveSetDefinition>), List<int> independentNodeIndexes = default(List<int>), Dictionary<string, DestinyDefinitionsDestinyTalentExclusiveGroup> groups = default(Dictionary<string, DestinyDefinitionsDestinyTalentExclusiveGroup>), List<DestinyDefinitionsDestinyTalentNodeCategory> nodeCategories = default(List<DestinyDefinitionsDestinyTalentNodeCategory>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.MaxGridLevel = maxGridLevel;
             this.GridLevelPerColumn = gridLevelPerColumn;
@@ -79,7 +79,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the Progression (DestinyProgressionDefinition) that drives whether and when Talent Nodes can be activated on the Grid. Items will have instances of this Progression, and will gain experience that will eventually cause the grid to increase in level. As the grid&#39;s level increases, it will cross the threshold where nodes can be activated. See DestinyTalentGridStepDefinition&#39;s activation requirements for more information.</value>
         [DataMember(Name="progressionHash", EmitDefaultValue=false)]
-        public int ProgressionHash { get; set; }
+        public long ProgressionHash { get; set; }
 
         /// <summary>
         /// The list of Talent Nodes on the Grid (recall that Nodes themselves are really just locations in the UI to show whatever their current Step is. You will only know the current step for a node by retrieving instanced data through platform calls to the API that return DestinyItemTalentGridComponent).
@@ -121,7 +121,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

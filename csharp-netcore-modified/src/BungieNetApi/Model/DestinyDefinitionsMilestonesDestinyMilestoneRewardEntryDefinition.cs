@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="vendorHash">If this reward is redeemed at a Vendor, this is the hash of the Vendor to go to in order to redeem the reward. Use this hash to look up the DestinyVendorDefinition..</param>
         /// <param name="displayProperties">For us to bother returning this info, we should be able to return some kind of information about why these rewards are grouped together. This is ideally that information. Look at how confident I am that this will always remain true..</param>
         /// <param name="order">If you want to follow BNet&#39;s ordering of these rewards, use this number within a given category to order the rewards. Yeah, I know. I feel dirty too..</param>
-        public DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition(int rewardEntryHash = default(int), string rewardEntryIdentifier = default(string), List<DestinyDestinyItemQuantity> items = default(List<DestinyDestinyItemQuantity>), int vendorHash = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int order = default(int))
+        public DestinyDefinitionsMilestonesDestinyMilestoneRewardEntryDefinition(long rewardEntryHash = default(long), string rewardEntryIdentifier = default(string), List<DestinyDestinyItemQuantity> items = default(List<DestinyDestinyItemQuantity>), long vendorHash = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), int order = default(int))
         {
             this.RewardEntryHash = rewardEntryHash;
             this.RewardEntryIdentifier = rewardEntryIdentifier;
@@ -55,7 +55,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for this reward entry. Runtime data will refer to reward entries by this hash. Only guaranteed unique within the specific Milestone.</value>
         [DataMember(Name="rewardEntryHash", EmitDefaultValue=false)]
-        public int RewardEntryHash { get; set; }
+        public long RewardEntryHash { get; set; }
 
         /// <summary>
         /// The string identifier, if you care about it. Only guaranteed unique within the specific Milestone.
@@ -76,7 +76,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this reward is redeemed at a Vendor, this is the hash of the Vendor to go to in order to redeem the reward. Use this hash to look up the DestinyVendorDefinition.</value>
         [DataMember(Name="vendorHash", EmitDefaultValue=false)]
-        public int VendorHash { get; set; }
+        public long VendorHash { get; set; }
 
         /// <summary>
         /// For us to bother returning this info, we should be able to return some kind of information about why these rewards are grouped together. This is ideally that information. Look at how confident I am that this will always remain true.

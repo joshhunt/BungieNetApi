@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="reasonCategoryHashes">So you&#39;ve decided to report someone instead of cursing them and their descendants. Well, okay then. This is the category or categorie(s) of infractions for which you are reporting the user. These are hash identifiers that map to DestinyReportReasonCategoryDefinition entries..</param>
         /// <param name="reasonHashes">If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided..</param>
         /// <param name="offendingCharacterId">Within the PGCR provided when calling the Reporting endpoint, this should be the character ID of the user that you thought was violating terms of use. They must exist in the PGCR provided..</param>
-        public DestinyReportingRequestsDestinyReportOffensePgcrRequest(List<int> reasonCategoryHashes = default(List<int>), List<int> reasonHashes = default(List<int>), long offendingCharacterId = default(long))
+        public DestinyReportingRequestsDestinyReportOffensePgcrRequest(List<long> reasonCategoryHashes = default(List<long>), List<long> reasonHashes = default(List<long>), long offendingCharacterId = default(long))
         {
             this.ReasonCategoryHashes = reasonCategoryHashes;
             this.ReasonHashes = reasonHashes;
@@ -49,14 +49,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>So you&#39;ve decided to report someone instead of cursing them and their descendants. Well, okay then. This is the category or categorie(s) of infractions for which you are reporting the user. These are hash identifiers that map to DestinyReportReasonCategoryDefinition entries.</value>
         [DataMember(Name="reasonCategoryHashes", EmitDefaultValue=false)]
-        public List<int> ReasonCategoryHashes { get; set; }
+        public List<long> ReasonCategoryHashes { get; set; }
 
         /// <summary>
         /// If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided.
         /// </summary>
         /// <value>If applicable, provide a more specific reason(s) within the general category of problems provided by the reasonHash. This is also an identifier for a reason. All reasonHashes provided must be children of at least one the reasonCategoryHashes provided.</value>
         [DataMember(Name="reasonHashes", EmitDefaultValue=false)]
-        public List<int> ReasonHashes { get; set; }
+        public List<long> ReasonHashes { get; set; }
 
         /// <summary>
         /// Within the PGCR provided when calling the Reporting endpoint, this should be the character ID of the user that you thought was violating terms of use. They must exist in the PGCR provided.

@@ -56,7 +56,7 @@ namespace BungieNetApi.Model
         /// <param name="baseCharacterLevel">The \&quot;base\&quot; level of your character, not accounting for any light level..</param>
         /// <param name="percentToNextLevel">A number between 0 and 100, indicating the whole and fractional % remaining to get to the next character level..</param>
         /// <param name="titleRecordHash">If this Character has a title assigned to it, this is the identifier of the DestinyRecordDefinition that has that title information..</param>
-        public DestinyEntitiesCharactersDestinyCharacterComponent(long membershipId = default(long), int membershipType = default(int), long characterId = default(long), DateTime dateLastPlayed = default(DateTime), long minutesPlayedThisSession = default(long), long minutesPlayedTotal = default(long), int light = default(int), Dictionary<string, int> stats = default(Dictionary<string, int>), int raceHash = default(int), int genderHash = default(int), int classHash = default(int), int raceType = default(int), int classType = default(int), int genderType = default(int), string emblemPath = default(string), string emblemBackgroundPath = default(string), int emblemHash = default(int), DestinyMiscDestinyColor emblemColor = default(DestinyMiscDestinyColor), DestinyDestinyProgression levelProgression = default(DestinyDestinyProgression), int baseCharacterLevel = default(int), float percentToNextLevel = default(float), int titleRecordHash = default(int))
+        public DestinyEntitiesCharactersDestinyCharacterComponent(long membershipId = default(long), int membershipType = default(int), long characterId = default(long), DateTime dateLastPlayed = default(DateTime), long minutesPlayedThisSession = default(long), long minutesPlayedTotal = default(long), int light = default(int), Dictionary<string, int> stats = default(Dictionary<string, int>), long raceHash = default(long), long genderHash = default(long), long classHash = default(long), int raceType = default(int), int classType = default(int), int genderType = default(int), string emblemPath = default(string), string emblemBackgroundPath = default(string), long emblemHash = default(long), DestinyMiscDestinyColor emblemColor = default(DestinyMiscDestinyColor), DestinyDestinyProgression levelProgression = default(DestinyDestinyProgression), int baseCharacterLevel = default(int), float percentToNextLevel = default(float), long titleRecordHash = default(long))
         {
             this.MembershipId = membershipId;
             this.MembershipType = membershipType;
@@ -143,21 +143,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Use this hash to look up the character&#39;s DestinyRaceDefinition.</value>
         [DataMember(Name="raceHash", EmitDefaultValue=false)]
-        public int RaceHash { get; set; }
+        public long RaceHash { get; set; }
 
         /// <summary>
         /// Use this hash to look up the character&#39;s DestinyGenderDefinition.
         /// </summary>
         /// <value>Use this hash to look up the character&#39;s DestinyGenderDefinition.</value>
         [DataMember(Name="genderHash", EmitDefaultValue=false)]
-        public int GenderHash { get; set; }
+        public long GenderHash { get; set; }
 
         /// <summary>
         /// Use this hash to look up the character&#39;s DestinyClassDefinition.
         /// </summary>
         /// <value>Use this hash to look up the character&#39;s DestinyClassDefinition.</value>
         [DataMember(Name="classHash", EmitDefaultValue=false)]
-        public int ClassHash { get; set; }
+        public long ClassHash { get; set; }
 
         /// <summary>
         /// Mostly for historical purposes at this point, this is an enumeration for the character&#39;s race.  It&#39;ll be preferable in the general case to look up the related definition: but for some people this was too convenient to remove.
@@ -199,7 +199,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of the currently equipped emblem for the user. Can be used to look up the DestinyInventoryItemDefinition.</value>
         [DataMember(Name="emblemHash", EmitDefaultValue=false)]
-        public int EmblemHash { get; set; }
+        public long EmblemHash { get; set; }
 
         /// <summary>
         /// A shortcut for getting the background color of the user&#39;s currently equipped emblem without having to do a DestinyInventoryItemDefinition lookup.
@@ -234,7 +234,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this Character has a title assigned to it, this is the identifier of the DestinyRecordDefinition that has that title information.</value>
         [DataMember(Name="titleRecordHash", EmitDefaultValue=false)]
-        public int TitleRecordHash { get; set; }
+        public long TitleRecordHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

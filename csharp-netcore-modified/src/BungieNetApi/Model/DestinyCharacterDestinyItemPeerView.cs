@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="itemHash">The hash identifier of the item in question. Use it to look up the DestinyInventoryItemDefinition of the item for static rendering data..</param>
         /// <param name="dyes">The list of dyes that have been applied to this item..</param>
-        public DestinyCharacterDestinyItemPeerView(int itemHash = default(int), List<DestinyDyeReference> dyes = default(List<DestinyDyeReference>))
+        public DestinyCharacterDestinyItemPeerView(long itemHash = default(long), List<DestinyDyeReference> dyes = default(List<DestinyDyeReference>))
         {
             this.ItemHash = itemHash;
             this.Dyes = dyes;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the item in question. Use it to look up the DestinyInventoryItemDefinition of the item for static rendering data.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// The list of dyes that have been applied to this item.

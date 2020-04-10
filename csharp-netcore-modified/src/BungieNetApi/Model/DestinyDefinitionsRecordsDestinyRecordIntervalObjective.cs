@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="intervalObjectiveHash">intervalObjectiveHash.</param>
         /// <param name="intervalScoreValue">intervalScoreValue.</param>
-        public DestinyDefinitionsRecordsDestinyRecordIntervalObjective(int intervalObjectiveHash = default(int), int intervalScoreValue = default(int))
+        public DestinyDefinitionsRecordsDestinyRecordIntervalObjective(long intervalObjectiveHash = default(long), int intervalScoreValue = default(int))
         {
             this.IntervalObjectiveHash = intervalObjectiveHash;
             this.IntervalScoreValue = intervalScoreValue;
@@ -46,7 +46,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets IntervalObjectiveHash
         /// </summary>
         [DataMember(Name="intervalObjectiveHash", EmitDefaultValue=false)]
-        public int IntervalObjectiveHash { get; set; }
+        public long IntervalObjectiveHash { get; set; }
 
         /// <summary>
         /// Gets or Sets IntervalScoreValue

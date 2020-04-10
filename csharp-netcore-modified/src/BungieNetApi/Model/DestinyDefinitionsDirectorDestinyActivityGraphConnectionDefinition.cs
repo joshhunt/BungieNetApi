@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="sourceNodeHash">sourceNodeHash.</param>
         /// <param name="destNodeHash">destNodeHash.</param>
-        public DestinyDefinitionsDirectorDestinyActivityGraphConnectionDefinition(int sourceNodeHash = default(int), int destNodeHash = default(int))
+        public DestinyDefinitionsDirectorDestinyActivityGraphConnectionDefinition(long sourceNodeHash = default(long), long destNodeHash = default(long))
         {
             this.SourceNodeHash = sourceNodeHash;
             this.DestNodeHash = destNodeHash;
@@ -46,13 +46,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets SourceNodeHash
         /// </summary>
         [DataMember(Name="sourceNodeHash", EmitDefaultValue=false)]
-        public int SourceNodeHash { get; set; }
+        public long SourceNodeHash { get; set; }
 
         /// <summary>
         /// Gets or Sets DestNodeHash
         /// </summary>
         [DataMember(Name="destNodeHash", EmitDefaultValue=false)]
-        public int DestNodeHash { get; set; }
+        public long DestNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

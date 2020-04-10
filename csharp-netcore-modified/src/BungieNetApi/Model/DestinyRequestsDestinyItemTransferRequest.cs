@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="itemId">itemId.</param>
         /// <param name="characterId">characterId.</param>
         /// <param name="membershipType">membershipType.</param>
-        public DestinyRequestsDestinyItemTransferRequest(int itemReferenceHash = default(int), int stackSize = default(int), bool transferToVault = default(bool), long itemId = default(long), long characterId = default(long), int membershipType = default(int))
+        public DestinyRequestsDestinyItemTransferRequest(long itemReferenceHash = default(long), int stackSize = default(int), bool transferToVault = default(bool), long itemId = default(long), long characterId = default(long), int membershipType = default(int))
         {
             this.ItemReferenceHash = itemReferenceHash;
             this.StackSize = stackSize;
@@ -54,7 +54,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets ItemReferenceHash
         /// </summary>
         [DataMember(Name="itemReferenceHash", EmitDefaultValue=false)]
-        public int ItemReferenceHash { get; set; }
+        public long ItemReferenceHash { get; set; }
 
         /// <summary>
         /// Gets or Sets StackSize

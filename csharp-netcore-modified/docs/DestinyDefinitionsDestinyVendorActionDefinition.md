@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Verb** | **string** |  | [optional] 
 **IsPositive** | **bool** |  | [optional] 
 **ActionId** | **string** |  | [optional] 
-**ActionHash** | **int** |  | [optional] 
+**ActionHash** | **long** |  | [optional] 
 **AutoPerformAction** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

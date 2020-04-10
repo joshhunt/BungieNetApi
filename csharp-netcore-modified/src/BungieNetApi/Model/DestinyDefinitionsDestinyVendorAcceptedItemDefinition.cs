@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="acceptedInventoryBucketHash">The \&quot;source\&quot; bucket for a transfer. When a user wants to transfer an item, the appropriate DestinyVendorDefinition&#39;s acceptedItems property is evaluated, looking for an entry where acceptedInventoryBucketHash matches the bucket that the item being transferred is currently located. If it exists, the item will be transferred into whatever bucket is defined by destinationInventoryBucketHash..</param>
         /// <param name="destinationInventoryBucketHash">This is the bucket where the item being transferred will be put, given that it was being transferred *from* the bucket defined in acceptedInventoryBucketHash..</param>
-        public DestinyDefinitionsDestinyVendorAcceptedItemDefinition(int acceptedInventoryBucketHash = default(int), int destinationInventoryBucketHash = default(int))
+        public DestinyDefinitionsDestinyVendorAcceptedItemDefinition(long acceptedInventoryBucketHash = default(long), long destinationInventoryBucketHash = default(long))
         {
             this.AcceptedInventoryBucketHash = acceptedInventoryBucketHash;
             this.DestinationInventoryBucketHash = destinationInventoryBucketHash;
@@ -47,14 +47,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The \&quot;source\&quot; bucket for a transfer. When a user wants to transfer an item, the appropriate DestinyVendorDefinition&#39;s acceptedItems property is evaluated, looking for an entry where acceptedInventoryBucketHash matches the bucket that the item being transferred is currently located. If it exists, the item will be transferred into whatever bucket is defined by destinationInventoryBucketHash.</value>
         [DataMember(Name="acceptedInventoryBucketHash", EmitDefaultValue=false)]
-        public int AcceptedInventoryBucketHash { get; set; }
+        public long AcceptedInventoryBucketHash { get; set; }
 
         /// <summary>
         /// This is the bucket where the item being transferred will be put, given that it was being transferred *from* the bucket defined in acceptedInventoryBucketHash.
         /// </summary>
         /// <value>This is the bucket where the item being transferred will be put, given that it was being transferred *from* the bucket defined in acceptedInventoryBucketHash.</value>
         [DataMember(Name="destinationInventoryBucketHash", EmitDefaultValue=false)]
-        public int DestinationInventoryBucketHash { get; set; }
+        public long DestinationInventoryBucketHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

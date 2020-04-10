@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="channelHash">channelHash.</param>
         /// <param name="dyeHash">dyeHash.</param>
-        public DestinyDyeReference(int channelHash = default(int), int dyeHash = default(int))
+        public DestinyDyeReference(long channelHash = default(long), long dyeHash = default(long))
         {
             this.ChannelHash = channelHash;
             this.DyeHash = dyeHash;
@@ -46,13 +46,13 @@ namespace BungieNetApi.Model
         /// Gets or Sets ChannelHash
         /// </summary>
         [DataMember(Name="channelHash", EmitDefaultValue=false)]
-        public int ChannelHash { get; set; }
+        public long ChannelHash { get; set; }
 
         /// <summary>
         /// Gets or Sets DyeHash
         /// </summary>
         [DataMember(Name="dyeHash", EmitDefaultValue=false)]
-        public int DyeHash { get; set; }
+        public long DyeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -42,7 +42,7 @@ namespace BungieNetApi.Model
         /// <param name="startDate">If known, this is the date when the Milestone started/became active..</param>
         /// <param name="endDate">If known, this is the date when the Milestone will expire/recycle/end..</param>
         /// <param name="order">Used for ordering milestones in a display to match how we order them in BNet. May pull from static data, or possibly in the future from dynamic information..</param>
-        public DestinyMilestonesDestinyPublicMilestone(int milestoneHash = default(int), List<DestinyMilestonesDestinyPublicMilestoneQuest> availableQuests = default(List<DestinyMilestonesDestinyPublicMilestoneQuest>), List<DestinyMilestonesDestinyPublicMilestoneChallengeActivity> activities = default(List<DestinyMilestonesDestinyPublicMilestoneChallengeActivity>), List<int> vendorHashes = default(List<int>), List<DestinyMilestonesDestinyPublicMilestoneVendor> vendors = default(List<DestinyMilestonesDestinyPublicMilestoneVendor>), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), int order = default(int))
+        public DestinyMilestonesDestinyPublicMilestone(long milestoneHash = default(long), List<DestinyMilestonesDestinyPublicMilestoneQuest> availableQuests = default(List<DestinyMilestonesDestinyPublicMilestoneQuest>), List<DestinyMilestonesDestinyPublicMilestoneChallengeActivity> activities = default(List<DestinyMilestonesDestinyPublicMilestoneChallengeActivity>), List<long> vendorHashes = default(List<long>), List<DestinyMilestonesDestinyPublicMilestoneVendor> vendors = default(List<DestinyMilestonesDestinyPublicMilestoneVendor>), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime), int order = default(int))
         {
             this.MilestoneHash = milestoneHash;
             this.AvailableQuests = availableQuests;
@@ -59,7 +59,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the milestone. Use it to look up the DestinyMilestoneDefinition for static data about the Milestone.</value>
         [DataMember(Name="milestoneHash", EmitDefaultValue=false)]
-        public int MilestoneHash { get; set; }
+        public long MilestoneHash { get; set; }
 
         /// <summary>
         /// A milestone not need have even a single quest, but if there are active quests they will be returned here.
@@ -79,7 +79,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Sometimes milestones - or activities active in milestones - will have relevant vendors. These are the vendors that are currently relevant.  Deprecated, already, for the sake of the new \&quot;vendors\&quot; property that has more data. What was I thinking.</value>
         [DataMember(Name="vendorHashes", EmitDefaultValue=false)]
-        public List<int> VendorHashes { get; set; }
+        public List<long> VendorHashes { get; set; }
 
         /// <summary>
         /// This is why we can&#39;t have nice things. This is the ordered list of vendors to be shown that relate to this milestone, potentially along with other interesting data.

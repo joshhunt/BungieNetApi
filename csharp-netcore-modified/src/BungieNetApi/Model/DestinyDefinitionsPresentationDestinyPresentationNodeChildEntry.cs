@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsPresentationDestinyPresentationNodeChildEntry" /> class.
         /// </summary>
         /// <param name="presentationNodeHash">presentationNodeHash.</param>
-        public DestinyDefinitionsPresentationDestinyPresentationNodeChildEntry(int presentationNodeHash = default(int))
+        public DestinyDefinitionsPresentationDestinyPresentationNodeChildEntry(long presentationNodeHash = default(long))
         {
             this.PresentationNodeHash = presentationNodeHash;
         }
@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets PresentationNodeHash
         /// </summary>
         [DataMember(Name="presentationNodeHash", EmitDefaultValue=false)]
-        public int PresentationNodeHash { get; set; }
+        public long PresentationNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

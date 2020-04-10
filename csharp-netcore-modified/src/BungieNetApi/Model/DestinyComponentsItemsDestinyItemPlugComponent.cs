@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="enabled">If true, this plug will provide its benefits while inserted..</param>
         /// <param name="insertFailIndexes">If the plug cannot be inserted for some reason, this will have the indexes into the plug item definition&#39;s plug.insertionRules property, so you can show the reasons why it can&#39;t be inserted.  This list will be empty if the plug can be inserted..</param>
         /// <param name="enableFailIndexes">If a plug is not enabled, this will be populated with indexes into the plug item definition&#39;s plug.enabledRules property, so that you can show the reasons why it is not enabled.  This list will be empty if the plug is enabled..</param>
-        public DestinyComponentsItemsDestinyItemPlugComponent(List<DestinyQuestsDestinyObjectiveProgress> plugObjectives = default(List<DestinyQuestsDestinyObjectiveProgress>), int plugItemHash = default(int), bool canInsert = default(bool), bool enabled = default(bool), List<int> insertFailIndexes = default(List<int>), List<int> enableFailIndexes = default(List<int>))
+        public DestinyComponentsItemsDestinyItemPlugComponent(List<DestinyQuestsDestinyObjectiveProgress> plugObjectives = default(List<DestinyQuestsDestinyObjectiveProgress>), long plugItemHash = default(long), bool canInsert = default(bool), bool enabled = default(bool), List<int> insertFailIndexes = default(List<int>), List<int> enableFailIndexes = default(List<int>))
         {
             this.PlugObjectives = plugObjectives;
             this.PlugItemHash = plugItemHash;
@@ -62,7 +62,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the DestinyInventoryItemDefinition that represents this plug.</value>
         [DataMember(Name="plugItemHash", EmitDefaultValue=false)]
-        public int PlugItemHash { get; set; }
+        public long PlugItemHash { get; set; }
 
         /// <summary>
         /// If true, this plug has met all of its insertion requirements. Big if true.

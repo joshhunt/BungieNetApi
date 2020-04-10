@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="capacityValue">How much energy capacity this plug provides..</param>
         /// <param name="energyTypeHash">Energy provided by a plug is always of a specific type - this is the hash identifier for the energy type for which it provides Capacity..</param>
         /// <param name="energyType">The Energy Type for this energy capacity, in enum form for easy use..</param>
-        public DestinyDefinitionsItemsDestinyEnergyCapacityEntry(int capacityValue = default(int), int energyTypeHash = default(int), int energyType = default(int))
+        public DestinyDefinitionsItemsDestinyEnergyCapacityEntry(int capacityValue = default(int), long energyTypeHash = default(long), int energyType = default(int))
         {
             this.CapacityValue = capacityValue;
             this.EnergyTypeHash = energyTypeHash;
@@ -56,7 +56,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Energy provided by a plug is always of a specific type - this is the hash identifier for the energy type for which it provides Capacity.</value>
         [DataMember(Name="energyTypeHash", EmitDefaultValue=false)]
-        public int EnergyTypeHash { get; set; }
+        public long EnergyTypeHash { get; set; }
 
         /// <summary>
         /// The Energy Type for this energy capacity, in enum form for easy use.

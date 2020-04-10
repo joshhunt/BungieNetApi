@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition" /> class.
         /// </summary>
         /// <param name="itemHash">The identifier of the Plug Item unlocked by activating this item in the Artifact..</param>
-        public DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition(int itemHash = default(int))
+        public DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition(long itemHash = default(long))
         {
             this.ItemHash = itemHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier of the Plug Item unlocked by activating this item in the Artifact.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

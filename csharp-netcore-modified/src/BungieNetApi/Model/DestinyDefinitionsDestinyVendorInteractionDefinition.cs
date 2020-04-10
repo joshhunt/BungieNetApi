@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// <param name="flavorLineTwo">If the vendor interaction has flavor text, this is the rest of it..</param>
         /// <param name="headerDisplayProperties">The header for the interaction dialog..</param>
         /// <param name="instructions">The localized text telling the player what to do when they see this dialog..</param>
-        public DestinyDefinitionsDestinyVendorInteractionDefinition(int interactionIndex = default(int), List<DestinyDefinitionsDestinyVendorInteractionReplyDefinition> replies = default(List<DestinyDefinitionsDestinyVendorInteractionReplyDefinition>), int vendorCategoryIndex = default(int), int questlineItemHash = default(int), List<DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition> sackInteractionList = default(List<DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition>), int uiInteractionType = default(int), int interactionType = default(int), string rewardBlockLabel = default(string), int rewardVendorCategoryIndex = default(int), string flavorLineOne = default(string), string flavorLineTwo = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition headerDisplayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string instructions = default(string))
+        public DestinyDefinitionsDestinyVendorInteractionDefinition(int interactionIndex = default(int), List<DestinyDefinitionsDestinyVendorInteractionReplyDefinition> replies = default(List<DestinyDefinitionsDestinyVendorInteractionReplyDefinition>), int vendorCategoryIndex = default(int), long questlineItemHash = default(long), List<DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition> sackInteractionList = default(List<DestinyDefinitionsDestinyVendorInteractionSackEntryDefinition>), long uiInteractionType = default(long), int interactionType = default(int), string rewardBlockLabel = default(string), int rewardVendorCategoryIndex = default(int), string flavorLineOne = default(string), string flavorLineTwo = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition headerDisplayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string instructions = default(string))
         {
             this.InteractionIndex = interactionIndex;
             this.Replies = replies;
@@ -90,7 +90,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this interaction dialog is about a quest, this is the questline related to the interaction. You can use this to show the quest overview, or even the character&#39;s status with the quest if you use it to find the character&#39;s current Quest Step by checking their inventory against this questlineItemHash&#39;s DestinyInventoryItemDefinition.setData.</value>
         [DataMember(Name="questlineItemHash", EmitDefaultValue=false)]
-        public int QuestlineItemHash { get; set; }
+        public long QuestlineItemHash { get; set; }
 
         /// <summary>
         /// If this interaction is meant to show you sacks, this is the list of types of sacks to be shown. If empty, the interaction is not meant to show sacks.
@@ -104,7 +104,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A UI hint for the behavior of the interaction screen. This is useful to determine what type of interaction is occurring, such as a prompt to receive a rank up reward or a prompt to choose a reward for completing a quest. The hash isn&#39;t as useful as the Enum in retrospect, well what can you do. Try using interactionType instead.</value>
         [DataMember(Name="uiInteractionType", EmitDefaultValue=false)]
-        public int UiInteractionType { get; set; }
+        public long UiInteractionType { get; set; }
 
         /// <summary>
         /// The enumerated version of the possible UI hints for vendor interactions, which is a little easier to grok than the hash found in uiInteractionType.

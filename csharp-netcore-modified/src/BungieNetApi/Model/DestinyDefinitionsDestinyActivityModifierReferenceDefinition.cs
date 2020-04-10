@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyActivityModifierReferenceDefinition" /> class.
         /// </summary>
         /// <param name="activityModifierHash">The hash identifier for the DestinyActivityModifierDefinition referenced by this activity..</param>
-        public DestinyDefinitionsDestinyActivityModifierReferenceDefinition(int activityModifierHash = default(int))
+        public DestinyDefinitionsDestinyActivityModifierReferenceDefinition(long activityModifierHash = default(long))
         {
             this.ActivityModifierHash = activityModifierHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the DestinyActivityModifierDefinition referenced by this activity.</value>
         [DataMember(Name="activityModifierHash", EmitDefaultValue=false)]
-        public int ActivityModifierHash { get; set; }
+        public long ActivityModifierHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

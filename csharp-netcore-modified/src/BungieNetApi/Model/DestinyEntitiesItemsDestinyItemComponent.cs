@@ -49,7 +49,7 @@ namespace BungieNetApi.Model
         /// <param name="tooltipNotificationIndexes">If this is populated, it is a list of indexes into DestinyInventoryItemDefinition.tooltipNotifications for any special tooltip messages that need to be shown for this item..</param>
         /// <param name="metricHash">The identifier for the currently-selected metric definition, to be displayed on the emblem nameplate..</param>
         /// <param name="metricObjective">The objective progress for the currently-selected metric definition, to be displayed on the emblem nameplate..</param>
-        public DestinyEntitiesItemsDestinyItemComponent(int itemHash = default(int), long itemInstanceId = default(long), int quantity = default(int), int bindStatus = default(int), int location = default(int), int bucketHash = default(int), int transferStatus = default(int), bool lockable = default(bool), int state = default(int), int overrideStyleItemHash = default(int), DateTime expirationDate = default(DateTime), bool isWrapper = default(bool), List<int> tooltipNotificationIndexes = default(List<int>), int metricHash = default(int), DestinyQuestsDestinyObjectiveProgress metricObjective = default(DestinyQuestsDestinyObjectiveProgress))
+        public DestinyEntitiesItemsDestinyItemComponent(long itemHash = default(long), long itemInstanceId = default(long), int quantity = default(int), int bindStatus = default(int), int location = default(int), long bucketHash = default(long), int transferStatus = default(int), bool lockable = default(bool), int state = default(int), long overrideStyleItemHash = default(long), DateTime expirationDate = default(DateTime), bool isWrapper = default(bool), List<int> tooltipNotificationIndexes = default(List<int>), long metricHash = default(long), DestinyQuestsDestinyObjectiveProgress metricObjective = default(DestinyQuestsDestinyObjectiveProgress))
         {
             this.ItemHash = itemHash;
             this.ItemInstanceId = itemInstanceId;
@@ -73,7 +73,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for the item&#39;s definition, which is where most of the useful static information for the item can be found.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If the item is instanced, it will have an instance ID. Lack of an instance ID implies that the item has no distinct local qualities aside from stack size.
@@ -108,7 +108,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the specific inventory bucket in which the item is located.</value>
         [DataMember(Name="bucketHash", EmitDefaultValue=false)]
-        public int BucketHash { get; set; }
+        public long BucketHash { get; set; }
 
         /// <summary>
         /// If there is a known error state that would cause this item to not be transferable, this Flags enum will indicate all of those error states. Otherwise, it will be 0 (CanTransfer).
@@ -136,7 +136,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If populated, this is the hash of the item whose icon (and other secondary styles, but *not* the human readable strings) should override whatever icons/styles are on the item being sold.  If you don&#39;t do this, certain items whose styles are being overridden by socketed items - such as the \&quot;Recycle Shader\&quot; item - would show whatever their default icon/style is, and it wouldn&#39;t be pretty or look accurate.</value>
         [DataMember(Name="overrideStyleItemHash", EmitDefaultValue=false)]
-        public int OverrideStyleItemHash { get; set; }
+        public long OverrideStyleItemHash { get; set; }
 
         /// <summary>
         /// If the item can expire, this is the date at which it will/did expire.
@@ -164,7 +164,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for the currently-selected metric definition, to be displayed on the emblem nameplate.</value>
         [DataMember(Name="metricHash", EmitDefaultValue=false)]
-        public int MetricHash { get; set; }
+        public long MetricHash { get; set; }
 
         /// <summary>
         /// The objective progress for the currently-selected metric definition, to be displayed on the emblem nameplate.

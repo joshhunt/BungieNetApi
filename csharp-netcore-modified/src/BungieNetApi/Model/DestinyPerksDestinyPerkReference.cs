@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="iconPath">The icon for the perk..</param>
         /// <param name="isActive">Whether this perk is currently active. (We may return perks that you have not actually activated yet: these represent perks that you should show in the item&#39;s tooltip, but that the user has not yet activated.).</param>
         /// <param name="visible">Some perks provide benefits, but aren&#39;t visible in the UI. This value will let you know if this is perk should be shown in your UI..</param>
-        public DestinyPerksDestinyPerkReference(int perkHash = default(int), string iconPath = default(string), bool isActive = default(bool), bool visible = default(bool))
+        public DestinyPerksDestinyPerkReference(long perkHash = default(long), string iconPath = default(string), bool isActive = default(bool), bool visible = default(bool))
         {
             this.PerkHash = perkHash;
             this.IconPath = iconPath;
@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the perk, which can be used to look up DestinySandboxPerkDefinition if it exists. Be warned, perks frequently do not have user-viewable information. You should examine whether you actually found a name/description in the perk&#39;s definition before you show it to the user.</value>
         [DataMember(Name="perkHash", EmitDefaultValue=false)]
-        public int PerkHash { get; set; }
+        public long PerkHash { get; set; }
 
         /// <summary>
         /// The icon for the perk.

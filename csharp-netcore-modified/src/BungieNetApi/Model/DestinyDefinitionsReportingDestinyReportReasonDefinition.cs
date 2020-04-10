@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="reasonHash">The identifier for the reason: they are only guaranteed unique under the Category in which they are found..</param>
         /// <param name="displayProperties">displayProperties.</param>
-        public DestinyDefinitionsReportingDestinyReportReasonDefinition(int reasonHash = default(int), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition))
+        public DestinyDefinitionsReportingDestinyReportReasonDefinition(long reasonHash = default(long), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition))
         {
             this.ReasonHash = reasonHash;
             this.DisplayProperties = displayProperties;
@@ -47,7 +47,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The identifier for the reason: they are only guaranteed unique under the Category in which they are found.</value>
         [DataMember(Name="reasonHash", EmitDefaultValue=false)]
-        public int ReasonHash { get; set; }
+        public long ReasonHash { get; set; }
 
         /// <summary>
         /// Gets or Sets DisplayProperties

@@ -41,7 +41,7 @@ namespace BungieNetApi.Model
         /// <param name="modes">The list of all Activity Modes to which this activity applies, including aggregates. This will let you see, for example, whether the activity was both Clash and part of the Trials of the Nine event..</param>
         /// <param name="isPrivate">Whether or not the match was a private match..</param>
         /// <param name="membershipType">The Membership Type indicating the platform on which this match was played..</param>
-        public DestinyHistoricalStatsDestinyHistoricalStatsActivity(int referenceId = default(int), int directorActivityHash = default(int), long instanceId = default(long), int mode = default(int), List<int> modes = default(List<int>), bool isPrivate = default(bool), int membershipType = default(int))
+        public DestinyHistoricalStatsDestinyHistoricalStatsActivity(long referenceId = default(long), long directorActivityHash = default(long), long instanceId = default(long), int mode = default(int), List<int> modes = default(List<int>), bool isPrivate = default(bool), int membershipType = default(int))
         {
             this.ReferenceId = referenceId;
             this.DirectorActivityHash = directorActivityHash;
@@ -57,14 +57,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The unique hash identifier of the DestinyActivityDefinition that was played. If I had this to do over, it&#39;d be named activityHash. Too late now.</value>
         [DataMember(Name="referenceId", EmitDefaultValue=false)]
-        public int ReferenceId { get; set; }
+        public long ReferenceId { get; set; }
 
         /// <summary>
         /// The unique hash identifier of the DestinyActivityDefinition that was played.
         /// </summary>
         /// <value>The unique hash identifier of the DestinyActivityDefinition that was played.</value>
         [DataMember(Name="directorActivityHash", EmitDefaultValue=false)]
-        public int DirectorActivityHash { get; set; }
+        public long DirectorActivityHash { get; set; }
 
         /// <summary>
         /// The unique identifier for this *specific* match that was played.  This value can be used to get additional data about this activity such as who else was playing via the GetPostGameCarnageReport endpoint.

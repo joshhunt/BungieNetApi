@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="entityType">The type of entity, returned as a string matching the DestinyDefinition&#39;s contract class name. You&#39;ll have to have your own mapping from class names to actually looking up those definitions in the manifest databases..</param>
         /// <param name="displayProperties">Basic display properties on the entity, so you don&#39;t have to look up the definition to show basic results for the item..</param>
         /// <param name="weight">The ranking value for sorting that we calculated using our relevance formula. This will hopefully get better with time and iteration..</param>
-        public DestinyDefinitionsDestinyEntitySearchResultItem(int hash = default(int), string entityType = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), double weight = default(double))
+        public DestinyDefinitionsDestinyEntitySearchResultItem(long hash = default(long), string entityType = default(string), DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), double weight = default(double))
         {
             this.Hash = hash;
             this.EntityType = entityType;
@@ -51,7 +51,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the entity. You will use this to look up the DestinyDefinition relevant for the entity found.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The type of entity, returned as a string matching the DestinyDefinition&#39;s contract class name. You&#39;ll have to have your own mapping from class names to actually looking up those definitions in the manifest databases.

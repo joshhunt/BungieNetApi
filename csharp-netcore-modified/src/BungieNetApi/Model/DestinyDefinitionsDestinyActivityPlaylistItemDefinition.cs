@@ -438,7 +438,7 @@ namespace BungieNetApi.Model
         /// <param name="directActivityModeType">If the playlist entry had an activity mode directly defined on it, this will be the enum value of that mode..</param>
         /// <param name="activityModeHashes">The hash identifiers for Activity Modes relevant to this entry..</param>
         /// <param name="activityModeTypes">The activity modes - if any - in enum form. Because we can&#39;t seem to escape the enums..</param>
-        public DestinyDefinitionsDestinyActivityPlaylistItemDefinition(int activityHash = default(int), int directActivityModeHash = default(int), DirectActivityModeTypeEnum? directActivityModeType = default(DirectActivityModeTypeEnum?), List<int> activityModeHashes = default(List<int>), List<int> activityModeTypes = default(List<int>))
+        public DestinyDefinitionsDestinyActivityPlaylistItemDefinition(long activityHash = default(long), long directActivityModeHash = default(long), DirectActivityModeTypeEnum? directActivityModeType = default(DirectActivityModeTypeEnum?), List<long> activityModeHashes = default(List<long>), List<int> activityModeTypes = default(List<int>))
         {
             this.ActivityHash = activityHash;
             this.DirectActivityModeHash = directActivityModeHash;
@@ -452,21 +452,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the Activity that can be played. Use it to look up the DestinyActivityDefinition.</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// If this playlist entry had an activity mode directly defined on it, this will be the hash of that mode.
         /// </summary>
         /// <value>If this playlist entry had an activity mode directly defined on it, this will be the hash of that mode.</value>
         [DataMember(Name="directActivityModeHash", EmitDefaultValue=false)]
-        public int DirectActivityModeHash { get; set; }
+        public long DirectActivityModeHash { get; set; }
 
         /// <summary>
         /// The hash identifiers for Activity Modes relevant to this entry.
         /// </summary>
         /// <value>The hash identifiers for Activity Modes relevant to this entry.</value>
         [DataMember(Name="activityModeHashes", EmitDefaultValue=false)]
-        public List<int> ActivityModeHashes { get; set; }
+        public List<long> ActivityModeHashes { get; set; }
 
         /// <summary>
         /// The activity modes - if any - in enum form. Because we can&#39;t seem to escape the enums.

@@ -40,7 +40,7 @@ namespace BungieNetApi.Model
         /// <param name="characterIds">A list of the character IDs, for further querying on your part..</param>
         /// <param name="seasonHashes">A list of seasons that this profile owns. Unlike versionsOwned, these stay with the profile across Platforms, and thus will be valid.   It turns out that Stadia Pro subscriptions will give access to seasons but only while playing on Stadia and with an active subscription. So some users (users who have Stadia Pro but choose to play on some other platform) won&#39;t see these as available: it will be whatever seasons are available for the platform on which they last played..</param>
         /// <param name="currentSeasonHash">If populated, this is a reference to the season that is currently active..</param>
-        public DestinyEntitiesProfilesDestinyProfileComponent(UserUserInfoCard userInfo = default(UserUserInfoCard), DateTime dateLastPlayed = default(DateTime), int versionsOwned = default(int), List<long> characterIds = default(List<long>), List<int> seasonHashes = default(List<int>), int currentSeasonHash = default(int))
+        public DestinyEntitiesProfilesDestinyProfileComponent(UserUserInfoCard userInfo = default(UserUserInfoCard), DateTime dateLastPlayed = default(DateTime), int versionsOwned = default(int), List<long> characterIds = default(List<long>), List<long> seasonHashes = default(List<long>), long currentSeasonHash = default(long))
         {
             this.UserInfo = userInfo;
             this.DateLastPlayed = dateLastPlayed;
@@ -83,14 +83,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>A list of seasons that this profile owns. Unlike versionsOwned, these stay with the profile across Platforms, and thus will be valid.   It turns out that Stadia Pro subscriptions will give access to seasons but only while playing on Stadia and with an active subscription. So some users (users who have Stadia Pro but choose to play on some other platform) won&#39;t see these as available: it will be whatever seasons are available for the platform on which they last played.</value>
         [DataMember(Name="seasonHashes", EmitDefaultValue=false)]
-        public List<int> SeasonHashes { get; set; }
+        public List<long> SeasonHashes { get; set; }
 
         /// <summary>
         /// If populated, this is a reference to the season that is currently active.
         /// </summary>
         /// <value>If populated, this is a reference to the season that is currently active.</value>
         [DataMember(Name="currentSeasonHash", EmitDefaultValue=false)]
-        public int CurrentSeasonHash { get; set; }
+        public long CurrentSeasonHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

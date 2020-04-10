@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// <param name="hash">The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to..</param>
         /// <param name="index">The index of the entity as it was found in the investment tables..</param>
         /// <param name="redacted">If this is true, then there is an entity with this identifier/type combination, but BNet is not yet allowed to show it. Sorry!.</param>
-        public DestinyDefinitionsPresentationDestinyPresentationNodeDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string originalIcon = default(string), string rootViewIcon = default(string), int nodeType = default(int), int scope = default(int), int objectiveHash = default(int), int completionRecordHash = default(int), DestinyDefinitionsPresentationDestinyPresentationNodeChildrenBlock children = default(DestinyDefinitionsPresentationDestinyPresentationNodeChildrenBlock), int displayStyle = default(int), int screenStyle = default(int), DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements = default(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock), bool disableChildSubscreenNavigation = default(bool), int presentationNodeType = default(int), List<string> traitIds = default(List<string>), List<int> traitHashes = default(List<int>), List<int> parentNodeHashes = default(List<int>), int hash = default(int), int index = default(int), bool redacted = default(bool))
+        public DestinyDefinitionsPresentationDestinyPresentationNodeDefinition(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties = default(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition), string originalIcon = default(string), string rootViewIcon = default(string), int nodeType = default(int), int scope = default(int), long objectiveHash = default(long), long completionRecordHash = default(long), DestinyDefinitionsPresentationDestinyPresentationNodeChildrenBlock children = default(DestinyDefinitionsPresentationDestinyPresentationNodeChildrenBlock), int displayStyle = default(int), int screenStyle = default(int), DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock requirements = default(DestinyDefinitionsPresentationDestinyPresentationNodeRequirementsBlock), bool disableChildSubscreenNavigation = default(bool), int presentationNodeType = default(int), List<string> traitIds = default(List<string>), List<long> traitHashes = default(List<long>), List<long> parentNodeHashes = default(List<long>), long hash = default(long), int index = default(int), bool redacted = default(bool))
         {
             this.DisplayProperties = displayProperties;
             this.OriginalIcon = originalIcon;
@@ -114,14 +114,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If this presentation node shows a related objective (for instance, if it tracks the progress of its children), the objective being tracked is indicated here.</value>
         [DataMember(Name="objectiveHash", EmitDefaultValue=false)]
-        public int ObjectiveHash { get; set; }
+        public long ObjectiveHash { get; set; }
 
         /// <summary>
         /// If this presentation node has an associated \&quot;Record\&quot; that you can accomplish for completing its children, this is the identifier of that Record.
         /// </summary>
         /// <value>If this presentation node has an associated \&quot;Record\&quot; that you can accomplish for completing its children, this is the identifier of that Record.</value>
         [DataMember(Name="completionRecordHash", EmitDefaultValue=false)]
-        public int CompletionRecordHash { get; set; }
+        public long CompletionRecordHash { get; set; }
 
         /// <summary>
         /// The child entities contained by this presentation node.
@@ -174,21 +174,21 @@ namespace BungieNetApi.Model
         /// Gets or Sets TraitHashes
         /// </summary>
         [DataMember(Name="traitHashes", EmitDefaultValue=false)]
-        public List<int> TraitHashes { get; set; }
+        public List<long> TraitHashes { get; set; }
 
         /// <summary>
         /// A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.
         /// </summary>
         /// <value>A quick reference to presentation nodes that have this node as a child. Presentation nodes can be parented under multiple parents.</value>
         [DataMember(Name="parentNodeHashes", EmitDefaultValue=false)]
-        public List<int> ParentNodeHashes { get; set; }
+        public List<long> ParentNodeHashes { get; set; }
 
         /// <summary>
         /// The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.
         /// </summary>
         /// <value>The unique identifier for this entity. Guaranteed to be unique for the type of entity, but not globally.  When entities refer to each other in Destiny content, it is this hash that they are referring to.</value>
         [DataMember(Name="hash", EmitDefaultValue=false)]
-        public int Hash { get; set; }
+        public long Hash { get; set; }
 
         /// <summary>
         /// The index of the entity as it was found in the investment tables.

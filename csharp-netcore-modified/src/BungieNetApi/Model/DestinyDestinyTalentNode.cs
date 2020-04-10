@@ -44,7 +44,7 @@ namespace BungieNetApi.Model
         /// <param name="progressPercent">If you want to show a progress bar or circle for how close this talent node is to being activate-able, this is the percentage to show. It follows the node&#39;s underlying rules about when the progress bar should first show up, and when it should be filled..</param>
         /// <param name="hidden">Whether or not the talent node is actually visible in the game&#39;s UI. Whether you want to show it in your own UI is up to you! I&#39;m not gonna tell you who to sock it to..</param>
         /// <param name="nodeStatsBlock">This property has some history. A talent grid can provide stats on both the item it&#39;s related to and the character equipping the item. This returns data about those stat bonuses..</param>
-        public DestinyDestinyTalentNode(int nodeIndex = default(int), int nodeHash = default(int), int state = default(int), bool isActivated = default(bool), int stepIndex = default(int), List<DestinyDefinitionsDestinyMaterialRequirement> materialsToUpgrade = default(List<DestinyDefinitionsDestinyMaterialRequirement>), int activationGridLevel = default(int), float progressPercent = default(float), bool hidden = default(bool), DestinyDestinyTalentNodeStatBlock nodeStatsBlock = default(DestinyDestinyTalentNodeStatBlock))
+        public DestinyDestinyTalentNode(int nodeIndex = default(int), long nodeHash = default(long), int state = default(int), bool isActivated = default(bool), int stepIndex = default(int), List<DestinyDefinitionsDestinyMaterialRequirement> materialsToUpgrade = default(List<DestinyDefinitionsDestinyMaterialRequirement>), int activationGridLevel = default(int), float progressPercent = default(float), bool hidden = default(bool), DestinyDestinyTalentNodeStatBlock nodeStatsBlock = default(DestinyDestinyTalentNodeStatBlock))
         {
             this.NodeIndex = nodeIndex;
             this.NodeHash = nodeHash;
@@ -70,7 +70,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash of the Talent Node being referred to (in DestinyTalentGridDefinition.nodes). Deceptively CONTENT VERSION DEPENDENT. We have no guarantee of the hash&#39;s immutability between content versions.</value>
         [DataMember(Name="nodeHash", EmitDefaultValue=false)]
-        public int NodeHash { get; set; }
+        public long NodeHash { get; set; }
 
         /// <summary>
         /// An DestinyTalentNodeState enum value indicating the node&#39;s state: whether it can be activated or swapped, and why not if neither can be performed.

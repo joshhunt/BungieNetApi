@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="records">records.</param>
         /// <param name="recordCategoriesRootNodeHash">The hash for the root presentation node definition of Triumph categories..</param>
         /// <param name="recordSealsRootNodeHash">The hash for the root presentation node definition of Triumph Seals..</param>
-        public DestinyComponentsRecordsDestinyRecordsComponent(Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent> records = default(Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent>), int recordCategoriesRootNodeHash = default(int), int recordSealsRootNodeHash = default(int))
+        public DestinyComponentsRecordsDestinyRecordsComponent(Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent> records = default(Dictionary<string, DestinyComponentsRecordsDestinyRecordComponent>), long recordCategoriesRootNodeHash = default(long), long recordSealsRootNodeHash = default(long))
         {
             this.Records = records;
             this.RecordCategoriesRootNodeHash = recordCategoriesRootNodeHash;
@@ -55,14 +55,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash for the root presentation node definition of Triumph categories.</value>
         [DataMember(Name="recordCategoriesRootNodeHash", EmitDefaultValue=false)]
-        public int RecordCategoriesRootNodeHash { get; set; }
+        public long RecordCategoriesRootNodeHash { get; set; }
 
         /// <summary>
         /// The hash for the root presentation node definition of Triumph Seals.
         /// </summary>
         /// <value>The hash for the root presentation node definition of Triumph Seals.</value>
         [DataMember(Name="recordSealsRootNodeHash", EmitDefaultValue=false)]
-        public int RecordSealsRootNodeHash { get; set; }
+        public long RecordSealsRootNodeHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

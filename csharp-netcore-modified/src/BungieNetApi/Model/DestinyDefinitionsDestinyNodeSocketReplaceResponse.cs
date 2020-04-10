@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="socketTypeHash">The hash identifier of the socket type to find amidst the item&#39;s sockets (the item to which this talent grid is attached). See DestinyInventoryItemDefinition.sockets.socketEntries to find the socket type of sockets on the item in question..</param>
         /// <param name="plugItemHash">The hash identifier of the plug item that will be inserted into the socket found..</param>
-        public DestinyDefinitionsDestinyNodeSocketReplaceResponse(int socketTypeHash = default(int), int plugItemHash = default(int))
+        public DestinyDefinitionsDestinyNodeSocketReplaceResponse(long socketTypeHash = default(long), long plugItemHash = default(long))
         {
             this.SocketTypeHash = socketTypeHash;
             this.PlugItemHash = plugItemHash;
@@ -47,14 +47,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the socket type to find amidst the item&#39;s sockets (the item to which this talent grid is attached). See DestinyInventoryItemDefinition.sockets.socketEntries to find the socket type of sockets on the item in question.</value>
         [DataMember(Name="socketTypeHash", EmitDefaultValue=false)]
-        public int SocketTypeHash { get; set; }
+        public long SocketTypeHash { get; set; }
 
         /// <summary>
         /// The hash identifier of the plug item that will be inserted into the socket found.
         /// </summary>
         /// <value>The hash identifier of the plug item that will be inserted into the socket found.</value>
         [DataMember(Name="plugItemHash", EmitDefaultValue=false)]
-        public int PlugItemHash { get; set; }
+        public long PlugItemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

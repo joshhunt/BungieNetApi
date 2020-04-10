@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="count">The minimum quantity of the item you have to have..</param>
         /// <param name="itemHash">The hash identifier of the item you need to have. Use it to look up the DestinyInventoryItemDefinition for more info..</param>
         /// <param name="deleteOnAction">If true, the item/quantity will be deleted from your inventory when the action is performed. Otherwise, you&#39;ll retain these required items after the action is complete..</param>
-        public DestinyDefinitionsDestinyItemActionRequiredItemDefinition(int count = default(int), int itemHash = default(int), bool deleteOnAction = default(bool))
+        public DestinyDefinitionsDestinyItemActionRequiredItemDefinition(int count = default(int), long itemHash = default(long), bool deleteOnAction = default(bool))
         {
             this.Count = count;
             this.ItemHash = itemHash;
@@ -56,7 +56,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the item you need to have. Use it to look up the DestinyInventoryItemDefinition for more info.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If true, the item/quantity will be deleted from your inventory when the action is performed. Otherwise, you&#39;ll retain these required items after the action is complete.

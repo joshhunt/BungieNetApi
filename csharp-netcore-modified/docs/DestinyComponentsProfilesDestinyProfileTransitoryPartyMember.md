@@ -5,7 +5,7 @@ This is some bare minimum information about a party member in a Fireteam. Unfort
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **MembershipId** | **long** | The Membership ID that matches the party member. | [optional] 
-**EmblemHash** | **int** | The identifier for the DestinyInventoryItemDefinition of the player&#39;s emblem. | [optional] 
+**EmblemHash** | **long** | The identifier for the DestinyInventoryItemDefinition of the player&#39;s emblem. | [optional] 
 **DisplayName** | **string** | The player&#39;s last known display name. | [optional] 
 **Status** | **int** | A Flags Enumeration value indicating the states that the player is in relevant to being on a fireteam. | [optional] 
 

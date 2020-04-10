@@ -39,7 +39,7 @@ namespace BungieNetApi.Model
         /// <param name="progressRequirementMessage">A string representing the localized minimum requirement text for this Tier, if any..</param>
         /// <param name="items">The items that can be earned within this tier..</param>
         /// <param name="minimumUnlockPointsUsedRequirement">The minimum number of \&quot;unlock points\&quot; that you must have used before you can unlock items from this tier..</param>
-        public DestinyDefinitionsArtifactsDestinyArtifactTierDefinition(int tierHash = default(int), string displayTitle = default(string), string progressRequirementMessage = default(string), List<DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition> items = default(List<DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition>), int minimumUnlockPointsUsedRequirement = default(int))
+        public DestinyDefinitionsArtifactsDestinyArtifactTierDefinition(long tierHash = default(long), string displayTitle = default(string), string progressRequirementMessage = default(string), List<DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition> items = default(List<DestinyDefinitionsArtifactsDestinyArtifactTierItemDefinition>), int minimumUnlockPointsUsedRequirement = default(int))
         {
             this.TierHash = tierHash;
             this.DisplayTitle = displayTitle;
@@ -53,7 +53,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>An identifier, unique within the Artifact, for this specific tier.</value>
         [DataMember(Name="tierHash", EmitDefaultValue=false)]
-        public int TierHash { get; set; }
+        public long TierHash { get; set; }
 
         /// <summary>
         /// The human readable title of this tier, if any.

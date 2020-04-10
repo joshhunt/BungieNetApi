@@ -77,7 +77,7 @@ namespace BungieNetApi.Model
         /// <param name="unitLabel">Localized Unit Name for the stat..</param>
         /// <param name="weight">Weight assigned to this stat indicating its relative impressiveness..</param>
         /// <param name="medalTierHash">The tier associated with this medal - be it implicitly or explicitly..</param>
-        public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition(string statId = default(string), int group = default(int), List<int> periodTypes = default(List<int>), List<int> modes = default(List<int>), int category = default(int), string statName = default(string), string statNameAbbr = default(string), string statDescription = default(string), int unitType = default(int), string iconImage = default(string), MergeMethodEnum? mergeMethod = default(MergeMethodEnum?), string unitLabel = default(string), int weight = default(int), int medalTierHash = default(int))
+        public DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinition(string statId = default(string), int group = default(int), List<int> periodTypes = default(List<int>), List<int> modes = default(List<int>), int category = default(int), string statName = default(string), string statNameAbbr = default(string), string statDescription = default(string), int unitType = default(int), string iconImage = default(string), MergeMethodEnum? mergeMethod = default(MergeMethodEnum?), string unitLabel = default(string), int weight = default(int), long medalTierHash = default(long))
         {
             this.StatId = statId;
             this.Group = group;
@@ -184,7 +184,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The tier associated with this medal - be it implicitly or explicitly.</value>
         [DataMember(Name="medalTierHash", EmitDefaultValue=false)]
-        public int MedalTierHash { get; set; }
+        public long MedalTierHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

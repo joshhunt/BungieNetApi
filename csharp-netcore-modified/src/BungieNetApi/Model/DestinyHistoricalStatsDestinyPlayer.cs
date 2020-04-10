@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// <param name="clanName">Current clan name for the player. This value may be null or an empty string if the user does not have a clan..</param>
         /// <param name="clanTag">Current clan tag for the player. This value may be null or an empty string if the user does not have a clan..</param>
         /// <param name="emblemHash">If we know the emblem&#39;s hash, this can be used to look up the player&#39;s emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it)..</param>
-        public DestinyHistoricalStatsDestinyPlayer(UserUserInfoCard destinyUserInfo = default(UserUserInfoCard), string characterClass = default(string), int classHash = default(int), int raceHash = default(int), int genderHash = default(int), int characterLevel = default(int), int lightLevel = default(int), UserUserInfoCard bungieNetUserInfo = default(UserUserInfoCard), string clanName = default(string), string clanTag = default(string), int emblemHash = default(int))
+        public DestinyHistoricalStatsDestinyPlayer(UserUserInfoCard destinyUserInfo = default(UserUserInfoCard), string characterClass = default(string), long classHash = default(long), long raceHash = default(long), long genderHash = default(long), int characterLevel = default(int), int lightLevel = default(int), UserUserInfoCard bungieNetUserInfo = default(UserUserInfoCard), string clanName = default(string), string clanTag = default(string), long emblemHash = default(long))
         {
             this.DestinyUserInfo = destinyUserInfo;
             this.CharacterClass = characterClass;
@@ -78,19 +78,19 @@ namespace BungieNetApi.Model
         /// Gets or Sets ClassHash
         /// </summary>
         [DataMember(Name="classHash", EmitDefaultValue=false)]
-        public int ClassHash { get; set; }
+        public long ClassHash { get; set; }
 
         /// <summary>
         /// Gets or Sets RaceHash
         /// </summary>
         [DataMember(Name="raceHash", EmitDefaultValue=false)]
-        public int RaceHash { get; set; }
+        public long RaceHash { get; set; }
 
         /// <summary>
         /// Gets or Sets GenderHash
         /// </summary>
         [DataMember(Name="genderHash", EmitDefaultValue=false)]
-        public int GenderHash { get; set; }
+        public long GenderHash { get; set; }
 
         /// <summary>
         /// Level of the character if available. Zero if it is not available.
@@ -132,7 +132,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>If we know the emblem&#39;s hash, this can be used to look up the player&#39;s emblem at the time of a match when receiving PGCR data, or otherwise their currently equipped emblem (if we are able to obtain it).</value>
         [DataMember(Name="emblemHash", EmitDefaultValue=false)]
-        public int EmblemHash { get; set; }
+        public long EmblemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="itemHash">The hash identifier for the item in question. Use it to look up the item&#39;s DestinyInventoryItemDefinition..</param>
         /// <param name="itemInstanceId">If this quantity is referring to a specific instance of an item, this will have the item&#39;s instance ID. Normally, this will be null..</param>
         /// <param name="quantity">The amount of the item needed/available depending on the context of where DestinyItemQuantity is being used..</param>
-        public DestinyDefinitionsDestinyVendorItemQuantity(int itemHash = default(int), long itemInstanceId = default(long), int quantity = default(int))
+        public DestinyDefinitionsDestinyVendorItemQuantity(long itemHash = default(long), long itemInstanceId = default(long), int quantity = default(int))
         {
             this.ItemHash = itemHash;
             this.ItemInstanceId = itemInstanceId;
@@ -49,7 +49,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier for the item in question. Use it to look up the item&#39;s DestinyInventoryItemDefinition.</value>
         [DataMember(Name="itemHash", EmitDefaultValue=false)]
-        public int ItemHash { get; set; }
+        public long ItemHash { get; set; }
 
         /// <summary>
         /// If this quantity is referring to a specific instance of an item, this will have the item&#39;s instance ID. Normally, this will be null.

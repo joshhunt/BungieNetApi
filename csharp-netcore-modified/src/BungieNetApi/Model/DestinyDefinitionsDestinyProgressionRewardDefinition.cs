@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="progressionMappingHash">The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions for which experience should be applied..</param>
         /// <param name="amount">The amount of experience to give to each of the mapped progressions..</param>
         /// <param name="applyThrottles">If true, the game&#39;s internal mechanisms to throttle progression should be applied..</param>
-        public DestinyDefinitionsDestinyProgressionRewardDefinition(int progressionMappingHash = default(int), int amount = default(int), bool applyThrottles = default(bool))
+        public DestinyDefinitionsDestinyProgressionRewardDefinition(long progressionMappingHash = default(long), int amount = default(int), bool applyThrottles = default(bool))
         {
             this.ProgressionMappingHash = progressionMappingHash;
             this.Amount = amount;
@@ -49,7 +49,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of the DestinyProgressionMappingDefinition that contains the progressions for which experience should be applied.</value>
         [DataMember(Name="progressionMappingHash", EmitDefaultValue=false)]
-        public int ProgressionMappingHash { get; set; }
+        public long ProgressionMappingHash { get; set; }
 
         /// <summary>
         /// The amount of experience to give to each of the mapped progressions.

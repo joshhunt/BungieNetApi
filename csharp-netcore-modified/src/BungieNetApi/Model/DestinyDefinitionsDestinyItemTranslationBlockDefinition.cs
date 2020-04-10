@@ -41,7 +41,7 @@ namespace BungieNetApi.Model
         /// <param name="customDyes">customDyes.</param>
         /// <param name="arrangements">arrangements.</param>
         /// <param name="hasGeometry">hasGeometry.</param>
-        public DestinyDefinitionsDestinyItemTranslationBlockDefinition(string weaponPatternIdentifier = default(string), int weaponPatternHash = default(int), List<DestinyDyeReference> defaultDyes = default(List<DestinyDyeReference>), List<DestinyDyeReference> lockedDyes = default(List<DestinyDyeReference>), List<DestinyDyeReference> customDyes = default(List<DestinyDyeReference>), List<DestinyDefinitionsDestinyGearArtArrangementReference> arrangements = default(List<DestinyDefinitionsDestinyGearArtArrangementReference>), bool hasGeometry = default(bool))
+        public DestinyDefinitionsDestinyItemTranslationBlockDefinition(string weaponPatternIdentifier = default(string), long weaponPatternHash = default(long), List<DestinyDyeReference> defaultDyes = default(List<DestinyDyeReference>), List<DestinyDyeReference> lockedDyes = default(List<DestinyDyeReference>), List<DestinyDyeReference> customDyes = default(List<DestinyDyeReference>), List<DestinyDefinitionsDestinyGearArtArrangementReference> arrangements = default(List<DestinyDefinitionsDestinyGearArtArrangementReference>), bool hasGeometry = default(bool))
         {
             this.WeaponPatternIdentifier = weaponPatternIdentifier;
             this.WeaponPatternHash = weaponPatternHash;
@@ -62,7 +62,7 @@ namespace BungieNetApi.Model
         /// Gets or Sets WeaponPatternHash
         /// </summary>
         [DataMember(Name="weaponPatternHash", EmitDefaultValue=false)]
-        public int WeaponPatternHash { get; set; }
+        public long WeaponPatternHash { get; set; }
 
         /// <summary>
         /// Gets or Sets DefaultDyes

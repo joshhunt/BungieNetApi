@@ -266,7 +266,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>InlineResponse20044</returns>
-        InlineResponse20044 Destiny2GetCollectibleNodeDetails (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
+        InlineResponse20044 Destiny2GetCollectibleNodeDetails (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
 
         /// <summary>
         /// 
@@ -281,7 +281,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>ApiResponse of InlineResponse20044</returns>
-        ApiResponse<InlineResponse20044> Destiny2GetCollectibleNodeDetailsWithHttpInfo (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
+        ApiResponse<InlineResponse20044> Destiny2GetCollectibleNodeDetailsWithHttpInfo (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
         /// <summary>
         /// 
         /// </summary>
@@ -317,7 +317,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>InlineResponse20034</returns>
-        InlineResponse20034 Destiny2GetDestinyEntityDefinition (string entityType, int hashIdentifier);
+        InlineResponse20034 Destiny2GetDestinyEntityDefinition (string entityType, long hashIdentifier);
 
         /// <summary>
         /// 
@@ -329,7 +329,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>ApiResponse of InlineResponse20034</returns>
-        ApiResponse<InlineResponse20034> Destiny2GetDestinyEntityDefinitionWithHttpInfo (string entityType, int hashIdentifier);
+        ApiResponse<InlineResponse20034> Destiny2GetDestinyEntityDefinitionWithHttpInfo (string entityType, long hashIdentifier);
         /// <summary>
         /// 
         /// </summary>
@@ -595,7 +595,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>InlineResponse20057</returns>
-        InlineResponse20057 Destiny2GetPublicMilestoneContent (int milestoneHash);
+        InlineResponse20057 Destiny2GetPublicMilestoneContent (long milestoneHash);
 
         /// <summary>
         /// 
@@ -606,7 +606,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>ApiResponse of InlineResponse20057</returns>
-        ApiResponse<InlineResponse20057> Destiny2GetPublicMilestoneContentWithHttpInfo (int milestoneHash);
+        ApiResponse<InlineResponse20057> Destiny2GetPublicMilestoneContentWithHttpInfo (long milestoneHash);
         /// <summary>
         /// 
         /// </summary>
@@ -685,7 +685,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>InlineResponse20042</returns>
-        InlineResponse20042 Destiny2GetVendor (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>));
+        InlineResponse20042 Destiny2GetVendor (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>));
 
         /// <summary>
         /// 
@@ -700,7 +700,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>ApiResponse of InlineResponse20042</returns>
-        ApiResponse<InlineResponse20042> Destiny2GetVendorWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>));
+        ApiResponse<InlineResponse20042> Destiny2GetVendorWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>));
         /// <summary>
         /// 
         /// </summary>
@@ -1123,7 +1123,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of InlineResponse20044</returns>
-        System.Threading.Tasks.Task<InlineResponse20044> Destiny2GetCollectibleNodeDetailsAsync (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
+        System.Threading.Tasks.Task<InlineResponse20044> Destiny2GetCollectibleNodeDetailsAsync (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
 
         /// <summary>
         /// 
@@ -1138,7 +1138,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse20044)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20044>> Destiny2GetCollectibleNodeDetailsAsyncWithHttpInfo (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20044>> Destiny2GetCollectibleNodeDetailsAsyncWithHttpInfo (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>));
         /// <summary>
         /// 
         /// </summary>
@@ -1174,7 +1174,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>Task of InlineResponse20034</returns>
-        System.Threading.Tasks.Task<InlineResponse20034> Destiny2GetDestinyEntityDefinitionAsync (string entityType, int hashIdentifier);
+        System.Threading.Tasks.Task<InlineResponse20034> Destiny2GetDestinyEntityDefinitionAsync (string entityType, long hashIdentifier);
 
         /// <summary>
         /// 
@@ -1186,7 +1186,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>Task of ApiResponse (InlineResponse20034)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20034>> Destiny2GetDestinyEntityDefinitionAsyncWithHttpInfo (string entityType, int hashIdentifier);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20034>> Destiny2GetDestinyEntityDefinitionAsyncWithHttpInfo (string entityType, long hashIdentifier);
         /// <summary>
         /// 
         /// </summary>
@@ -1452,7 +1452,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>Task of InlineResponse20057</returns>
-        System.Threading.Tasks.Task<InlineResponse20057> Destiny2GetPublicMilestoneContentAsync (int milestoneHash);
+        System.Threading.Tasks.Task<InlineResponse20057> Destiny2GetPublicMilestoneContentAsync (long milestoneHash);
 
         /// <summary>
         /// 
@@ -1463,7 +1463,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>Task of ApiResponse (InlineResponse20057)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20057>> Destiny2GetPublicMilestoneContentAsyncWithHttpInfo (int milestoneHash);
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20057>> Destiny2GetPublicMilestoneContentAsyncWithHttpInfo (long milestoneHash);
         /// <summary>
         /// 
         /// </summary>
@@ -1542,7 +1542,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of InlineResponse20042</returns>
-        System.Threading.Tasks.Task<InlineResponse20042> Destiny2GetVendorAsync (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>));
+        System.Threading.Tasks.Task<InlineResponse20042> Destiny2GetVendorAsync (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>));
 
         /// <summary>
         /// 
@@ -1557,7 +1557,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse20042)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InlineResponse20042>> Destiny2GetVendorAsyncWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>));
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse20042>> Destiny2GetVendorAsyncWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>));
         /// <summary>
         /// 
         /// </summary>
@@ -3066,7 +3066,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>InlineResponse20044</returns>
-        public InlineResponse20044 Destiny2GetCollectibleNodeDetails (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
+        public InlineResponse20044 Destiny2GetCollectibleNodeDetails (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20044> localVarResponse = Destiny2GetCollectibleNodeDetailsWithHttpInfo(characterId, collectiblePresentationNodeHash, destinyMembershipId, membershipType, components);
              return localVarResponse.Data;
@@ -3082,7 +3082,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>ApiResponse of InlineResponse20044</returns>
-        public BungieNetApi.Client.ApiResponse< InlineResponse20044 > Destiny2GetCollectibleNodeDetailsWithHttpInfo (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
+        public BungieNetApi.Client.ApiResponse< InlineResponse20044 > Destiny2GetCollectibleNodeDetailsWithHttpInfo (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
         {
             BungieNetApi.Client.RequestOptions localVarRequestOptions = new BungieNetApi.Client.RequestOptions();
 
@@ -3132,7 +3132,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of InlineResponse20044</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20044> Destiny2GetCollectibleNodeDetailsAsync (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
+        public async System.Threading.Tasks.Task<InlineResponse20044> Destiny2GetCollectibleNodeDetailsAsync (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20044> localVarResponse = await Destiny2GetCollectibleNodeDetailsAsyncWithHttpInfo(characterId, collectiblePresentationNodeHash, destinyMembershipId, membershipType, components);
              return localVarResponse.Data;
@@ -3149,7 +3149,7 @@ namespace BungieNetApi.Api
         /// <param name="membershipType">A valid non-BungieNet membership type.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse20044)</returns>
-        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20044>> Destiny2GetCollectibleNodeDetailsAsyncWithHttpInfo (long characterId, int collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
+        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20044>> Destiny2GetCollectibleNodeDetailsAsyncWithHttpInfo (long characterId, long collectiblePresentationNodeHash, long destinyMembershipId, int membershipType, List<int> components = default(List<int>))
         {
 
             BungieNetApi.Client.RequestOptions localVarRequestOptions = new BungieNetApi.Client.RequestOptions();
@@ -3315,7 +3315,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>InlineResponse20034</returns>
-        public InlineResponse20034 Destiny2GetDestinyEntityDefinition (string entityType, int hashIdentifier)
+        public InlineResponse20034 Destiny2GetDestinyEntityDefinition (string entityType, long hashIdentifier)
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20034> localVarResponse = Destiny2GetDestinyEntityDefinitionWithHttpInfo(entityType, hashIdentifier);
              return localVarResponse.Data;
@@ -3328,7 +3328,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>ApiResponse of InlineResponse20034</returns>
-        public BungieNetApi.Client.ApiResponse< InlineResponse20034 > Destiny2GetDestinyEntityDefinitionWithHttpInfo (string entityType, int hashIdentifier)
+        public BungieNetApi.Client.ApiResponse< InlineResponse20034 > Destiny2GetDestinyEntityDefinitionWithHttpInfo (string entityType, long hashIdentifier)
         {
             // verify the required parameter 'entityType' is set
             if (entityType == null)
@@ -3374,7 +3374,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>Task of InlineResponse20034</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20034> Destiny2GetDestinyEntityDefinitionAsync (string entityType, int hashIdentifier)
+        public async System.Threading.Tasks.Task<InlineResponse20034> Destiny2GetDestinyEntityDefinitionAsync (string entityType, long hashIdentifier)
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20034> localVarResponse = await Destiny2GetDestinyEntityDefinitionAsyncWithHttpInfo(entityType, hashIdentifier);
              return localVarResponse.Data;
@@ -3388,7 +3388,7 @@ namespace BungieNetApi.Api
         /// <param name="entityType">The type of entity for whom you would like results. These correspond to the entity&#39;s definition contract name. For instance, if you are looking for items, this property should be &#39;DestinyInventoryItemDefinition&#39;. PREVIEW: This endpoint is still in beta, and may experience rough edges. The schema is tentatively in final form, but there may be bugs that prevent desirable operation.</param>
         /// <param name="hashIdentifier">The hash identifier for the specific Entity you want returned.</param>
         /// <returns>Task of ApiResponse (InlineResponse20034)</returns>
-        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20034>> Destiny2GetDestinyEntityDefinitionAsyncWithHttpInfo (string entityType, int hashIdentifier)
+        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20034>> Destiny2GetDestinyEntityDefinitionAsyncWithHttpInfo (string entityType, long hashIdentifier)
         {
             // verify the required parameter 'entityType' is set
             if (entityType == null)
@@ -4713,7 +4713,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>InlineResponse20057</returns>
-        public InlineResponse20057 Destiny2GetPublicMilestoneContent (int milestoneHash)
+        public InlineResponse20057 Destiny2GetPublicMilestoneContent (long milestoneHash)
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20057> localVarResponse = Destiny2GetPublicMilestoneContentWithHttpInfo(milestoneHash);
              return localVarResponse.Data;
@@ -4725,7 +4725,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>ApiResponse of InlineResponse20057</returns>
-        public BungieNetApi.Client.ApiResponse< InlineResponse20057 > Destiny2GetPublicMilestoneContentWithHttpInfo (int milestoneHash)
+        public BungieNetApi.Client.ApiResponse< InlineResponse20057 > Destiny2GetPublicMilestoneContentWithHttpInfo (long milestoneHash)
         {
             BungieNetApi.Client.RequestOptions localVarRequestOptions = new BungieNetApi.Client.RequestOptions();
 
@@ -4764,7 +4764,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>Task of InlineResponse20057</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20057> Destiny2GetPublicMilestoneContentAsync (int milestoneHash)
+        public async System.Threading.Tasks.Task<InlineResponse20057> Destiny2GetPublicMilestoneContentAsync (long milestoneHash)
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20057> localVarResponse = await Destiny2GetPublicMilestoneContentAsyncWithHttpInfo(milestoneHash);
              return localVarResponse.Data;
@@ -4777,7 +4777,7 @@ namespace BungieNetApi.Api
         /// <exception cref="BungieNetApi.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="milestoneHash">The identifier for the milestone to be returned.</param>
         /// <returns>Task of ApiResponse (InlineResponse20057)</returns>
-        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20057>> Destiny2GetPublicMilestoneContentAsyncWithHttpInfo (int milestoneHash)
+        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20057>> Destiny2GetPublicMilestoneContentAsyncWithHttpInfo (long milestoneHash)
         {
 
             BungieNetApi.Client.RequestOptions localVarRequestOptions = new BungieNetApi.Client.RequestOptions();
@@ -5149,7 +5149,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>InlineResponse20042</returns>
-        public InlineResponse20042 Destiny2GetVendor (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>))
+        public InlineResponse20042 Destiny2GetVendor (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>))
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20042> localVarResponse = Destiny2GetVendorWithHttpInfo(characterId, destinyMembershipId, membershipType, vendorHash, components);
              return localVarResponse.Data;
@@ -5165,7 +5165,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>ApiResponse of InlineResponse20042</returns>
-        public BungieNetApi.Client.ApiResponse< InlineResponse20042 > Destiny2GetVendorWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>))
+        public BungieNetApi.Client.ApiResponse< InlineResponse20042 > Destiny2GetVendorWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>))
         {
             BungieNetApi.Client.RequestOptions localVarRequestOptions = new BungieNetApi.Client.RequestOptions();
 
@@ -5215,7 +5215,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of InlineResponse20042</returns>
-        public async System.Threading.Tasks.Task<InlineResponse20042> Destiny2GetVendorAsync (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>))
+        public async System.Threading.Tasks.Task<InlineResponse20042> Destiny2GetVendorAsync (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>))
         {
              BungieNetApi.Client.ApiResponse<InlineResponse20042> localVarResponse = await Destiny2GetVendorAsyncWithHttpInfo(characterId, destinyMembershipId, membershipType, vendorHash, components);
              return localVarResponse.Data;
@@ -5232,7 +5232,7 @@ namespace BungieNetApi.Api
         /// <param name="vendorHash">The Hash identifier of the Vendor to be returned.</param>
         /// <param name="components">A comma separated list of components to return (as strings or numeric values). See the DestinyComponentType enum for valid components to request. You must request at least one component to receive results. (optional)</param>
         /// <returns>Task of ApiResponse (InlineResponse20042)</returns>
-        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20042>> Destiny2GetVendorAsyncWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, int vendorHash, List<int> components = default(List<int>))
+        public async System.Threading.Tasks.Task<BungieNetApi.Client.ApiResponse<InlineResponse20042>> Destiny2GetVendorAsyncWithHttpInfo (long characterId, long destinyMembershipId, int membershipType, long vendorHash, List<int> components = default(List<int>))
         {
 
             BungieNetApi.Client.RequestOptions localVarRequestOptions = new BungieNetApi.Client.RequestOptions();

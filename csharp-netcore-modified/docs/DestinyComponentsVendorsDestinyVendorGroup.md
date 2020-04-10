@@ -4,8 +4,8 @@ Represents a specific group of vendors that can be rendered in the recommended o
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VendorGroupHash** | **int** |  | [optional] 
-**VendorHashes** | **List&lt;int&gt;** | The ordered list of vendors within a particular group. | [optional] 
+**VendorGroupHash** | **long** |  | [optional] 
+**VendorHashes** | **List&lt;long&gt;** | The ordered list of vendors within a particular group. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

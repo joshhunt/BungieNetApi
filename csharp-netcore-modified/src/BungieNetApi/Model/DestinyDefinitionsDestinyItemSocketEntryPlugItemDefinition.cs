@@ -35,7 +35,7 @@ namespace BungieNetApi.Model
         /// Initializes a new instance of the <see cref="DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition" /> class.
         /// </summary>
         /// <param name="plugItemHash">The hash identifier of a DestinyInventoryItemDefinition representing the plug that can be inserted..</param>
-        public DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition(int plugItemHash = default(int))
+        public DestinyDefinitionsDestinyItemSocketEntryPlugItemDefinition(long plugItemHash = default(long))
         {
             this.PlugItemHash = plugItemHash;
         }
@@ -45,7 +45,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The hash identifier of a DestinyInventoryItemDefinition representing the plug that can be inserted.</value>
         [DataMember(Name="plugItemHash", EmitDefaultValue=false)]
-        public int PlugItemHash { get; set; }
+        public long PlugItemHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Metrics** | [**Dictionary&lt;string, DestinyComponentsMetricsDestinyMetricComponent&gt;**](DestinyComponentsMetricsDestinyMetricComponent.md) |  | [optional] 
-**MetricsRootNodeHash** | **int** |  | [optional] 
+**MetricsRootNodeHash** | **long** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

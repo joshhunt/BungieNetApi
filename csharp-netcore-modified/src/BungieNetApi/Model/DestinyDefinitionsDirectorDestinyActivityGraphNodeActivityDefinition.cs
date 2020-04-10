@@ -36,7 +36,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <param name="nodeActivityId">An identifier for this node activity. It is only guaranteed to be unique within the Activity Graph..</param>
         /// <param name="activityHash">The activity that will be activated if the user clicks on this node. Controls all activity-related information displayed on the node if it is active (the text shown in the tooltip etc).</param>
-        public DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition(int nodeActivityId = default(int), int activityHash = default(int))
+        public DestinyDefinitionsDirectorDestinyActivityGraphNodeActivityDefinition(long nodeActivityId = default(long), long activityHash = default(long))
         {
             this.NodeActivityId = nodeActivityId;
             this.ActivityHash = activityHash;
@@ -47,14 +47,14 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>An identifier for this node activity. It is only guaranteed to be unique within the Activity Graph.</value>
         [DataMember(Name="nodeActivityId", EmitDefaultValue=false)]
-        public int NodeActivityId { get; set; }
+        public long NodeActivityId { get; set; }
 
         /// <summary>
         /// The activity that will be activated if the user clicks on this node. Controls all activity-related information displayed on the node if it is active (the text shown in the tooltip etc)
         /// </summary>
         /// <value>The activity that will be activated if the user clicks on this node. Controls all activity-related information displayed on the node if it is active (the text shown in the tooltip etc)</value>
         [DataMember(Name="activityHash", EmitDefaultValue=false)]
-        public int ActivityHash { get; set; }
+        public long ActivityHash { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
