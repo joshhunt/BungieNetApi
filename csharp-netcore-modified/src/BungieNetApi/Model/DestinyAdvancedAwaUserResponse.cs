@@ -37,7 +37,7 @@ namespace BungieNetApi.Model
         /// <param name="selection">Indication of the selection the user has made (Approving or rejecting the action).</param>
         /// <param name="correlationId">Correlation ID of the request.</param>
         /// <param name="nonce">Secret nonce received via the PUSH notification..</param>
-        public DestinyAdvancedAwaUserResponse(int selection = default(int), string correlationId = default(string), List<byte[]> nonce = default(List<byte[]>))
+        public DestinyAdvancedAwaUserResponse(int selection = default(int), string correlationId = default(string), List<int> nonce = default(List<int>))
         {
             this.Selection = selection;
             this.CorrelationId = correlationId;
@@ -63,7 +63,7 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>Secret nonce received via the PUSH notification.</value>
         [DataMember(Name="nonce", EmitDefaultValue=false)]
-        public List<byte[]> Nonce { get; set; }
+        public List<int> Nonce { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

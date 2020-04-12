@@ -13,7 +13,7 @@ Contact: support@bungie.com
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9DC2587E-BF6C-4FC2-9C87-0699BBC06C7C}</ProjectGuid>
+    <ProjectGuid>{E6FA1204-E2F3-4C84-8D56-99F237E86600}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BungieNetApi</RootNamespace>

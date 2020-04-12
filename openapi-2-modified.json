@@ -11292,19 +11292,19 @@
       "properties": {
         "red": {
           "format": "byte",
-          "type": "string"
+          "type": "integer"
         },
         "green": {
           "format": "byte",
-          "type": "string"
+          "type": "integer"
         },
         "blue": {
           "format": "byte",
-          "type": "string"
+          "type": "integer"
         },
         "alpha": {
           "format": "byte",
-          "type": "string"
+          "type": "integer"
         }
       }
     },
@@ -27089,7 +27089,7 @@
           "description": "Do you ever get the feeling that a system was designed *too* flexibly? That it can be used in so many different ways that you end up being unable to provide an easy to use abstraction for the mess that's happening under the surface?\r\nLet's talk about character-specific data that might be related to items without instances. These two statements are totally unrelated, I promise.\r\nAt some point during D2, it was decided that items - such as Bounties - could be given to characters and *not* have instance data, but that *could* display and even use relevant state information on your account and character.\r\nUp to now, any item that had meaningful dependencies on character or account state had to be instanced, and thus \"itemComponents\" was all that you needed: it was keyed by item's instance IDs and provided the stateful information you needed inside.\r\nUnfortunately, we don't live in such a magical world anymore. This is information held on a per-character basis about non-instanced items that the characters have in their inventory - or that reference character-specific state information even if it's in Account-level inventory - and the values related to that item's state in relation to the given character.\r\nTo give a concrete example, look at a Moments of Triumph bounty. They exist in a character's inventory, and show/care about a character's progression toward completing the bounty. But the bounty itself is a non-instanced item, like a mod or a currency. This returns that data for the characters who have the bounty in their inventory.\r\nI'm not crying, you're crying Okay we're both crying but it's going to be okay I promise Actually I shouldn't promise that, I don't know if it's going to be okay",
           "type": "object",
           "additionalProperties": {
-            "$ref": "#/definitions/DestinyBaseItemComponentSetOfint64"
+            "$ref": "#/definitions/DestinyBaseItemComponentSetOfuint32"
           }
         },
         "characterPresentationNodes": {
@@ -31681,12 +31681,12 @@
         }
       }
     },
-    "DestinyBaseItemComponentSetOfint64": {
+    "DestinyBaseItemComponentSetOfuint32": {
       "type": "object",
       "properties": {
         "objectives": {
           "x-destiny-component-type-dependency": "ItemObjectives",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent"
         }
       }
     },
@@ -31718,7 +31718,7 @@
       },
       "x-destiny-component-type-dependency": "ItemObjectives"
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -31917,7 +31917,7 @@
         },
         "plugStates": {
           "x-destiny-component-type-dependency": "ItemPlugStates",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemPlugComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent"
         },
         "objectives": {
           "x-destiny-component-type-dependency": "ItemObjectives",
@@ -32756,7 +32756,7 @@
       },
       "x-destiny-component-type-dependency": "ItemPlugStates"
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemPlugComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -32948,7 +32948,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DestinyBaseItemComponentSetOfint64"
+              "$ref": "#/definitions/DestinyBaseItemComponentSetOfuint32"
             }
           ]
         },
@@ -33417,7 +33417,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyVendorComponent"
+              "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyVendorComponent"
             }
           ],
           "x-destiny-component-type-dependency": "Vendors"
@@ -33427,7 +33427,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyVendorCategoriesComponent"
+              "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent"
             }
           ],
           "x-destiny-component-type-dependency": "VendorCategories"
@@ -33437,7 +33437,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DictionaryComponentResponseOfint64AndPersonalDestinyVendorSaleItemSetComponent"
+              "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndPersonalDestinyVendorSaleItemSetComponent"
             }
           ],
           "x-destiny-component-type-dependency": "VendorSales"
@@ -33589,7 +33589,7 @@
       },
       "x-destiny-component-type-dependency": "Vendors"
     },
-    "DictionaryComponentResponseOfint64AndDestinyVendorComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyVendorComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -33645,7 +33645,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyVendorCategoriesComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34020,7 +34020,7 @@
       },
       "x-destiny-component-type-dependency": "VendorSales"
     },
-    "DictionaryComponentResponseOfint64AndPersonalDestinyVendorSaleItemSetComponent": {
+    "DictionaryComponentResponseOfuint32AndPersonalDestinyVendorSaleItemSetComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34112,7 +34112,7 @@
         },
         "plugStates": {
           "x-destiny-component-type-dependency": "ItemPlugStates",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemPlugComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent"
         },
         "objectives": {
           "x-destiny-component-type-dependency": "ItemObjectives",
@@ -34439,7 +34439,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyPublicVendorComponent"
+              "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyPublicVendorComponent"
             }
           ],
           "x-destiny-component-type-dependency": "Vendors"
@@ -34449,7 +34449,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyVendorCategoriesComponent"
+              "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent"
             }
           ],
           "x-destiny-component-type-dependency": "VendorCategories"
@@ -34459,7 +34459,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DictionaryComponentResponseOfint64AndPublicDestinyVendorSaleItemSetComponent"
+              "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndPublicDestinyVendorSaleItemSetComponent"
             }
           ],
           "x-destiny-component-type-dependency": "VendorSales"
@@ -34490,7 +34490,7 @@
       },
       "x-destiny-component-type-dependency": "Vendors"
     },
-    "DictionaryComponentResponseOfint64AndDestinyPublicVendorComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyPublicVendorComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34584,7 +34584,7 @@
       },
       "x-destiny-component-type-dependency": "VendorSales"
     },
-    "DictionaryComponentResponseOfint64AndPublicDestinyVendorSaleItemSetComponent": {
+    "DictionaryComponentResponseOfuint32AndPublicDestinyVendorSaleItemSetComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34626,58 +34626,58 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "#/definitions/DestinyItemComponentSetOfint64"
+              "$ref": "#/definitions/DestinyItemComponentSetOfuint32"
             }
           ]
         }
       }
     },
-    "DestinyItemComponentSetOfint64": {
+    "DestinyItemComponentSetOfuint32": {
       "type": "object",
       "properties": {
         "instances": {
           "x-destiny-component-type-dependency": "ItemInstances",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemInstanceComponent"
         },
         "perks": {
           "x-destiny-component-type-dependency": "ItemPerks",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemPerksComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent"
         },
         "renderData": {
           "x-destiny-component-type-dependency": "ItemRenderData",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemRenderComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent"
         },
         "stats": {
           "x-destiny-component-type-dependency": "ItemStats",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemStatsComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent"
         },
         "sockets": {
           "x-destiny-component-type-dependency": "ItemSockets",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent"
         },
         "reusablePlugs": {
           "x-destiny-component-type-dependency": "ItemReusablePlugs",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent"
         },
         "plugObjectives": {
           "x-destiny-component-type-dependency": "ItemPlugObjectives",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent"
         },
         "talentGrids": {
           "x-destiny-component-type-dependency": "ItemTalentGrids",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent"
         },
         "plugStates": {
           "x-destiny-component-type-dependency": "ItemPlugStates",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemPlugComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent"
         },
         "objectives": {
           "x-destiny-component-type-dependency": "ItemObjectives",
-          "$ref": "#/definitions/DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent"
+          "$ref": "#/definitions/DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent"
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemInstanceComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34700,7 +34700,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemPerksComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34723,7 +34723,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemRenderComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemRenderComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34746,7 +34746,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemStatsComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemStatsComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34769,7 +34769,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemSocketsComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34792,7 +34792,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemReusablePlugsComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34815,7 +34815,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemPlugObjectivesComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -34838,7 +34838,7 @@
         }
       }
     },
-    "DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent": {
+    "DictionaryComponentResponseOfuint32AndDestinyItemTalentGridComponent": {
       "type": "object",
       "properties": {
         "data": {
@@ -37511,7 +37511,7 @@
           "type": "array",
           "items": {
             "format": "byte",
-            "type": "string"
+            "type": "integer"
           }
         }
       }

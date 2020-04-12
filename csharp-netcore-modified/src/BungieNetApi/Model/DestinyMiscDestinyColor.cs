@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="green">green.</param>
         /// <param name="blue">blue.</param>
         /// <param name="alpha">alpha.</param>
-        public DestinyMiscDestinyColor(byte[] red = default(byte[]), byte[] green = default(byte[]), byte[] blue = default(byte[]), byte[] alpha = default(byte[]))
+        public DestinyMiscDestinyColor(int red = default(int), int green = default(int), int blue = default(int), int alpha = default(int))
         {
             this.Red = red;
             this.Green = green;
@@ -50,25 +50,25 @@ namespace BungieNetApi.Model
         /// Gets or Sets Red
         /// </summary>
         [DataMember(Name="red", EmitDefaultValue=false)]
-        public byte[] Red { get; set; }
+        public int Red { get; set; }
 
         /// <summary>
         /// Gets or Sets Green
         /// </summary>
         [DataMember(Name="green", EmitDefaultValue=false)]
-        public byte[] Green { get; set; }
+        public int Green { get; set; }
 
         /// <summary>
         /// Gets or Sets Blue
         /// </summary>
         [DataMember(Name="blue", EmitDefaultValue=false)]
-        public byte[] Blue { get; set; }
+        public int Blue { get; set; }
 
         /// <summary>
         /// Gets or Sets Alpha
         /// </summary>
         [DataMember(Name="alpha", EmitDefaultValue=false)]
-        public byte[] Alpha { get; set; }
+        public int Alpha { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -118,23 +118,19 @@ namespace BungieNetApi.Model
             return 
                 (
                     this.Red == input.Red ||
-                    (this.Red != null &&
-                    this.Red.Equals(input.Red))
+                    this.Red.Equals(input.Red)
                 ) && 
                 (
                     this.Green == input.Green ||
-                    (this.Green != null &&
-                    this.Green.Equals(input.Green))
+                    this.Green.Equals(input.Green)
                 ) && 
                 (
                     this.Blue == input.Blue ||
-                    (this.Blue != null &&
-                    this.Blue.Equals(input.Blue))
+                    this.Blue.Equals(input.Blue)
                 ) && 
                 (
                     this.Alpha == input.Alpha ||
-                    (this.Alpha != null &&
-                    this.Alpha.Equals(input.Alpha))
+                    this.Alpha.Equals(input.Alpha)
                 );
         }
 
@@ -147,14 +143,10 @@ namespace BungieNetApi.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Red != null)
-                    hashCode = hashCode * 59 + this.Red.GetHashCode();
-                if (this.Green != null)
-                    hashCode = hashCode * 59 + this.Green.GetHashCode();
-                if (this.Blue != null)
-                    hashCode = hashCode * 59 + this.Blue.GetHashCode();
-                if (this.Alpha != null)
-                    hashCode = hashCode * 59 + this.Alpha.GetHashCode();
+                hashCode = hashCode * 59 + this.Red.GetHashCode();
+                hashCode = hashCode * 59 + this.Green.GetHashCode();
+                hashCode = hashCode * 59 + this.Blue.GetHashCode();
+                hashCode = hashCode * 59 + this.Alpha.GetHashCode();
                 return hashCode;
             }
         }

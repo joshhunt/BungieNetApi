@@ -4,10 +4,10 @@ Represents a color whose RGBA values are all represented as values between 0 and
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Red** | **byte[]** |  | [optional] 
-**Green** | **byte[]** |  | [optional] 
-**Blue** | **byte[]** |  | [optional] 
-**Alpha** | **byte[]** |  | [optional] 
+**Red** | **int** |  | [optional] 
+**Green** | **int** |  | [optional] 
+**Blue** | **int** |  | [optional] 
+**Alpha** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

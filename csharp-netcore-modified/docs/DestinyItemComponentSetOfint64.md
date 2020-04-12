@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **ReusablePlugs** | [**DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent**](DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent.md) |  | [optional] 
 **PlugObjectives** | [**DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent**](DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent.md) |  | [optional] 
 **TalentGrids** | [**DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent**](DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent.md) |  | [optional] 
-**PlugStates** | [**DictionaryComponentResponseOfint64AndDestinyItemPlugComponent**](DictionaryComponentResponseOfint64AndDestinyItemPlugComponent.md) |  | [optional] 
+**PlugStates** | [**DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent**](DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent.md) |  | [optional] 
 **Objectives** | [**DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent**](DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -24,7 +24,7 @@ Contact: support@bungie.com
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BungieNetApi\BungieNetApi.csproj">
-      <Project>{9DC2587E-BF6C-4FC2-9C87-0699BBC06C7C}</Project>
+      <Project>{E6FA1204-E2F3-4C84-8D56-99F237E86600}</Project>
       <Name>BungieNetApi</Name>
     </ProjectReference>
   </ItemGroup>

@@ -38,7 +38,7 @@ namespace BungieNetApi.Model
         /// <param name="vendors">The base properties of the vendor. These are keyed by the Vendor Hash, so you will get one Vendor Component per vendor returned.  COMPONENT TYPE: Vendors.</param>
         /// <param name="categories">Categories that the vendor has available, and references to the sales therein. These are keyed by the Vendor Hash, so you will get one Categories Component per vendor returned.  COMPONENT TYPE: VendorCategories.</param>
         /// <param name="sales">Sales, keyed by the vendorItemIndex of the item being sold. These are keyed by the Vendor Hash, so you will get one Sale Item Set Component per vendor returned.  Note that within the Sale Item Set component, the sales are themselves keyed by the vendorSaleIndex, so you can relate it to the corrent sale item definition within the Vendor&#39;s definition.  COMPONENT TYPE: VendorSales.</param>
-        public DestinyResponsesDestinyPublicVendorsResponse(SingleComponentResponseOfDestinyVendorGroupComponent vendorGroups = default(SingleComponentResponseOfDestinyVendorGroupComponent), DictionaryComponentResponseOfint64AndDestinyPublicVendorComponent vendors = default(DictionaryComponentResponseOfint64AndDestinyPublicVendorComponent), DictionaryComponentResponseOfint64AndDestinyVendorCategoriesComponent categories = default(DictionaryComponentResponseOfint64AndDestinyVendorCategoriesComponent), DictionaryComponentResponseOfint64AndPublicDestinyVendorSaleItemSetComponent sales = default(DictionaryComponentResponseOfint64AndPublicDestinyVendorSaleItemSetComponent))
+        public DestinyResponsesDestinyPublicVendorsResponse(SingleComponentResponseOfDestinyVendorGroupComponent vendorGroups = default(SingleComponentResponseOfDestinyVendorGroupComponent), DictionaryComponentResponseOfuint32AndDestinyPublicVendorComponent vendors = default(DictionaryComponentResponseOfuint32AndDestinyPublicVendorComponent), DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent categories = default(DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent), DictionaryComponentResponseOfuint32AndPublicDestinyVendorSaleItemSetComponent sales = default(DictionaryComponentResponseOfuint32AndPublicDestinyVendorSaleItemSetComponent))
         {
             this.VendorGroups = vendorGroups;
             this.Vendors = vendors;
@@ -58,21 +58,21 @@ namespace BungieNetApi.Model
         /// </summary>
         /// <value>The base properties of the vendor. These are keyed by the Vendor Hash, so you will get one Vendor Component per vendor returned.  COMPONENT TYPE: Vendors</value>
         [DataMember(Name="vendors", EmitDefaultValue=false)]
-        public DictionaryComponentResponseOfint64AndDestinyPublicVendorComponent Vendors { get; set; }
+        public DictionaryComponentResponseOfuint32AndDestinyPublicVendorComponent Vendors { get; set; }
 
         /// <summary>
         /// Categories that the vendor has available, and references to the sales therein. These are keyed by the Vendor Hash, so you will get one Categories Component per vendor returned.  COMPONENT TYPE: VendorCategories
         /// </summary>
         /// <value>Categories that the vendor has available, and references to the sales therein. These are keyed by the Vendor Hash, so you will get one Categories Component per vendor returned.  COMPONENT TYPE: VendorCategories</value>
         [DataMember(Name="categories", EmitDefaultValue=false)]
-        public DictionaryComponentResponseOfint64AndDestinyVendorCategoriesComponent Categories { get; set; }
+        public DictionaryComponentResponseOfuint32AndDestinyVendorCategoriesComponent Categories { get; set; }
 
         /// <summary>
         /// Sales, keyed by the vendorItemIndex of the item being sold. These are keyed by the Vendor Hash, so you will get one Sale Item Set Component per vendor returned.  Note that within the Sale Item Set component, the sales are themselves keyed by the vendorSaleIndex, so you can relate it to the corrent sale item definition within the Vendor&#39;s definition.  COMPONENT TYPE: VendorSales
         /// </summary>
         /// <value>Sales, keyed by the vendorItemIndex of the item being sold. These are keyed by the Vendor Hash, so you will get one Sale Item Set Component per vendor returned.  Note that within the Sale Item Set component, the sales are themselves keyed by the vendorSaleIndex, so you can relate it to the corrent sale item definition within the Vendor&#39;s definition.  COMPONENT TYPE: VendorSales</value>
         [DataMember(Name="sales", EmitDefaultValue=false)]
-        public DictionaryComponentResponseOfint64AndPublicDestinyVendorSaleItemSetComponent Sales { get; set; }
+        public DictionaryComponentResponseOfuint32AndPublicDestinyVendorSaleItemSetComponent Sales { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
